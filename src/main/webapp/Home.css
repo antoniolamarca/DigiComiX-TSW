@@ -1,0 +1,292 @@
+/* Importazione del font */
+@import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
+
+/* colore per i testi: #f7b544*/
+/* colore per lo sfondo: #1b74b0*/
+
+/* stile generale */
+body{
+    background-color: #1b74b0;
+    margin: 0;
+    padding: 0;
+}
+
+/* stile per il div del titolo e per la foto del menu */
+#benvenuto{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#benvenuto h1{
+    flex-grow: 1;
+    color: #f7b544;
+    font-family: 'Press Start 2P';
+}
+
+#benvenuto img{
+    height: 125px;
+    width: 125px;
+    float: left;
+    cursor: pointer;
+}
+
+/* modifica parametri di specifiche immagini */
+.icone{
+    height: 45px !important;
+    width: 45px !important;
+    margin-top: 75px;
+    margin-right: 20px;
+}
+
+/* stile per il menu */
+.side-menu {
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #1b74b0;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.side-menu.open {
+    width: 15%; /* larghezza del menù */
+}
+
+#closeMenu{
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 35px;
+    font-family: 'Press Start 2P';
+    color: #f7b544;
+}
+
+#sideMenu img{
+    height: 125px;
+    width: 125px;
+}
+
+#sideMenu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sideMenu li {
+    padding: 10px;
+    font-family: 'Press Start 2P';
+    font-size: 20px;
+}
+
+#sideMenu li a {
+    text-decoration: none; /* Rimuove il sottolineato dai link */
+    color: #f7b544; /* Imposta il colore del testo */
+    display: block; /* Fa sì che i link occupino l'intera larghezza del li */
+}
+
+#sideMenu li a:hover {
+    color: red; /* Cambia colore del testo al passaggio del mouse */
+}
+
+/* stile per lo slider di immagini delle novità */
+#novita{
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #f7b544;
+    font-family: 'Press Start 2P';
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+#slider_novita{
+    background-color: white;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+#slider_novita img{
+    height: 200px;
+    width: 150px;
+    margin: 15px;
+}
+
+/* stile per lo slider di immagini degli sconti */
+#sconti{
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    color: #f7b544;
+    font-family: 'Press Start 2P';
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+#slider_sconti{
+    background-color: white;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+#slider_sconti img{
+    height: 200px;
+    width: 150px;
+    margin: 15px;
+}
+
+/* stile per lo slider per i giochi di carte*/
+#TCG{
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    color: #f7b544;
+    font-family: 'Press Start 2P';
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+#slider_TCG{
+    background-color: white;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+#slider_TCG img{
+    height: 200px;
+    width: 150px;
+    margin: 15px;
+}
+
+/* stile per lo slider per gadgets & action figures */
+#GAF{
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    color: #f7b544;
+    font-family: 'Press Start 2P';
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+#slider_GAF{
+    background-color: white;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+#slider_GAF img{
+    height: 200px;
+    width: 150px;
+    margin: 15px;
+}
+
+/* stile per lo slider per i giochi da tavolo */
+#GdT{
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    color: #f7b544;
+    font-family: 'Press Start 2P';
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+#slider_GdT{
+    background-color: white;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+#slider_GdT img{
+    height: 200px;
+    width: 150px;
+    margin: 15px;
+}
+
+#prev_novita, #next_novita, #prev_sconti, #next_sconti, #prev_TCG, #next_TCG, #prev_GAF, #next_GAF, #prev_GdT, #next_GdT{
+    width: 40px; /* Imposta la larghezza del bottone */
+    height: 40px; /* Imposta l'altezza del bottone */
+    border-radius: 50%; /* Rende il bottone circolare */
+    border: 2px solid black; /* Opzionale: Imposta il bordo del bottone */
+    background-color: lightgray; /* Opzionale: Imposta il colore di sfondo */
+    color: black; /* Imposta il colore del testo o dell'icona */
+    font-size: 15px; /* Imposta la dimensione del testo o dell'icona */
+    line-height: 36px;
+    text-align: center;
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+}
+
+/* stile per il bottone che torna su */
+#tornaSu {
+    width:50px;
+    height:50px;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: #f7b544;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+/* stile per il footer */
+footer{
+    font-family: 'Press Start 2P';
+    color: #f7b544;
+}
+
+#info ul{
+    font-size: 15px;
+    list-style-type: none;
+}
+
+#info li a:link{
+    color: #f7b544; /* cambia colore di base del link*/
+}
+
+#info li a:hover {
+    color: red; /* Cambia colore del testo al passaggio del mouse */
+}
