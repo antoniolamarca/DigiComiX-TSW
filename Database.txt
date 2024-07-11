@@ -1,0 +1,114 @@
+drop database Digicomix;
+create database Digicomix;
+use Digicomix;
+
+
+CREATE TABLE ACCOUNT_UTENTE (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(50),
+    Cognome VARCHAR(50),
+    Email VARCHAR(100),
+    Passkey VARCHAR(100),
+    Tipo VARCHAR(20)
+);
+
+CREATE TABLE CARRELLO (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    NumeroArticoli INT,
+    AccountId INT,
+    FOREIGN KEY (AccountId) REFERENCES ACCOUNT_UTENTE(Id)
+);
+
+CREATE TABLE ORDINE (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Data_ordine DATE,
+    Indirizzo VARCHAR(200),
+    CarrelloId INT,
+    FOREIGN KEY (CarrelloId) REFERENCES CARRELLO(Id)
+);
+
+CREATE TABLE WISHLIST (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    NumeroArticoli INT,
+    AccountId INT,
+    FOREIGN KEY (AccountId) REFERENCES ACCOUNT_UTENTE(Id)
+);
+
+CREATE TABLE ARTICOLO (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(100),
+    Prezzo DECIMAL(10, 2),
+    Tipo VARCHAR(50),
+    Quantità INT
+);
+
+CREATE TABLE OFFERTA (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Tipo VARCHAR(50),
+    Percentuale DECIMAL(5, 2),
+    DataScadenza DATE,
+    ArticoloId INT,
+    FOREIGN KEY (ArticoloId) REFERENCES ARTICOLO(Id)
+);
+
+CREATE TABLE CONTENERE (
+    CarrelloId INT,
+    ArticoloId INT,
+    PRIMARY KEY (CarrelloId, ArticoloId),
+    FOREIGN KEY (CarrelloId) REFERENCES CARRELLO(Id),
+    FOREIGN KEY (ArticoloId) REFERENCES ARTICOLO(Id)
+);
+
+CREATE TABLE INSERIRE (
+    WishlistId INT,
+    ArticoloId INT,
+    PRIMARY KEY (WishlistId, ArticoloId),
+    FOREIGN KEY (WishlistId) REFERENCES WISHLIST(Id),
+    FOREIGN KEY (ArticoloId) REFERENCES ARTICOLO(Id)
+);
+
+
+-- Popolamento della tabella ACCOUNT
+INSERT INTO ACCOUNT_UTENTE (Nome, Cognome, Email, Passkey, Tipo) VALUES
+('Mario', 'Rossi', 'mario.rossi@gmail.com', 'password123', 'Admin'),
+('Luigi', 'Verdi', 'luigi.verdi@gmail.com', 'password456', 'Cliente'),
+('Anna', 'Bianchi', 'anna.bianchi@gmail.com', 'password789', 'Cliente');
+
+-- Popolamento della tabella CARRELLO
+INSERT INTO CARRELLO (NumeroArticoli, AccountId) VALUES
+(3, 1),
+(2, 2);
+
+-- Popolamento della tabella ORDINE
+INSERT INTO ORDINE (Data_ordine, Indirizzo, CarrelloId) VALUES
+('2023-06-15', 'Via Roma 1, Roma', 1),
+('2023-06-16', 'Corso Italia 5, Milano', 2);
+
+-- Popolamento della tabella WISHLIST
+INSERT INTO WISHLIST (NumeroArticoli, AccountId) VALUES
+(5, 1),
+(3, 3);
+
+-- Popolamento della tabella ARTICOLO
+INSERT INTO ARTICOLO (Nome, Prezzo, Tipo, Quantità) VALUES
+('Berserk vol.1', 5.00, 'manga', 10),
+('Magic outlaws of thunder junction box', 80.00, 'tcg', 20),
+('Mordekainens Monsters of the multiverse', 59.99, 'libro', 30);
+
+-- Popolamento della tabella OFFERTA
+INSERT INTO OFFERTA (Tipo, Percentuale, DataScadenza, ArticoloId) VALUES
+('Sconto', 10.00, '2023-07-01', 1),
+('Sconto', 15.00, '2023-07-15', 2);
+
+-- Popolamento della tabella CONTENERE
+INSERT INTO CONTENERE (CarrelloId, ArticoloId) VALUES
+(1, 1),
+(1, 2),
+(2, 2),
+(2, 3);
+
+-- Popolamento della tabella WISHLIST_ARTICOLO
+INSERT INTO INSERIRE (WishlistId, ArticoloId) VALUES
+(1, 1),
+(1, 3),
+(2, 2);
