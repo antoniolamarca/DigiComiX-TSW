@@ -4,6 +4,6 @@
     <title>Carrello - DigiComiX</title>
 </head>
 <body>
-
+<%@include file="Footer.jsp" %>
 </body>
 </html>
