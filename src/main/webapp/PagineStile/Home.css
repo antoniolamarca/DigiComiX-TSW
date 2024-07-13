@@ -290,3 +290,9 @@ footer{
 #info li a:hover {
     color: red; /* Cambia colore del testo al passaggio del mouse */
 }
+
+.titolo a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #f7b544
+}

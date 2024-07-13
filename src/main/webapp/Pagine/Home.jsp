@@ -25,8 +25,8 @@
             <li><a href="../Pagine/GdT.jsp">Giochi da Tavolo</a></li>
         </ul>
     </div>
-    <div id="novita">
-        <h1>NOVITÀ</h1>
+    <div id="novita" class="titolo">
+        <a href="../Pagine/Novità.jsp"><h1>NOVITÀ</h1></a>
     </div>
     <div id="slider_novita">
         <button id="prev_novita">Prev</button>
@@ -37,8 +37,8 @@
         <img alt="Shaman King Vol.1" src="../Immagini/Articoli/ShamanCop.jpg">
         <button id="next_novita">Next</button>
     </div>
-    <div id="sconti">
-        <h1>SCONTI</h1>
+    <div id="sconti" class="titolo">
+        <a href="../Pagine/Sconti.jsp"><h1>SCONTI</h1></a>
     </div>
     <div id="slider_sconti">
         <button id="prev_sconti">Prev</button>
@@ -49,8 +49,8 @@
         <img alt="Shaman King Vol.1" src="../Immagini/Articoli/ShamanCop.jpg">
         <button id="next_sconti">Next</button>
     </div>
-    <div id="TCG">
-        <h1>Trading Card Games</h1>
+    <div id="TCG" class="titolo">
+        <a href="../Pagine/TCG.jsp"><h1>TRADING CARD GAMES</h1></a>
     </div>
     <div id="slider_TCG">
         <button id="prev_TCG">Prev</button>
@@ -61,8 +61,8 @@
         <img alt="Shaman King Vol.1" src="../Immagini/Articoli/ShamanCop.jpg">
         <button id="next_TCG">Next</button>
     </div>
-    <div id="GAF">
-        <h1>GADGETS & ACTION FIGURES</h1>
+    <div id="GAF" class="titolo">
+        <a href="../Pagine/Gadgets.jsp"><h1>GADGETS & ACTION FIGURES</h1></a>
     </div>
     <div id="slider_GAF">
         <button id="prev_GAF">Prev</button>
@@ -73,8 +73,8 @@
         <img alt="Shaman King Vol.1" src="../Immagini/Articoli/ShamanCop.jpg">
         <button id="next_GAF">Next</button>
     </div>
-    <div id="GdT">
-        <h1>GIOCHI DA TAVOLO</h1>
+    <div id="GdT" class="titolo">
+        <a href="../Pagine/GdT.jsp"><h1>GIOCHI DA TAVOLO</h1></a>
     </div>
     <div id="slider_GdT">
         <button id="prev_GdT">Prev</button>

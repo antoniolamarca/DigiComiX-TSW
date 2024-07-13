@@ -20,40 +20,23 @@
     %>
     <h1><%= message %></h1>
 
-    <div id="azioni">
-        <div id="registrazione">
-            <form action="reg" method="post">
-                <h1>Registrati subito</h1>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-
-                <label for="cognome">Cognome:</label>
-                <input type="text" id="cognome" name="cognome" required >
-
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required placeholder="Es. abcd1234@gmail.com">
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-
-                <input type="submit" value="Registrati">
-            </form>
-        </div>
-        <div id="login">
-            <h1>Accedi</h1>
-            <form action="login" method="post">
-                <label for="username">Username:</label>
-                <input type="text" id="user_log" name="username" required>
-
-                <label for="password">Password:</label>
-                <input type="password" id="pass_log" name="password" required>
-
-                <input type="submit" value="Login">
-            </form>
-        </div>
+    <div id="login">
+        <h1>Accedi</h1>
+        <form method="post">
+            <ul>
+                <li>
+                    <label for="username">Username:</label>
+                    <input type="text" id="user_log" name="username" required>
+                </li>
+                <li>
+                    <label for="password">Password:</label>
+                    <input type="password" id="pass_log" name="password" required>
+                </li>
+                <li>
+                    <input type="submit" value="Login">
+                </li>
+            </ul>
+        </form>
     </div>
 </body>
 </html>
