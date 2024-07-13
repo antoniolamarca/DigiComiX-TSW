@@ -12,5 +12,6 @@
         <img alt="BoxMagic" src="../Immagini/Articoli/BoxMagic.png">
         <img alt="Berserk" src="../Immagini/Articoli/BerserkCop.jpg">
     </div>
+    <%@include file="Footer.jsp" %>
 </body>
 </html>

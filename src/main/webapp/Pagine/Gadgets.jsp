@@ -4,6 +4,6 @@
     <title>Gadgets & Action figures - DigiComiX</title>
 </head>
 <body>
-
+<%@include file="Footer.jsp" %>
 </body>
 </html>

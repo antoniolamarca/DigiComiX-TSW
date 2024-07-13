@@ -4,6 +4,6 @@
     <title>Giochi da tavolo - DigiComiX</title>
 </head>
 <body>
-
+<%@include file="Footer.jsp" %>
 </body>
 </html>
