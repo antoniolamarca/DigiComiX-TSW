@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="../PagineStile/Login.css">
 </head>
 <body>
+<%@include file="header.jsp" %>
     <h1>Registrati subito</h1>
     <div id="registrazione">
         <form method="post">

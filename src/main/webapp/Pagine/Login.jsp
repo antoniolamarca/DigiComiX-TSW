@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../PagineStile/Login.css">
 </head>
 <body>
+<%@include file="header.jsp" %>
     <%
         LocalTime now = LocalTime.now();
         String message;
@@ -26,18 +27,20 @@
             <ul>
                 <li>
                     <label for="username">Username:</label>
-                    <input type="text" id="user_log" name="username" required>
+                    <input type="text" id="username" name="username" required>
                 </li>
                 <li>
                     <label for="password">Password:</label>
-                    <input type="password" id="pass_log" name="password" required>
+                    <input type="password" id="password" name="password" required>
                 </li>
                 <li>
                     <input type="submit" value="Login">
                 </li>
             </ul>
         </form>
+        <p>Non sei registrato? <a href="Registrazione.jsp">Registrati qui</a></p>
     </div>
+
     <%@include file="Footer.jsp" %>
 </body>
 </html>

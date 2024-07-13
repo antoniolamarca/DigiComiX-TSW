@@ -45,15 +45,21 @@ body h1{
 
 #login ul{
     list-style-type: none;
-    padding: 0;
+    padding: 10px;
 }
 
 #login ul li{
     margin: 10px;
+    padding: 10px;
 }
 
 #login ul li input[type="text"]{
     display: block;
     margin: auto;
     width: 50%;
+}
+
+#login a {
+    color: #f7b544; /* Cambia questo colore secondo le tue preferenze */
+    text-decoration: none;
 }
