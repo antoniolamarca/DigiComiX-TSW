@@ -1,10 +1,21 @@
 package Controller.Utente;
 
+import Model.Utente.UtenteBean;
+import Model.Utente.UtenteDAO;
+
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet("/ACCOUNT_UTENTE")
+import javax.*;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/AddUtente")
 public class UtenteServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private UtenteDAO utenteDAO;
@@ -32,7 +43,7 @@ public class UtenteServlet extends HttpServlet {
                     showNewForm(request, response);
                     break;
                 case "/insert":
-                    insertUtente(request, response);
+                    insertUtente();
                     break;
                 case "/delete":
                     deleteUtente(request, response);
