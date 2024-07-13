@@ -1,0 +1,20 @@
+body{
+    background-color: #1b74b0;
+}
+
+body h1{
+    text-align: center;
+}
+
+#azioni{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+}
+
+#registrazione, login{
+    width: 45%;
+    margin: 10px;
+}

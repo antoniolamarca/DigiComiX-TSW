@@ -1,4 +1,4 @@
-package Controller.Utente;
+/* package Controller.Utente;
 
 import Model.Utente.UtenteBean;
 import Model.Utente.UtenteDAO;
@@ -86,4 +86,4 @@ public class UtenteServlet extends HttpServlet {
         dispatcher.forward(request, response);
     }
 
-}
+} */

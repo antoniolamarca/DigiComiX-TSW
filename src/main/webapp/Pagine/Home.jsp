@@ -3,26 +3,26 @@
 <html>
 <head>
     <title>Home - DigiComiX</title>
-    <link rel="stylesheet" type="text/css" href="Home.css">
+    <link rel="stylesheet" type="text/css" href="../PagineStile/Home.css">
 </head>
 <body>
     <div id="benvenuto">
-        <img id="menuToggle" alt="Logo" src="Immagini/Logo.png">
+        <img id="menuToggle" alt="Logo" src="../Immagini/Logo.png">
         <h1>Benvenuto User!</h1>
         <a href="Carrello.jsp">
-            <img alt="carrello" src="Immagini/Icone/Carrello.png" class="icone">
+            <img alt="carrello" src="../Immagini/Icone/Carrello.png" class="icone">
         </a>
-        <img alt="profilo" src="Immagini/Icone/Profilo.png" class="icone">
+        <img alt="profilo" src="../Immagini/Icone/Profilo.png" class="icone">
     </div>
     <div id="sideMenu" class="side-menu">
-        <img alt="Logo" src="Immagini/Logo.png">
+        <img alt="Logo" src="../Immagini/Logo.png">
         <span id="closeMenu">&times;</span>
         <ul>
-            <li><a href="Novità.jsp">Novità</a></li>
-            <li><a href="Sconti.jsp">Sconti</a></li>
-            <li><a href="TCG.jsp">Trading Card Games</a></li>
-            <li><a href="Gadgets.jsp">Gadgets & Action figures</a></li>
-            <li><a href="GdT.jsp">Giochi da Tavolo</a></li>
+            <li><a href="../Pagine/Novità.jsp">Novità</a></li>
+            <li><a href="../Pagine/Sconti.jsp">Sconti</a></li>
+            <li><a href="../Pagine/TCG.jsp">Trading Card Games</a></li>
+            <li><a href="../Pagine/Gadgets.jsp">Gadgets & Action figures</a></li>
+            <li><a href="../Pagine/GdT.jsp">Giochi da Tavolo</a></li>
         </ul>
     </div>
     <div id="novita">
@@ -30,11 +30,11 @@
     </div>
     <div id="slider_novita">
         <button id="prev_novita">Prev</button>
-        <img alt="Berserk Vol.1" src="Immagini/Articoli/BerserkCop.jpg">
-        <img alt="ChainsawMan Vol.1" src="Immagini/Articoli/CopChainsawMan.jpg">
-        <img alt="Darling In The FranXX Vol.1" src="Immagini/Articoli/DarlingXX.jpg">
-        <img alt="DragonBall Vol.1" src="Immagini/Articoli/DragonBallCop.jpg">
-        <img alt="Shaman King Vol.1" src="Immagini/Articoli/ShamanCop.jpg">
+        <img alt="Berserk Vol.1" src="../Immagini/Articoli/BerserkCop.jpg">
+        <img alt="ChainsawMan Vol.1" src="../Immagini/Articoli/CopChainsawMan.jpg">
+        <img alt="Darling In The FranXX Vol.1" src="../Immagini/Articoli/DarlingXX.jpg">
+        <img alt="DragonBall Vol.1" src="../Immagini/Articoli/DragonBallCop.jpg">
+        <img alt="Shaman King Vol.1" src="../Immagini/Articoli/ShamanCop.jpg">
         <button id="next_novita">Next</button>
     </div>
     <div id="sconti">
@@ -42,11 +42,11 @@
     </div>
     <div id="slider_sconti">
         <button id="prev_sconti">Prev</button>
-        <img alt="Berserk Vol.1" src="Immagini/Articoli/BerserkCop.jpg">
-        <img alt="ChainsawMan Vol.1" src="Immagini/Articoli/CopChainsawMan.jpg">
-        <img alt="Darling In The FranXX Vol.1" src="Immagini/Articoli/DarlingXX.jpg">
-        <img alt="DragonBall Vol.1" src="Immagini/Articoli/DragonBallCop.jpg">
-        <img alt="Shaman King Vol.1" src="Immagini/Articoli/ShamanCop.jpg">
+        <img alt="Berserk Vol.1" src="../Immagini/Articoli/BerserkCop.jpg">
+        <img alt="ChainsawMan Vol.1" src="../Immagini/Articoli/CopChainsawMan.jpg">
+        <img alt="Darling In The FranXX Vol.1" src="../Immagini/Articoli/DarlingXX.jpg">
+        <img alt="DragonBall Vol.1" src="../Immagini/Articoli/DragonBallCop.jpg">
+        <img alt="Shaman King Vol.1" src="../Immagini/Articoli/ShamanCop.jpg">
         <button id="next_sconti">Next</button>
     </div>
     <div id="TCG">
@@ -54,11 +54,11 @@
     </div>
     <div id="slider_TCG">
         <button id="prev_TCG">Prev</button>
-        <img alt="Berserk Vol.1" src="Immagini/Articoli/BerserkCop.jpg">
-        <img alt="ChainsawMan Vol.1" src="Immagini/Articoli/CopChainsawMan.jpg">
-        <img alt="Darling In The FranXX Vol.1" src="Immagini/Articoli/DarlingXX.jpg">
-        <img alt="DragonBall Vol.1" src="Immagini/Articoli/DragonBallCop.jpg">
-        <img alt="Shaman King Vol.1" src="Immagini/Articoli/ShamanCop.jpg">
+        <img alt="Berserk Vol.1" src="../Immagini/Articoli/BerserkCop.jpg">
+        <img alt="ChainsawMan Vol.1" src="../Immagini/Articoli/CopChainsawMan.jpg">
+        <img alt="Darling In The FranXX Vol.1" src="../Immagini/Articoli/DarlingXX.jpg">
+        <img alt="DragonBall Vol.1" src="../Immagini/Articoli/DragonBallCop.jpg">
+        <img alt="Shaman King Vol.1" src="../Immagini/Articoli/ShamanCop.jpg">
         <button id="next_TCG">Next</button>
     </div>
     <div id="GAF">
@@ -66,11 +66,11 @@
     </div>
     <div id="slider_GAF">
         <button id="prev_GAF">Prev</button>
-        <img alt="Berserk Vol.1" src="Immagini/Articoli/BerserkCop.jpg">
-        <img alt="ChainsawMan Vol.1" src="Immagini/Articoli/CopChainsawMan.jpg">
-        <img alt="Darling In The FranXX Vol.1" src="Immagini/Articoli/DarlingXX.jpg">
-        <img alt="DragonBall Vol.1" src="Immagini/Articoli/DragonBallCop.jpg">
-        <img alt="Shaman King Vol.1" src="Immagini/Articoli/ShamanCop.jpg">
+        <img alt="Berserk Vol.1" src="../Immagini/Articoli/BerserkCop.jpg">
+        <img alt="ChainsawMan Vol.1" src="../Immagini/Articoli/CopChainsawMan.jpg">
+        <img alt="Darling In The FranXX Vol.1" src="../Immagini/Articoli/DarlingXX.jpg">
+        <img alt="DragonBall Vol.1" src="../Immagini/Articoli/DragonBallCop.jpg">
+        <img alt="Shaman King Vol.1" src="../Immagini/Articoli/ShamanCop.jpg">
         <button id="next_GAF">Next</button>
     </div>
     <div id="GdT">
@@ -78,11 +78,11 @@
     </div>
     <div id="slider_GdT">
         <button id="prev_GdT">Prev</button>
-        <img alt="Berserk Vol.1" src="Immagini/Articoli/BerserkCop.jpg">
-        <img alt="ChainsawMan Vol.1" src="Immagini/Articoli/CopChainsawMan.jpg">
-        <img alt="Darling In The FranXX Vol.1" src="Immagini/Articoli/DarlingXX.jpg">
-        <img alt="DragonBall Vol.1" src="Immagini/Articoli/DragonBallCop.jpg">
-        <img alt="Shaman King Vol.1" src="Immagini/Articoli/ShamanCop.jpg">
+        <img alt="Berserk Vol.1" src="../Immagini/Articoli/BerserkCop.jpg">
+        <img alt="ChainsawMan Vol.1" src="../Immagini/Articoli/CopChainsawMan.jpg">
+        <img alt="Darling In The FranXX Vol.1" src="../Immagini/Articoli/DarlingXX.jpg">
+        <img alt="DragonBall Vol.1" src="../Immagini/Articoli/DragonBallCop.jpg">
+        <img alt="Shaman King Vol.1" src="../Immagini/Articoli/ShamanCop.jpg">
         <button id="next_GdT">Next</button>
     </div>
 
