@@ -1,4 +1,4 @@
-drop database Digicomix;
+drop database if exists Digicomix;
 create database Digicomix;
 use Digicomix;
 
