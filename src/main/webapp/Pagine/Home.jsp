@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Home - DigiComiX</title>
-    <link rel="stylesheet" type="text/css" href="../PagineStile/Home.css">
+    <link rel="stylesheet" type="text/css" href="../PagineStile/Home.css?=v1.1">
 </head>
 <body>
     <div id="benvenuto">
