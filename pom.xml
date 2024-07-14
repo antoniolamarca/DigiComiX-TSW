@@ -36,6 +36,12 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-jdbc</artifactId>
+            <version>10.1.0-M10</version> <!-- Assicurati di utilizzare una versione appropriata -->
+        </dependency>
+
     </dependencies>
 
     <build>

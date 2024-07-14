@@ -8,7 +8,7 @@
 <%@include file="header.jsp" %>
     <h1>Registrati subito</h1>
     <div id="registrazione">
-        <form method="post">
+        <form method="POST" action="${pageContext.request.contextPath}/registerUser">
             <ul>
                 <li>
                     <label for="nome">Nome:</label>

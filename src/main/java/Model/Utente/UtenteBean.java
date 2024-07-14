@@ -1,20 +1,15 @@
 package Model.Utente;
 
-import java.io.Serializable;
+public class UtenteBean {
 
-public class UtenteBean implements Serializable {
     private int id;
     private String nome;
     private String cognome;
     private String email;
-    private String passkey;
+    private String password;
     private String tipo;
 
-    // Costruttore senza argomenti
-    public UtenteBean() {
-    }
 
-    // Getter e Setter per ogni campo
     public int getId() {
         return id;
     }
@@ -47,12 +42,12 @@ public class UtenteBean implements Serializable {
         this.email = email;
     }
 
-    public String getPasskey() {
-        return passkey;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPasskey(String passkey) {
-        this.passkey = passkey;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getTipo() {
