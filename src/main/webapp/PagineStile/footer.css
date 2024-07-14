@@ -6,4 +6,10 @@ footer {
     text-align: left;
     padding: 10px 0;
     font-family: 'Press Start 2P';
+    text-decoration: none;
 }
+footer #info ul li a {
+    text-decoration: none !important;
+    color: #f7b544;
+}
+

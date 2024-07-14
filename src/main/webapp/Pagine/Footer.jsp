@@ -2,7 +2,7 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 
-<link rel="stylesheet" type="text/css" href="../PagineStile/footer.css">
+<link rel="stylesheet" type="text/css" href="../PagineStile/footer.css?version=1.1">
 <footer>
     <div id="info">
         <ul>
