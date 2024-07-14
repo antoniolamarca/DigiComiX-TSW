@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Login - DigiComiX</title>
-    <link rel="stylesheet" type="text/css" href="../PagineStile/Login.css">
+    <link rel="stylesheet" type="text/css" href="../PagineStile/Login.css?version=1.1">
 </head>
 <body>
 <%@include file="header.jsp" %>
@@ -26,8 +26,8 @@
         <form method="post">
             <ul>
                 <li>
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" required>
+                    <label for="email">Username:</label>
+                    <input type="text" id="email" name="email" required>
                 </li>
                 <li>
                     <label for="password">Password:</label>
