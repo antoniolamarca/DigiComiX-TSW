@@ -1,7 +1,8 @@
 package Controller.Utente;
 
 import Model.Utente.UtenteBean;
-import Model.UtenteDao;
+import Model.Utente.UtenteDao;
+
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

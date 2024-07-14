@@ -1,6 +1,7 @@
-package Model;
+package Model.Utente;
 
 
+import Model.DriverManagerConnectionPool;
 import Model.Utente.UtenteBean;
 
 import java.sql.Connection;
