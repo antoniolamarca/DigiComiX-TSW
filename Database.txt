@@ -17,6 +17,7 @@ CREATE TABLE ORDINE (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     Data_ordine DATE,
     Indirizzo VARCHAR(200)
+    Prodotti_ordinati(1000)
 );
 
 CREATE TABLE WISHLIST (
