@@ -7,8 +7,9 @@ body{
     align-items: center;
     background-color: #1b74b0;
     height: 100vh;
-    font-family: 'Press Start 2P';
+    font-family: 'Press Start 2P', serif;
     color: #f7b544;
+    padding-bottom: 120px;
 }
 
 body h1{
@@ -39,6 +40,31 @@ body h1{
     width: 50%;
 }
 
+#registrazione ul li input[type="password"]{
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+#registrazione ul li input[type="email"]{
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+#btnReg, #btnLogin{
+    background-color: red;
+    border: none;
+    color: #f7b544;
+    font-family: 'Press Start 2P', serif;
+    width: 250px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
 #login{
     text-align: center;
 }
@@ -59,7 +85,17 @@ body h1{
     width: 50%;
 }
 
+#login ul li input[type="password"]{
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
 #login a {
     color: #f7b544;
     text-decoration: none;
+}
+
+#login a:hover {
+    color: red;
 }

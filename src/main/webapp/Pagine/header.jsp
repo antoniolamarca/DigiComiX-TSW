@@ -4,8 +4,8 @@
     <link rel="stylesheet" type="text/css" href="../PagineStile/header.css">
 </head>
 <body>
-<a href="Home.jsp">
-<img src="../Immagini/Logo.png">
-</a>
+    <a href="Home.jsp">
+        <img alt="Logo" src="../Immagini/Logo.png">
+    </a>
 </body>
 </html>

@@ -18,8 +18,6 @@
                     <label for="cognome">Cognome:</label>
                     <input type="text" id="cognome" name="cognome" required>
                 </li>
-
-
                 <li>
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required placeholder="Es. abcd1234@gmail.com">
@@ -29,7 +27,7 @@
                     <input type="password" id="password" name="password" required>
                 </li>
                 <li>
-                    <input type="submit" value="Registrati">
+                    <input type="submit" value="Registrati" id="btnReg">
                 </li>
             </ul>
         </form>

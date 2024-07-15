@@ -1,15 +1,25 @@
 @import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
+
 footer {
     width: 100%;
     background-color: #1b74b0;
     color: #f7b544;
     text-align: left;
     padding: 10px 0;
-    font-family: 'Press Start 2P';
+    font-family: 'Press Start 2P', serif;
     text-decoration: none;
 }
-footer #info ul li a {
+
+#info ul{
+    list-style-type: none;
+}
+
+#info ul li a {
     text-decoration: none !important;
     color: #f7b544;
+}
+
+#info ul li a:hover {
+    color: red;
 }
 
