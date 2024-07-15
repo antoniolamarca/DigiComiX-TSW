@@ -12,7 +12,16 @@
         <a href="Carrello.jsp">
             <img alt="carrello" src="../Immagini/Icone/Carrello.png" class="icone">
         </a>
-        <img alt="profilo" src="../Immagini/Icone/Profilo.png" class="icone">
+        <div class="iconaProfilo">
+            <img alt="profilo" src="../Immagini/Icone/Profilo.png" class="icone">
+            <div class="menu-profilo">
+                <ul>
+                    <li><a href="../Pagine/Novità.jsp">Profilo</a></li>
+                    <li><a href="../Pagine/Sconti.jsp">Wishlist</a></li>
+                    <li><p>LOGOUT</p></li>
+                </ul>
+            </div>
+        </div>
     </div>
     <div id="sideMenu" class="side-menu">
         <img alt="Logo" src="../Immagini/Logo.png">
