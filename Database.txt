@@ -16,8 +16,8 @@ CREATE TABLE ACCOUNT_UTENTE (
 CREATE TABLE ORDINE (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     Data_ordine DATE,
-    Indirizzo VARCHAR(200)
-    Prodotti_ordinati(1000)
+    Indirizzo VARCHAR(200),
+    Prodotti_ordinati VARCHAR(1000)
 );
 
 CREATE TABLE WISHLIST (
@@ -62,9 +62,9 @@ INSERT INTO ACCOUNT_UTENTE (Nome, Cognome, Email, Passkey, Tipo) VALUES
 ('Anna', 'Bianchi', 'anna.bianchi@gmail.com', 'password789', 'Cliente');
 
 -- Popolamento della tabella ORDINE
-INSERT INTO ORDINE (Data_ordine, indirizzo) VALUES
-('2023-06-15', 'Via Roma 1, Roma'),
-('2023-06-16', 'Corso Italia 5, Milano');
+INSERT INTO ORDINE (Data_ordine, indirizzo, Prodotti_ordinati) VALUES
+('2023-06-15', 'Via Roma 1, Roma', 'manga'),
+('2023-06-16', 'Corso Italia 5, Milano', 'tcg');
 
 -- Popolamento della tabella WISHLIST
 INSERT INTO WISHLIST (NumeroArticoli, AccountId) VALUES
