@@ -1,4 +1,4 @@
-package Controller.Prodotto;
+/*package Controller.Prodotto;
 
 import Model.Carrello.Cart;
 import Model.Utente.UtenteBean;
@@ -30,4 +30,4 @@ public class AggiungiACarrello extends HttpServlet {
             response.sendRedirect("Pagine/Login.jsp");
         }
     }
-}
+}*/
