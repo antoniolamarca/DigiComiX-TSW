@@ -27,10 +27,12 @@
                     <input type="password" id="password" name="password" required>
                 </li>
                 <li>
-                    <input type="submit" value="Registrati" id="btnReg">
+                    <input type="submit" value="Registrati" id="btnReg" disabled>
                 </li>
             </ul>
+            <script src="../script/Registervalidation.js"></script>
         </form>
+
     </div>
     <%@include file="Footer.jsp" %>
 </body>
