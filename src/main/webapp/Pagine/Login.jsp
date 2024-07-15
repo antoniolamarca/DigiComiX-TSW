@@ -23,7 +23,7 @@
 
         <div id="login">
             <h1>Accedi</h1>
-            <form method="post">
+            <form method="post" action="${pageContext.request.contextPath}/LoginUser">
                 <ul>
                     <li>
                         <label for="email">Email:</label>

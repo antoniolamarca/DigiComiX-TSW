@@ -8,7 +8,7 @@
 <body>
     <div id="benvenuto">
         <img id="menuToggle" alt="Logo" src="../Immagini/Logo.png">
-        <h1>Benvenuto User!</h1>
+        <h1>Benvenuto ${sessionScope.nome}</h1>
         <a href="Carrello.jsp">
             <img alt="carrello" src="../Immagini/Icone/Carrello.png" class="icone">
         </a>
