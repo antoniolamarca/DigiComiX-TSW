@@ -30,6 +30,15 @@
     <p><%=articolo.getDescrizione()%></p>
     <span><%=articolo.getPrezzo()%></span>
 </div>
+<div id="carrello" class="carrello-container">
+    <form action="Carrello" method="post">
+        <input type="hidden" name="id" value="<%=articolo.getId()%>">
+        <input type="hidden" name="nome" value="<%=articolo.getNome()%>">
+        <input type="hidden" name="prezzo" value="<%=articolo.getPrezzo()%>">
+        <input type="submit" value="Aggiungi al carrello">
+    </form>
+</div>
+
 
 <div>
  <%@include file="Footer.jsp"%>

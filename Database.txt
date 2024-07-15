@@ -9,22 +9,15 @@ CREATE TABLE ACCOUNT_UTENTE (
     Cognome VARCHAR(50),
     Email VARCHAR(100),
     Passkey VARCHAR(100),
-    Tipo VARCHAR(20)
-);
-
-CREATE TABLE CARRELLO (
-    Id INT AUTO_INCREMENT PRIMARY KEY,
-    NumeroArticoli INT,
-    AccountId INT,
-    FOREIGN KEY (AccountId) REFERENCES ACCOUNT_UTENTE(Id)
+    Tipo VARCHAR(20),
+    Carrello VARCHAR(1000)    
 );
 
 CREATE TABLE ORDINE (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     Data_ordine DATE,
     Indirizzo VARCHAR(200),
-    CarrelloId INT,
-    FOREIGN KEY (CarrelloId) REFERENCES CARRELLO(Id)
+    Prodotti_ordinati VARCHAR(1000)
 );
 
 CREATE TABLE WISHLIST (
@@ -52,13 +45,6 @@ CREATE TABLE OFFERTA (
     FOREIGN KEY (ArticoloId) REFERENCES ARTICOLO(Id)
 );
 
-CREATE TABLE CONTENERE (
-    CarrelloId INT,
-    ArticoloId INT,
-    PRIMARY KEY (CarrelloId, ArticoloId),
-    FOREIGN KEY (CarrelloId) REFERENCES CARRELLO(Id),
-    FOREIGN KEY (ArticoloId) REFERENCES ARTICOLO(Id)
-);
 
 CREATE TABLE INSERIRE (
     WishlistId INT,
@@ -75,15 +61,10 @@ INSERT INTO ACCOUNT_UTENTE (Nome, Cognome, Email, Passkey, Tipo) VALUES
 ('Luigi', 'Verdi', 'luigi.verdi@gmail.com', 'password456', 'Cliente'),
 ('Anna', 'Bianchi', 'anna.bianchi@gmail.com', 'password789', 'Cliente');
 
--- Popolamento della tabella CARRELLO
-INSERT INTO CARRELLO (NumeroArticoli, AccountId) VALUES
-(3, 1),
-(2, 2);
-
 -- Popolamento della tabella ORDINE
-INSERT INTO ORDINE (Data_ordine, Indirizzo, CarrelloId) VALUES
-('2023-06-15', 'Via Roma 1, Roma', 1),
-('2023-06-16', 'Corso Italia 5, Milano', 2);
+INSERT INTO ORDINE (Data_ordine, indirizzo, Prodotti_ordinati) VALUES
+('2023-06-15', 'Via Roma 1, Roma', 'manga'),
+('2023-06-16', 'Corso Italia 5, Milano', 'tcg');
 
 -- Popolamento della tabella WISHLIST
 INSERT INTO WISHLIST (NumeroArticoli, AccountId) VALUES
@@ -100,13 +81,6 @@ INSERT INTO ARTICOLO (Nome, Prezzo, Tipo, Descrizione, Quantità) VALUES
 INSERT INTO OFFERTA (Tipo, Percentuale, DataScadenza, ArticoloId) VALUES
 ('Sconto', 10.00, '2023-07-01', 1),
 ('Sconto', 15.00, '2023-07-15', 2);
-
--- Popolamento della tabella CONTENERE
-INSERT INTO CONTENERE (CarrelloId, ArticoloId) VALUES
-(1, 1),
-(1, 2),
-(2, 2),
-(2, 3);
 
 -- Popolamento della tabella WISHLIST_ARTICOLO
 INSERT INTO INSERIRE (WishlistId, ArticoloId) VALUES

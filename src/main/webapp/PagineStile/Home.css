@@ -117,16 +117,16 @@ body{
 }
 
 #sideMenu li a {
-    text-decoration: none; /* Rimuove il sottolineato dai link */
-    color: #f7b544; /* Imposta il colore del testo */
-    display: block; /* Fa sì che i link occupino l'intera larghezza del li */
+    text-decoration: none;
+    color: #f7b544;
+    display: block;
 }
 
 #sideMenu li a:hover {
-    color: red; /* Cambia colore del testo al passaggio del mouse */
+    color: red;
 }
 
-/* stile per lo slider di immagini delle novità */
+/*  */
 #novita{
     background-color: white;
     justify-content: center;
@@ -139,23 +139,7 @@ body{
     border-top-right-radius: 25px;
 }
 
-#slider_novita{
-    background-color: white;
-    width: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-}
-
-#slider_novita img{
-    height: 200px;
-    width: 150px;
-    margin: 15px;
-}
-
-/* stile per lo slider di immagini degli sconti */
+/* stile per i titoli degli slider */
 #sconti, #TCG, #GAF, #GdT{
     background-color: white;
     justify-content: center;
@@ -169,7 +153,8 @@ body{
     border-top-right-radius: 25px;
 }
 
-#slider_sconti{
+/* stile per gli slider delle immagini di ogni categoria */
+#slider_novita, #slider_sconti, #slider_TCG, #slider_GAF, #slider_GdT{
     background-color: white;
     width: 100%;
     margin: auto;
@@ -179,74 +164,30 @@ body{
     border-bottom-right-radius: 25px;
 }
 
-#slider_sconti img{
+/* stile per le foto degli slider */
+#slider_novita img, #slider_sconti img, #slider_TCG img, #slider_GAF img, #slider_GdT img{
     height: 200px;
     width: 150px;
     margin: 15px;
 }
 
-/* stile per lo slider per i giochi di carte*/
-#slider_TCG{
-    background-color: white;
-    width: 100%;
-    margin: auto;
+/* stile per i bottoni destra e sinistra degli slider */
+#left_novita, #right_novita, #left_sconti, #right_sconti, #left_TCG, #right_TCG, #left_GAF, #right_GAF, #left_GdT, #right_GdT{
     display: flex;
     justify-content: center;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    margin-top: 75px;
 }
 
-#slider_TCG img{
-    height: 200px;
-    width: 150px;
-    margin: 15px;
-}
-
-/* stile per lo slider per gadgets & action figures */
-#slider_GAF{
-    background-color: white;
-    width: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-}
-
-#slider_GAF img{
-    height: 200px;
-    width: 150px;
-    margin: 15px;
-}
-
-/* stile per lo slider per i giochi da tavolo */
-#slider_GdT{
-    background-color: white;
-    width: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-}
-
-#slider_GdT img{
-    height: 200px;
-    width: 150px;
-    margin: 15px;
-}
-
+/* stile per i bottoni degli slider */
 #prev_novita, #next_novita, #prev_sconti, #next_sconti, #prev_TCG, #next_TCG, #prev_GAF, #next_GAF, #prev_GdT, #next_GdT{
-    width: 40px; /* Imposta la larghezza del bottone */
-    height: 40px; /* Imposta l'altezza del bottone */
-    border-radius: 50%; /* Rende il bottone circolare */
-    border: 2px solid black; /* Opzionale: Imposta il bordo del bottone */
-    background-color: lightgray; /* Opzionale: Imposta il colore di sfondo */
-    color: black; /* Imposta il colore del testo o dell'icona */
-    font-size: 15px; /* Imposta la dimensione del testo o dell'icona */
+    width: 40px !important;
+    height: 40px !important;
+    border: none !important;
+    border-radius: 5px !important;
+    font-size: 15px;
     line-height: 36px;
     text-align: center;
-    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    cursor: pointer;
 }
 
 /* stile per il bottone che torna su */

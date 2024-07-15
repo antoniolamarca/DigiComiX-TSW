@@ -4,9 +4,12 @@
     <head>
         <title>Login - DigiComiX</title>
         <link rel="stylesheet" type="text/css" href="../PagineStile/Login.css?version=1.1">
+        <script src="../script/Loginvalidation.js"></script>
     </head>
     <body>
-        <%@include file="header.jsp" %>
+        <div id="foto-logo">
+            <a href="Home.jsp"><img src="../Immagini/Logo.png" alt="Logo" class="foto-login"></a>
+        </div>
         <%
             LocalTime now = LocalTime.now();
             String message;
@@ -34,13 +37,14 @@
                         <input type="password" id="password" name="password" required>
                     </li>
                     <li>
-                        <input type="submit" value="Login" id="btnLogin">
+                        <input type="submit" value="Login" id="btnLogin" disabled>
+
                     </li>
                 </ul>
             </form>
+            <script src="../script/Loginvalidation.js"></script>
             <p>Non sei registrato? <a href="Registrazione.jsp">Registrati qui</a></p>
         </div>
-
         <%@include file="Footer.jsp" %>
     </body>
 </html>
