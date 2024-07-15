@@ -13,7 +13,9 @@
             <img alt="carrello" src="../Immagini/Icone/Carrello.png" class="icone">
         </a>
         <div class="iconaProfilo">
+            <a href="Login.jsp">
             <img alt="profilo" src="../Immagini/Icone/Profilo.png" class="icone">
+            </a>
             <div class="menu-profilo">
                 <ul>
                     <li><a href="../Pagine/Novità.jsp">Profilo</a></li>
