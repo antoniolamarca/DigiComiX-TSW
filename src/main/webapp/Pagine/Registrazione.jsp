@@ -5,7 +5,9 @@
     <link rel="stylesheet" type="text/css" href="../PagineStile/Login.css">
 </head>
 <body>
-<%@include file="header.jsp" %>
+    <div id="foto-logo">
+        <a href="Home.jsp"><img src="../Immagini/Logo.png" alt="Logo" class="foto-registrazione"></a>
+    </div>
     <h1>Registrati subito</h1>
     <div id="registrazione">
         <form method="POST" action="${pageContext.request.contextPath}/registerUser">

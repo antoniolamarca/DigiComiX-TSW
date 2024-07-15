@@ -12,6 +12,7 @@
         <a href="Carrello.jsp">
             <img alt="carrello" src="../Immagini/Icone/Carrello.png" class="icone">
         </a>
+        <!-- contenitore delle icone di profilo e carrello -->
         <div class="iconaProfilo">
             <a href="Login.jsp">
             <img alt="profilo" src="../Immagini/Icone/Profilo.png" class="icone">
@@ -25,6 +26,7 @@
             </div>
         </div>
     </div>
+    <!-- menù laterale -->
     <div id="sideMenu" class="side-menu">
         <img alt="Logo" src="../Immagini/Logo.png">
         <span id="closeMenu">&times;</span>
@@ -36,65 +38,90 @@
             <li><a href="../Pagine/GdT.jsp">Giochi da Tavolo</a></li>
         </ul>
     </div>
+    <!-- Slider per le novità -->
     <div id="novita" class="titolo">
         <a href="../Pagine/Novità.jsp"><h1>NOVITÀ</h1></a>
     </div>
     <div id="slider_novita">
-        <button id="prev_novita">Prev</button>
+        <div id="left_novita">
+            <img id="prev_novita" alt="FrecciaSx" src="../Immagini/Icone/FrecciaL.png">
+        </div>
         <img alt="Berserk Vol.1" src="../Immagini/Articoli/BerserkCop.jpg">
         <img alt="ChainsawMan Vol.1" src="../Immagini/Articoli/CopChainsawMan.jpg">
         <img alt="Darling In The FranXX Vol.1" src="../Immagini/Articoli/DarlingXX.jpg">
         <img alt="DragonBall Vol.1" src="../Immagini/Articoli/DragonBallCop.jpg">
         <img alt="Shaman King Vol.1" src="../Immagini/Articoli/ShamanCop.jpg">
-        <button id="next_novita">Next</button>
+        <div id="right_novita">
+            <img id="next_novita" alt="FrecciaDx" src="../Immagini/Icone/FrecciaD.png">
+        </div>
     </div>
+    <!-- Slider per gli sconti -->
     <div id="sconti" class="titolo">
         <a href="../Pagine/Sconti.jsp"><h1>SCONTI</h1></a>
     </div>
     <div id="slider_sconti">
-        <button id="prev_sconti">Prev</button>
+        <div id="left_sconti">
+            <img id="prev_sconti" alt="FrecciaSx" src="../Immagini/Icone/FrecciaL.png">
+        </div>
         <img alt="Berserk Vol.1" src="../Immagini/Articoli/BerserkCop.jpg">
         <img alt="ChainsawMan Vol.1" src="../Immagini/Articoli/CopChainsawMan.jpg">
         <img alt="Darling In The FranXX Vol.1" src="../Immagini/Articoli/DarlingXX.jpg">
         <img alt="DragonBall Vol.1" src="../Immagini/Articoli/DragonBallCop.jpg">
         <img alt="Shaman King Vol.1" src="../Immagini/Articoli/ShamanCop.jpg">
-        <button id="next_sconti">Next</button>
+        <div id="right_sconti">
+            <img id="next_sconti" alt="FrecciaDx" src="../Immagini/Icone/FrecciaD.png">
+        </div>
     </div>
+    <!-- slider per i giochi di carte -->
     <div id="TCG" class="titolo">
         <a href="../Pagine/TCG.jsp"><h1>TRADING CARD GAMES</h1></a>
     </div>
     <div id="slider_TCG">
-        <button id="prev_TCG">Prev</button>
+        <div id="left_TCG">
+            <img id="prev_TCG" alt="FrecciaSx" src="../Immagini/Icone/FrecciaL.png">
+        </div>
         <img alt="Berserk Vol.1" src="../Immagini/Articoli/BerserkCop.jpg">
         <img alt="ChainsawMan Vol.1" src="../Immagini/Articoli/CopChainsawMan.jpg">
         <img alt="Darling In The FranXX Vol.1" src="../Immagini/Articoli/DarlingXX.jpg">
         <img alt="DragonBall Vol.1" src="../Immagini/Articoli/DragonBallCop.jpg">
         <img alt="Shaman King Vol.1" src="../Immagini/Articoli/ShamanCop.jpg">
-        <button id="next_TCG">Next</button>
+        <div id="right_TCG">
+            <img id="next_TCG" alt="FrecciaDx" src="../Immagini/Icone/FrecciaD.png">
+        </div>
     </div>
+    <!-- slider per i gadgets -->
     <div id="GAF" class="titolo">
         <a href="../Pagine/Gadgets.jsp"><h1>GADGETS & ACTION FIGURES</h1></a>
     </div>
     <div id="slider_GAF">
-        <button id="prev_GAF">Prev</button>
+        <div id="left_GAF">
+            <img id="prev_GAF" alt="FrecciaSx" src="../Immagini/Icone/FrecciaL.png">
+        </div>
         <img alt="Berserk Vol.1" src="../Immagini/Articoli/BerserkCop.jpg">
         <img alt="ChainsawMan Vol.1" src="../Immagini/Articoli/CopChainsawMan.jpg">
         <img alt="Darling In The FranXX Vol.1" src="../Immagini/Articoli/DarlingXX.jpg">
         <img alt="DragonBall Vol.1" src="../Immagini/Articoli/DragonBallCop.jpg">
         <img alt="Shaman King Vol.1" src="../Immagini/Articoli/ShamanCop.jpg">
-        <button id="next_GAF">Next</button>
+        <div id="right_GAF">
+            <img id="next_GAF" alt="FrecciaDx" src="../Immagini/Icone/FrecciaD.png">
+        </div>
     </div>
+    <!-- slider per i giochi da tavolo-->
     <div id="GdT" class="titolo">
         <a href="../Pagine/GdT.jsp"><h1>GIOCHI DA TAVOLO</h1></a>
     </div>
     <div id="slider_GdT">
-        <button id="prev_GdT">Prev</button>
+        <div id="left_GdT">
+            <img id="prev_GdT" alt="FrecciaSx" src="../Immagini/Icone/FrecciaL.png">
+        </div>
         <img alt="Berserk Vol.1" src="../Immagini/Articoli/BerserkCop.jpg">
         <img alt="ChainsawMan Vol.1" src="../Immagini/Articoli/CopChainsawMan.jpg">
         <img alt="Darling In The FranXX Vol.1" src="../Immagini/Articoli/DarlingXX.jpg">
         <img alt="DragonBall Vol.1" src="../Immagini/Articoli/DragonBallCop.jpg">
         <img alt="Shaman King Vol.1" src="../Immagini/Articoli/ShamanCop.jpg">
-        <button id="next_GdT">Next</button>
+        <div id="right_GdT">
+            <img id="next_GdT" alt="FrecciaDx" src="../Immagini/Icone/FrecciaD.png">
+        </div>
     </div>
 
     <button id="tornaSu" title="Torna su">^</button>

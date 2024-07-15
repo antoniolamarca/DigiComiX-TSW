@@ -7,7 +7,9 @@
         <script src="../script/Loginvalidation.js"></script>
     </head>
     <body>
-        <%@include file="header.jsp" %>
+        <div id="foto-logo">
+            <a href="Home.jsp"><img src="../Immagini/Logo.png" alt="Logo" class="foto-login"></a>
+        </div>
         <%
             LocalTime now = LocalTime.now();
             String message;

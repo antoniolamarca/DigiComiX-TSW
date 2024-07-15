@@ -16,6 +16,23 @@ body h1{
     text-align: center;
 }
 
+#foto-logo {
+    text-align: center;
+}
+
+#foto-logo img {
+    width: 175px;
+    height: 175px;
+}
+
+.foto-login{
+    margin-top: 175px;
+}
+
+.foto-registrazione{
+    margin-top: 70px;
+}
+
 #registrazione, #login{
     width: 45%;
     margin: 10px;
