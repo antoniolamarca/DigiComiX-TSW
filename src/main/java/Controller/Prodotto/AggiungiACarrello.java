@@ -1,4 +1,4 @@
-/*package Controller.Prodotto;
+package Controller.Prodotto;
 
 import Model.Carrello.Cart;
 import Model.Utente.UtenteBean;
@@ -18,16 +18,20 @@ import java.util.ArrayList;
 public class AggiungiACarrello extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("servlet aggiunta a carrello avviata");
-        UtenteBean utenteBean = new UtenteBean();
-        UtenteDao utenteDao = new UtenteDao();
-        Cart carrello=null;
-        if (request.getSession().getAttribute("email") != null) {
-            if(utenteDao)//fare un altro uf che controlla se il carrello esiste
-            //se enon esiste lo creo lo aggiorno e ritorno
-            //se esiste lo prendo lo aggiorno e o ritorno
+        HttpSession session = request.getSession();
+        Cart cart=null;
+        synchronized (session){
+           cart= (Cart) session.getAttribute("cart");
+           if(cart==null){
+               cart= new Cart();
+               session.setAttribute("cart", cart);
+           }
         }
-        else {
-            response.sendRedirect("Pagine/Login.jsp");
+        int id= Integer.parseInt(request.getParameter("id"));
+        try {
+            cart.addArticolo(id);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
     }
-}*/
+}

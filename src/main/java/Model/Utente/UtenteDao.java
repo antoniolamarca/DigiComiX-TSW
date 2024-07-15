@@ -124,7 +124,7 @@ public class UtenteDao {
 
     }
 }
-    /*public UtenteBean GetCarrello(String email) throws SQLException{ //funzione che prende il carrello
+   /* public UtenteBean GetCarrello(String email) throws SQLException{ //funzione che prende il carrello
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
