@@ -7,7 +7,7 @@
     ArticoloDao dao=new ArticoloDao();
 
     try {
-        articolo=dao.doGetById(1);
+        articolo=dao.doGetById(2);
     } catch (SQLException e) {
         throw new RuntimeException(e);
     }
@@ -27,8 +27,8 @@
 <div id="prodotto" class="prodotto-container">
     <h1><%=articolo.getNome()%></h1>
     <img src="../Immagini/Articoli/BerserkCop.jpg" alt="immagine_prodotto">
-    <p>Irresistibili, trascinanti, folgoranti: le avventure a fumetti di Gatsu, il guerriero nero, hanno conquistato i lettori di tutto il mondo.</p>
-    <span>Prezzo: $5,00</span>
+    <p><%=articolo.getDescrizione()%></p>
+    <span><%=articolo.getPrezzo()%></span>
 </div>
 
 <div>

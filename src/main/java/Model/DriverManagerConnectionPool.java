@@ -27,10 +27,10 @@ public class DriverManagerConnectionPool  {
         String port = "3306";
         //Nome db
         String db = "Digicomix";
-        //Mettere il promio nome
+        //Mettere il propio nome
         String username = "root";
         //Mettere la propia password:
-        String password = "casotto";
+        String password = "Raffaele04!";
 
         newConnection = DriverManager.getConnection("jdbc:mysql://"+ ip+":"+ port+"/"+db+"?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", username, password);
         return newConnection;

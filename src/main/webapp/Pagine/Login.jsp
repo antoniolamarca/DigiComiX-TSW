@@ -26,7 +26,7 @@
             <form method="post">
                 <ul>
                     <li>
-                        <label for="email">Username:</label>
+                        <label for="email">Email:</label>
                         <input type="text" id="email" name="email" required>
                     </li>
                     <li>
