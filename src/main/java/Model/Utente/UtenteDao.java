@@ -118,5 +118,23 @@ public class UtenteDao {
                 DriverManagerConnectionPool.releaseConnection(connection);
             }
         }
+
     }
+
+    public UtenteBean GetCarrello(String email) throws SQLException{ //funzione che prende il carrello
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+
+        String insertSQL = "SELECT * FROM ACCOUNT_UTENTE WHERE Email = ?";
+        UtenteBean utentebean= null;
+        try {
+            connection = DriverManagerConnectionPool.getConnection();
+            System.out.println("connessione stabilita");
+            preparedStatement = connection.prepareStatement(insertSQL);
+            preparedStatement.setString(1,email);
+            resultSet = preparedStatement.executeQuery();
+    }
+
+    //funzione che imposta il nuovo carrello aggiornato
 }

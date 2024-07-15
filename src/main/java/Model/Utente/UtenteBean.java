@@ -8,6 +8,7 @@ public class UtenteBean {
     private String email;
     private String password;
     private String tipo;
+    private String carrello;
 
 
     public int getId() {
@@ -56,5 +57,13 @@ public class UtenteBean {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    public String getCarrello() {
+        return carrello;
+    }
+
+    public void setCarrello(String carrello) {
+        this.carrello = carrello;
     }
 }
