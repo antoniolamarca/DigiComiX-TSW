@@ -1,4 +1,114 @@
-a img {
-    width: 175px;
-    height: 175px;
+/* stile per il div del titolo e per la foto del menu */
+#benvenuto{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#benvenuto h1{
+    flex-grow: 1;
+    color: #f7b544;
+    font-family: 'Press Start 2P', serif;
+}
+
+#benvenuto img{
+    height: 125px;
+    width: 125px;
+    float: left;
+    cursor: pointer;
+}
+
+/* modifica parametri di specifiche immagini */
+.icone{
+    height: 45px !important;
+    width: 45px !important;
+    margin-top: 75px;
+    margin-right: 20px;
+}
+
+/* menù a comparsa sull'icona del profilo */
+.iconaProfilo{
+    position: relative;
+    display: inline-block;
+}
+
+.menu-profilo{
+    display: none;
+    position: absolute;
+    background-color: #1b74b0;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.profilo:hover .menu-profilo{
+    display: block;
+}
+
+.menu-profilo ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-profilo ul li a{
+    color: #f7b544;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-profilo ul li a:hover{
+    background-color: red;
+}
+
+/* stile per il menu */
+.side-menu {
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #1b74b0;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.side-menu.open {
+    width: 15%; /* larghezza del menù */
+}
+
+#closeMenu{
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 35px;
+    font-family: 'Press Start 2P', serif;
+    color: #f7b544;
+}
+
+#sideMenu img{
+    height: 125px;
+    width: 125px;
+}
+
+#sideMenu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sideMenu li {
+    padding: 10px;
+    font-family: 'Press Start 2P', serif;
+    font-size: 20px;
+}
+
+#sideMenu li a {
+    text-decoration: none;
+    color: #f7b544;
+    display: block;
+}
+
+#sideMenu li a:hover {
+    color: red;
 }
