@@ -10,9 +10,14 @@ body {
 #prodotto img{
     height: 700px;
     width: 500px;
-    margin-left: 20px;
-    margin-right: 50px;
+    margin-left: 100px;
+    margin-right: 300px;
+    background-color: white; /* Sfondo bianco */
+    border-radius: 15px; /* Contorni tondi */
+    padding: 10px; /* Spazio intorno all'immagine */
+    border: 1px solid #ddd; /* Bordo leggero (opzionale) */
 }
+
 
 #prodotto td p{
     text-align: center;
@@ -21,7 +26,17 @@ body {
 
 #product-info{
     max-width: 50%;
+    background-color: red; /* Colore di sfondo */
+    border-radius: 15px; /* Angoli arrotondati */
+    padding: 20px; /* Spazio interno */
+    color: #f7b544; /* Colore del testo bianco per contrasto */
+    position: relative;
+    right: 100px; /* Aumenta per spostare più a sinistra */
 }
+
+
+
+
 
 #carrello input[type="submit"]{
     background-color: red;

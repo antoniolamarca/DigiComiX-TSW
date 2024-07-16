@@ -28,7 +28,7 @@
         <h1><%=articolo.getNome()%></h1>
         <table>
             <tr>
-                <td><img src="../Immagini/Articoli/BerserkCop.jpg" alt="immagine_prodotto"></td>
+                <td><img src="../Immagini/Articoli/BoxMagic.png" alt="immagine_prodotto"></td>
                 <td><div id="product-info"><h3><%=articolo.getDescrizione()%></h3></div></td>
             </tr>
         </table>
