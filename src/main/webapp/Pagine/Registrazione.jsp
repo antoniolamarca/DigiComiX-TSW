@@ -14,7 +14,7 @@
             <ul>
                 <li>
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required placeholder="Nome">
+                    <input type="text" id="nome" name="nome" required>
                 </li>
                 <li>
                     <label for="cognome">Cognome:</label>
@@ -22,7 +22,7 @@
                 </li>
                 <li>
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required placeholder="Es. abcd1234@gmail.com">
+                    <input type="email" id="email" name="email" required>
                 </li>
                 <li>
                     <label for="password">Password:</label>
