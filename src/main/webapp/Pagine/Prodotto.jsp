@@ -16,32 +16,37 @@
 <html>
 <head>
     <title>Prodotto - DigiComiX</title>
-    <link rel="stylesheet" type="text/css" href="../PagineStile/Prodotto?version=1.1">
+    <link rel="stylesheet" type="text/css" href="../PagineStile/Prodotto.css?version=1.1">
 </head>
 <body>
+    <div>
+        <%@include file="header.jsp" %>
+    </div>
 
-<div>
-<%@include file="header.jsp" %>
-</div>
+    <!-- visualizzazione del prodotto e degli altri elementi -->
+    <div id="prodotto" class="prodotto-container">
+        <h1><%=articolo.getNome()%></h1>
+        <table>
+            <tr>
+                <td><img src="../Immagini/Articoli/BerserkCop.jpg" alt="immagine_prodotto"></td>
+                <td><div id="product-info"><h3><%=articolo.getDescrizione()%></h3></div></td>
+            </tr>
+        </table>
+        <h3>Prezzo: <%=articolo.getPrezzo()%></h3>
+    </div>
 
-<div id="prodotto" class="prodotto-container">
-    <h1><%=articolo.getNome()%></h1>
-    <img src="../Immagini/Articoli/BerserkCop.jpg" alt="immagine_prodotto">
-    <p><%=articolo.getDescrizione()%></p>
-    <span><%=articolo.getPrezzo()%></span>
-</div>
-<div id="carrello" class="carrello-container">
-    <form action="Carrello" method="post">
-        <input type="hidden" name="id" value="<%=articolo.getId()%>">
-        <input type="hidden" name="nome" value="<%=articolo.getNome()%>">
-        <input type="hidden" name="prezzo" value="<%=articolo.getPrezzo()%>">
-        <input type="submit" value="Aggiungi al carrello">
-    </form>
-</div>
+    <!-- tasto carrello che invia i dati al database -->
+    <div id="carrello" class="carrello-container">
+        <form action="Carrello" method="post">
+            <input type="hidden" name="id" value="<%=articolo.getId()%>">
+            <input type="hidden" name="nome" value="<%=articolo.getNome()%>">
+            <input type="hidden" name="prezzo" value="<%=articolo.getPrezzo()%>">
+            <input type="submit" value="Aggiungi al carrello">
+        </form>
+    </div>
 
-<div>
- <%@include file="Footer.jsp"%>
-</div>
-
+    <div>
+        <%@include file="Footer.jsp"%>
+    </div>
 </body>
 </html>

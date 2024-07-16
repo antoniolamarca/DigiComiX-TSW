@@ -1,22 +1,37 @@
 @import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
 
-.prodotto-container {
-    display: flex;
-    align-items: center; /* Allinea verticalmente al centro */
-    justify-content: center; /* Centra i contenuti all'interno del contenitore */
-    gap: 20px; /* Distanza tra la descrizione, il prezzo e l'immagine */
-    flex-direction: row-reverse; /* Inverte l'ordine degli elementi per mettere la descrizione e il prezzo a sinistra */
-}
-
-.prodotto-container img {
-    max-width: 50%; /* Imposta una larghezza massima per l'immagine */
-    height: auto; /* Mantiene le proporzioni dell'immagine */
-}
-
-/* Assicurati che il testo e altri elementi siano stilizzati coerentemente */
 body {
     background-color: #1b74b0;
     text-align: center;
-    font-family: 'Press Start 2P';
+    font-family: 'Press Start 2P', serif;
     color: #f7b544;
+}
+
+#prodotto img{
+    height: 700px;
+    width: 500px;
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+#prodotto td p{
+    text-align: center;
+    vertical-align: middle;
+}
+
+#product-info{
+    max-width: 50%;
+}
+
+#carrello input[type="submit"]{
+    background-color: red;
+    border: 2px solid black;
+    color: #f7b544;
+    font-family: 'Press Start 2P', serif;
+    width: 350px;
+    height: 45px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: 20px;
 }
