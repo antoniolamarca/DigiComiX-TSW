@@ -5,6 +5,7 @@ import Model.DriverManagerConnectionPool;
 import Model.Prodotto.ArticoloBean;
 import Model.Utente.UtenteBean;
 
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,7 +16,6 @@ import java.util.LinkedList;
 public class ArticoloDao {
 
 
-    //Si occupa di salvare un utente nel db:
     public void doSave(ArticoloBean articolo) throws SQLException {
 
         Connection connection = null;
