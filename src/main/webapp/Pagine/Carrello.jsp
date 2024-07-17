@@ -2,14 +2,14 @@
 <html>
 <head>
     <title>Carrello - DigiComiX</title>
-    <link rel="stylesheet" type="text/css" href="../PagineStile/Carrello.css?version=1.2">
+    <link rel="stylesheet" type="text/css" href="../PagineStile/Carrello.css?version=1.3">
 </head>
 <body>
     <!-- header della pagina -->
     <%@include file="header.jsp" %>
 
     <h1>Il tuo carrello</h1>
-
+<form action="Carrello" method="post">
     <div id="product-info">
         <table class="tabella-prodotti">
             <tr>
@@ -37,6 +37,8 @@
                 <td>21,97 euro</td>
             </tr>
         </table>
+        
+        <button type="submit" name="action" value="checkout" class="bottone_checkout">Procedi all'acquisto</button>
     </div>
 
     <!-- footer della pagina -->

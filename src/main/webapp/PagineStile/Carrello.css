@@ -39,3 +39,18 @@ table{
     border-radius: 10px; /* Regola l'arrotondamento qui */
     padding : 5px;
 }
+.bottone_checkout {
+    background-color: #f7b544; /* Colore giallo */
+    border: none; /* Rimuove il bordo predefinito */
+    color: #1b74b0; /* Colore del testo */
+    padding: 10px 20px; /* Spaziatura interna */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px; /* Bordo arrotondato */
+    font-family: 'Press Start 2P', serif;
+    margin-bottom: 40px;
+}
