@@ -33,7 +33,9 @@ CREATE TABLE ARTICOLO (
     Prezzo DECIMAL(10, 2),
     Tipo VARCHAR(50),
     Descrizione VARCHAR(400),
-    Quantità INT
+    Quantità INT,
+    Sconto Boolean,
+    Novita Boolean
 );
 
 CREATE TABLE OFFERTA (
@@ -72,10 +74,10 @@ INSERT INTO WISHLIST (NumeroArticoli, AccountId) VALUES
 (3, 3);
 
 -- Popolamento della tabella ARTICOLO
-INSERT INTO ARTICOLO (Nome, Prezzo, Tipo, Descrizione, Quantità) VALUES
-('Berserk vol.1', 5.00, 'manga','Irresistibili, trascinanti, folgoranti: le avventure a fumetti di Gatsu, il guerriero nero, hanno conquistato i lettori di tutto il mondo.', 10),
-('Magic outlaws of thunder junction box', 80.00, 'tcg','Ti diamo il benvenuto a Crocevia Tonante, il nuovo piano western e paradiso dei fuorilegge. Box contenente 36 Buste di espansione', 20),
-('Mordekainens Monsters of the multiverse', 59.99, 'gdt','Include oltre 250 mostri e diversi aggiornamenti, tra cui una maggiore facilità di gestione degli incantatori per i Dungeon Master, mostri capaci di infliggere più danni e dotati di una maggiore resistenza e un’organizzazione delle statistiche migliorata.', 30);
+INSERT INTO ARTICOLO (Nome, Prezzo, Tipo, Descrizione, Quantità, Sconto, Novita) VALUES
+('Berserk vol.1', 5.00, 'manga','Irresistibili, trascinanti, folgoranti: le avventure a fumetti di Gatsu, il guerriero nero, hanno conquistato i lettori di tutto il mondo.', 10, 1, 0),
+('Magic outlaws of thunder junction box', 80.00, 'tcg','Ti diamo il benvenuto a Crocevia Tonante, il nuovo piano western e paradiso dei fuorilegge. Box contenente 36 Buste di espansione', 20, 0, 1),
+('Mordekainens Monsters of the multiverse', 59.99, 'gdt','Include oltre 250 mostri e diversi aggiornamenti, tra cui una maggiore facilità di gestione degli incantatori per i Dungeon Master, mostri capaci di infliggere più danni e dotati di una maggiore resistenza e un’organizzazione delle statistiche migliorata.', 30, 1, 0);
 
 -- Popolamento della tabella OFFERTA
 INSERT INTO OFFERTA (Tipo, Percentuale, DataScadenza, ArticoloId) VALUES
@@ -87,3 +89,5 @@ INSERT INTO INSERIRE (WishlistId, ArticoloId) VALUES
 (1, 1),
 (1, 3),
 (2, 2);
+
+SELECT * FROM ACCOUNT_UTENTE;
