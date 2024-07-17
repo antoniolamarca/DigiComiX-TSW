@@ -17,7 +17,7 @@
                 <th><h3>Prezzo</h3></th>
             </tr>
             <tr>
-                <td><img alt="prodotto" src="../Immagini/Articoli/BerserkCop.jpg"></td>
+                <td><img alt="prodotto" src="../Immagini/Articoli/1.jpg"></td>
                 <td><p>5,99 euro</p></td>
             </tr>
             <tr>

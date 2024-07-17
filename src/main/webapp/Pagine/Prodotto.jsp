@@ -4,20 +4,14 @@
 <%@ page import="java.sql.SQLException" %>
 
 <%
-    ArticoloBean articolo=new ArticoloBean();
-    ArticoloDao dao=new ArticoloDao();
+    ArticoloBean articolo= (ArticoloBean) request.getSession().getAttribute("ArticoloTrovato");
 
-    try {
-        articolo=dao.doGetById(2);
-    } catch (SQLException e) {
-        throw new RuntimeException(e);
-    }
 
 %>
 <html>
 <head>
     <title>Prodotto - DigiComiX</title>
-    <link rel="stylesheet" type="text/css" href="../PagineStile/Prodotto.css?version=1.1">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Prodotto.css?version=1.1">
 </head>
 <body>
     <!-- header della pagina -->
@@ -25,10 +19,11 @@
 
     <!-- visualizzazione del prodotto e degli altri elementi -->
     <div id="prodotto">
+
         <h1><%= articolo.getNome() %></h1>
         <table>
             <tr>
-                <td><img src="../Immagini/Articoli/BoxMagic.png" alt="immagine_prodotto"></td>
+                <td><img src="${pageContext.request.contextPath}/Immagini/Articoli/<%= articolo.getImages() %>" alt="Immagine di <%= articolo.getNome() %>"></td>
                 <td><div id="product-info"><h3><%= articolo.getDescrizione() %></h3></div></td>
             </tr>
         </table>

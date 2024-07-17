@@ -1,34 +1,35 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/PagineStile/header.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.getContextPath()}/PagineStile/header.css">
     <script src="<%=request.getContextPath()%>/script/menu'header.js"></script>
 </head>
 <div id="benvenuto">
-    <img id="menuToggle" alt="Logo" src="../Immagini/Logo.png">
+    <img id="menuToggle" alt="Logo" src="${pageContext.request.contextPath}/Immagini/Logo.png">
     <h1>Benvenuto ${sessionScope.nome}</h1>
     <!-- icona carrello -->
     <a href="Carrello.jsp">
-        <img alt="carrello" src="../Immagini/Icone/Carrello.png" class="icone">
+        <img alt="carrello" src="${pageContext.request.contextPath}/Immagini/Icone/Carrello.png" class="icone">
     </a>
     <!-- icona profilo -->
     <a href="Login.jsp">
-        <img alt="profilo" src="../Immagini/Icone/Profilo.png" class="icone">
+        <img alt="profilo" src="${pageContext.request.contextPath}/Immagini/Icone/Profilo.png" class="icone">
     </a>
 </div>
 <!-- menù laterale -->
 <div id="sideMenu" class="side-menu">
-    <img alt="Logo" src="../Immagini/Logo.png">
+    <img alt="Logo" src="${pageContext.request.contextPath}/Immagini/Logo.png">
     <span id="closeMenu">&times;</span>
     <ul>
-        <li><a href="../Pagine/Novità.jsp">Novità</a></li>
-        <li><a href="../Pagine/Sconti.jsp">Sconti</a></li>
-        <li><a href="../Pagine/TCG.jsp">Trading Card Games</a></li>
-        <li><a href="../Pagine/Gadgets.jsp">Gadgets & Action figures</a></li>
-        <li><a href="../Pagine/GdT.jsp">Giochi da Tavolo</a></li>
+        <li><a href="${pageContext.request.contextPath}/CatalogoServlet?tipo=novita">Novità</a></li>
+        <li><a href="${pageContext.request.contextPath}/CatalogoServlet?tipo=sconti">Sconti</a></li>
+        <li><a href="${pageContext.request.contextPath}/CatalogoServlet?tipo=manga">Manga</a></li>
+        <li><a href="${pageContext.request.contextPath}/CatalogoServlet?tipo=tcg">Trading Card Games</a></li>
+        <li><a href="${pageContext.request.contextPath}/CatalogoServlet?tipo=gad">Gadgets & Action figures</a></li>
+        <li><a href="${pageContext.request.contextPath}/CatalogoServlet?tipo=gdt">Giochi da Tavolo</a></li>
         <% String requestURL = request.getRequestURI();
             if (!requestURL.endsWith("Home.jsp")) { %>
-        <li><a href="../Pagine/Home.jsp">Torna alla home</a></li>
+        <li><a href="${pageContext.request.contextPath}Pagine/Home.jsp">Torna alla home</a></li>
         <% } %>
     </ul>
 </div>

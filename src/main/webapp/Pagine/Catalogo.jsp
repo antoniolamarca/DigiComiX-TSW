@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+/<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="Model.Prodotto.ArticoloBean" %>
 <%@ page import="Model.Prodotto.ArticoloDao" %>
 <%@ page import="java.util.List" %>
@@ -13,12 +13,13 @@
     ArrayList<ArticoloBean> catalogo = (ArrayList<ArticoloBean>) request.getSession().getAttribute("CatalogoFiltrato");
     for(ArticoloBean articolo : catalogo) {
 %>
+
 <div class="articolo">
-    <img src="immagini/Articoli/<%= articolo.getImages() %>" alt="Immagine di <%= articolo.getNome() %>">
+    <img src="${pageContext.request.contextPath}/Immagini/Articoli/<%= articolo.getImages() %>" alt="Immagine di <%= articolo.getNome() %>">
     <h3><%= articolo.getNome() %></h3>
     <p><%= articolo.getDescrizione() %></p>
     <p>Prezzo: €<%= articolo.getPrezzo() %></p>
-    <a href="Prodotto.jsp?id=<%= articolo.getId() %>">Dettagli</a>
+    <a href="${pageContext.request.contextPath}/ProdottoServlet?ID=<%= articolo.getId() %>">Dettagli</a>
 </div>
 <% } %>
 </body>

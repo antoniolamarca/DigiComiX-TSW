@@ -1,6 +1,7 @@
 package Model.Prodotto;
 
-import java.io.Serializable;
+import java.io.*;
+import java.util.Base64;
 
 public class ArticoloBean implements Serializable {
     private int id;
@@ -11,7 +12,7 @@ public class ArticoloBean implements Serializable {
     private int quantita;
 
     public String getImages(){
-        return id+"-"+nome+".jpg";
+        return id+".jpg";
     }
     public void setId(int id) {
         this.id = id;
@@ -59,6 +60,35 @@ public class ArticoloBean implements Serializable {
 
     public int getId() {
         return id;
+    }
+
+    //Funzione che serializza un oggetto in una stringa:
+    public static String serializzaToString(Serializable object) throws Exception {
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        ObjectOutputStream oos = new ObjectOutputStream(bos);
+        oos.writeObject(object);
+        oos.close();
+
+        // Codifica l'array di byte in base64
+        byte[] byteData = bos.toByteArray();
+        return Base64.getEncoder().encodeToString(byteData);
+    }
+
+    //Funzione che deserializza una stringa in un oggetto
+    public static Object deserializzaFromString(String stringaSerializzata) throws Exception {
+        // Decodifica la stringa in base64 in un array di byte
+        byte[] byteData = Base64.getDecoder().decode(stringaSerializzata);
+
+        // Crea un flusso di input per leggere l'array di byte
+        ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(byteData));
+
+        // Deserializza l'oggetto dal flusso di input
+        Object objectDeserializzato = ois.readObject();
+
+        // Chiudi il flusso di input
+        ois.close();
+
+        return objectDeserializzato;
     }
 
 

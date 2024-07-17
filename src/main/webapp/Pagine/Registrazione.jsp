@@ -2,11 +2,11 @@
 <html>
 <head>
     <title>Registrazione - DigiComiX</title>
-    <link rel="stylesheet" type="text/css" href="../PagineStile/Login.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Login.css">
 </head>
 <body>
     <div id="foto-logo">
-        <a href="Home.jsp"><img src="../Immagini/Logo.png" alt="Logo" class="foto-registrazione"></a>
+        <a href="Home.jsp"><img src="${pageContext.request.contextPath}/Immagini/Logo.png" alt="Logo" class="foto-registrazione"></a>
     </div>
     <h1>Registrati subito</h1>
     <div id="registrazione">

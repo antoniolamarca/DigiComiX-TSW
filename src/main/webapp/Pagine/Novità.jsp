@@ -10,7 +10,7 @@
 
     <div id="articoli">
         <img alt="BoxMagic" src="../Immagini/Articoli/BoxMagic.png">
-        <img alt="Berserk" src="../Immagini/Articoli/BerserkCop.jpg">
+        <img alt="Berserk" src="../Immagini/Articoli/1.jpg">
     </div>
     <%@include file="Footer.jsp" %>
 </body>
