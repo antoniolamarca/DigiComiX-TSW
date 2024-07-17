@@ -8,6 +8,7 @@ footer {
     padding: 10px 0;
     font-family: 'Press Start 2P', serif;
     text-decoration: none;
+    border-radius: 20px;
 }
 
 #info ul{

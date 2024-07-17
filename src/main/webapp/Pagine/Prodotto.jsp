@@ -2,7 +2,7 @@
 <%@ page import="Model.Prodotto.ArticoloBean" %>
 <%@ page import="Model.ArticoloDao" %>
 <%@ page import="java.sql.SQLException" %>
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 <%
     ArticoloBean articolo=new ArticoloBean();
     ArticoloDao dao=new ArticoloDao();
@@ -32,7 +32,7 @@
                 <td><div id="product-info"><h3><%= articolo.getDescrizione() %></h3></div></td>
             </tr>
         </table>
-        <h3>Prezzo: <%= articolo.getPrezzo() %>€</h3>
+        <h3>Prezzo: <%= articolo.getPrezzo() %></h3>
     </div>
 
     <!-- tasto carrello che invia i dati al database -->
