@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 @WebServlet("/AggiungiACarrello")
 public class AggiungiACarrello extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("servlet aggiunta a carrello avviata");
         HttpSession session = request.getSession();
