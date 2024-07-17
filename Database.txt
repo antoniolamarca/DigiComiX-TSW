@@ -5,7 +5,7 @@ use Digicomix;
 
 CREATE TABLE ACCOUNT_UTENTE (
     Id INT AUTO_INCREMENT PRIMARY KEY,
-    Nome VARCHAR(50),
+    Nome VARCHAR(100),
     Cognome VARCHAR(50),
     Email VARCHAR(100),
     Passkey VARCHAR(100),
@@ -76,8 +76,20 @@ INSERT INTO WISHLIST (NumeroArticoli, AccountId) VALUES
 -- Popolamento della tabella ARTICOLO
 INSERT INTO ARTICOLO (Nome, Prezzo, Tipo, Descrizione, Quantita, Sconto, Novita) VALUES
 ('Berserk vol.1', 5.00, 'manga','Irresistibili, trascinanti, folgoranti: le avventure a fumetti di Gatsu, il guerriero nero, hanno conquistato i lettori di tutto il mondo.', 10, 1, 0),
-('Magic outlaws of thunder junction box', 80.00, 'tcg','Ti diamo il benvenuto a Crocevia Tonante, il nuovo piano western e paradiso dei fuorilegge. Box contenente 36 Buste di espansione', 20, 0, 1),
-('Mordekainens Monsters of the multiverse', 59.99, 'gdt','Include oltre 250 mostri e diversi aggiornamenti, tra cui una maggiore facilità di gestione degli incantatori per i Dungeon Master, mostri capaci di infliggere più danni e dotati di una maggiore resistenza e un’organizzazione delle statistiche migliorata.', 30, 1, 0);
+('Magic outlaws of thunder junction Prerelease ox', 80.00, 'tcg','Ti diamo il benvenuto a Crocevia Tonante, il nuovo piano western e paradiso dei fuorilegge. Box contenente 36 Buste di espansione', 20, 0, 1),
+('Mordekainens Monsters of the multiverse', 59.99, 'gdt','Include oltre 250 mostri e diversi aggiornamenti, tra cui una maggiore facilità di gestione degli incantatori per i Dungeon Master, mostri capaci di infliggere più danni e dotati di una maggiore resistenza e un’organizzazione delle statistiche migliorata.', 30, 1, 0),
+('Dark Souls 3 Soul of cinder figure', 200.00, 'gad', 'Alta 25 cm e realizzata con estrema cura nei dettagli, questa figure cattura perfettamente la presenza maestosa del leggendario boss finale del gioco. Con armatura intricata, armi intercambiabili e una base dettagliata, questa action figure è un must per ogni appassionato della serie Dark Souls.', 40,0 ,0),
+('Monopoly London Underground Edition', 39.99, 'gdt' , 'Esplora la leggendaria rete metropolitana di Londra con il Monopoly London Underground Edition! Questa edizione speciale del classico gioco da tavolo Monopoly ti porta direttamente nelle gallerie e stazioni storiche della famosa Tube di Londra. Imbarcati in un viaggio attraverso i 270 stazioni della metropolitana londinese, acquistando, vendendo e scambiando proprietà lungo il percorso.', 10, 0, 1),
+('Vita da slime vol.1', 5.00, 'manga', 'Segui le incredibili avventure di Satoru Mikami, un impiegato di 37 anni che, dopo un incontro fatale, si ritrova reincarnato in un mondo fantasy come un semplice slime. Con nuove abilità uniche e una mente brillante, il nostro protagonista inizia una straordinaria trasformazione che lo porterà a diventare uno dei più potenti esseri di questo nuovo mondo.', 20, 1,0),
+('Portachiavi Hatsune Miku', 3.50, 'gad', 'Porta con te lo stile di Hatsune Miku ovunque tu vada con questo splendido portachiavi! Perfetto per i fan del fenomeno Vocaloid, questo accessorio rappresenta al meglio la iconica idol virtuale in un design accattivante e dettagliato.', 10, 0,0),
+('Yu-Gi-Oh! Fire Kings Structure Deck', 15.00, 'tcg', 'Scatena il potere ardente con lo Structure Deck - Fire Kings di Yu-Gi-Oh! Questo mazzo pre-costruito è perfetto per i duellanti che desiderano dominare il campo di battaglia con strategie infuocate e potenti mostri di fuoco.',5, 0,1),
+('Devil May Cry 5: Visions of V vol.1', 10.00, 'manga', 'Entra nel mondo oscuro e affascinante di Devil May Cry con il primo volume del manga "Devil May Cry 5: Visions of V". Questo capitolo imperdibile offre una prospettiva unica e avvincente sul mondo del celebre videogioco, esplorando la storia del misterioso V.',3,1,1),
+('Super Dragonball Heroes Universe mission 2 Booster Box', 79.99, 'tcg', 'Espandi la tua collezione e potenzia il tuo mazzo con il Booster Box di Dragon Ball Heroes Universe Mission 2! Questa confezione speciale è un must-have per tutti i fan di Dragon Ball e i giocatori del gioco di carte Super Dragon Ball Heroes, offrendo una gamma di carte potenti e iconiche direttamente dallo spin-off di Dragon Ball.',10,0,1);
+
+
+ 
+
+
 
 -- Popolamento della tabella OFFERTA
 INSERT INTO OFFERTA (Tipo, Percentuale, DataScadenza, ArticoloId) VALUES
