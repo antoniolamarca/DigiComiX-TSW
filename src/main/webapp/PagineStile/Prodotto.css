@@ -7,6 +7,7 @@ body {
     color: #f7b544;
 }
 
+/* modifica l'immagine del prodotto */
 #prodotto img{
     height: 700px;
     width: 500px;
@@ -18,12 +19,12 @@ body {
     border: 1px solid #ddd; /* Bordo leggero (opzionale) */
 }
 
-
-#prodotto td p{
+#prodotto td h3{
     text-align: center;
     vertical-align: middle;
 }
 
+/* modifica la parte della descrizione del prodotto */
 #product-info{
     max-width: 50%;
     background-color: red; /* Colore di sfondo */
@@ -34,10 +35,7 @@ body {
     right: 100px; /* Aumenta per spostare più a sinistra */
 }
 
-
-
-
-
+/* cambia lo stile del bottone "aggiungi al carrello "*/
 #carrello input[type="submit"]{
     background-color: red;
     border: 2px solid black;
