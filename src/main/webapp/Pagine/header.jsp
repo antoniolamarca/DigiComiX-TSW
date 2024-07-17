@@ -7,22 +7,14 @@
 <div id="benvenuto">
     <img id="menuToggle" alt="Logo" src="../Immagini/Logo.png">
     <h1>Benvenuto ${sessionScope.nome}</h1>
+    <!-- icona carrello -->
     <a href="Carrello.jsp">
         <img alt="carrello" src="../Immagini/Icone/Carrello.png" class="icone">
     </a>
-    <!-- contenitore delle icone di profilo e carrello -->
-    <div class="iconaProfilo">
-        <a href="Login.jsp">
-            <img alt="profilo" src="../Immagini/Icone/Profilo.png" class="icone">
-        </a>
-        <div class="menu-profilo">
-            <ul>
-                <li><a href="../Pagine/Novità.jsp">Profilo</a></li>
-                <li><a href="../Pagine/Sconti.jsp">Wishlist</a></li>
-                <li><p>LOGOUT</p></li>
-            </ul>
-        </div>
-    </div>
+    <!-- icona profilo -->
+    <a href="Login.jsp">
+        <img alt="profilo" src="../Immagini/Icone/Profilo.png" class="icone">
+    </a>
 </div>
 <!-- menù laterale -->
 <div id="sideMenu" class="side-menu">

@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-
 // Codice per cambiare immagini negli slider novità
 const imagesNovita = document.querySelectorAll('#slider_novita img');
 const btnPrevNovita = document.getElementById('prev_novita');
@@ -115,7 +114,6 @@ btnNextGdT.addEventListener('click', () => {
     currentIndexGdT = (currentIndexGdT + 1) % imagesGdT.length;
     showImageGdT(currentIndexGdT);
 });
-
 
 
 // Codice per tornare su

@@ -1,0 +1,38 @@
+/* Importazione del font */
+@import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
+
+/* colore per i testi: #f7b544*/
+/* colore per lo sfondo: #1b74b0*/
+
+/* stile generale della pagina */
+body{
+    background-color: #1b74b0;
+    color: #f7b544;
+    font-family: 'Press Start 2P', serif;
+    text-align: center;
+}
+
+body h1{
+    text-align: center;
+}
+
+/* definizione della grandezza della tabella per gestire l'immagine e il testo */
+table{
+    width: 50%;
+    border: 2px solid black;
+    background-color: whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.tabella-prodotti td{
+    width: 50%;
+    border: 2px solid black;
+    background-color: #1b74b0;
+}
+/* stile del div che contiene la tabella */
+#product-info td img{
+    height: 100px;
+    width: 75px;
+}

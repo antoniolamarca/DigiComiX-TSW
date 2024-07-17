@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="Model.Prodotto.ArticoloBean" %>
 <%@ page import="Model.ArticoloDao" %>
 <%@ page import="java.sql.SQLException" %>
@@ -19,9 +20,8 @@
     <link rel="stylesheet" type="text/css" href="../PagineStile/Prodotto.css?version=1.1">
 </head>
 <body>
-    <div>
-        <%@ include file="header.jsp" %>
-    </div>
+    <!-- header della pagina -->
+    <%@ include file="header.jsp" %>
 
     <!-- visualizzazione del prodotto e degli altri elementi -->
     <div id="prodotto">
@@ -32,7 +32,7 @@
                 <td><div id="product-info"><h3><%= articolo.getDescrizione() %></h3></div></td>
             </tr>
         </table>
-        <h3>Prezzo: <%= articolo.getPrezzo() %></h3>
+        <h3>Prezzo: <%= articolo.getPrezzo() %>€</h3>
     </div>
 
     <!-- tasto carrello che invia i dati al database -->
