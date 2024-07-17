@@ -14,7 +14,7 @@
     for(ArticoloBean articolo : catalogo) {
 %>
 <div class="articolo">
-    <img src="" alt="Immagine di <%= articolo.getNome() %>">
+    <img src="immagini/Articoli/<%= articolo.getImages() %>" alt="Immagine di <%= articolo.getNome() %>">
     <h3><%= articolo.getNome() %></h3>
     <p><%= articolo.getDescrizione() %></p>
     <p>Prezzo: €<%= articolo.getPrezzo() %></p>

@@ -10,6 +10,9 @@ public class ArticoloBean implements Serializable {
     private String descrizione;
     private int quantita;
 
+    public String getImages(){
+        return id+"-"+nome+".jpg";
+    }
     public void setId(int id) {
         this.id = id;
     }

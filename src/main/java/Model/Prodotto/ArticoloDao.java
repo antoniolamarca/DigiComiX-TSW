@@ -140,4 +140,88 @@ public class ArticoloDao {
 
         }
     }
+
+    public ArrayList<ArticoloBean> doGetByNovita() throws SQLException {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        String insertSQL = "SELECT * FROM ARTICOLO WHERE novita = 1";
+        ResultSet resultSet = null;
+        ArrayList<ArticoloBean> listaArticoli = new ArrayList<>();
+
+        try {
+            connection = DriverManagerConnectionPool.getConnection();
+            System.out.println("Stabilita connessione, stiamo salvando");
+            preparedStatement = connection.prepareStatement(insertSQL);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                ArticoloBean articolo = new ArticoloBean();
+                articolo.setId(resultSet.getInt("id"));
+                articolo.setNome(resultSet.getString("Nome"));
+                articolo.setPrezzo(resultSet.getInt("Prezzo"));
+                articolo.setDescrizione(resultSet.getString("Descrizione"));
+                articolo.setTipo(resultSet.getString("Tipo"));
+                articolo.setQuantita(resultSet.getInt("Quantita"));
+
+                listaArticoli.add(articolo);
+            }
+            return listaArticoli;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            try {
+                if (preparedStatement != null)
+                    preparedStatement.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } finally {
+                DriverManagerConnectionPool.releaseConnection(connection);
+            }
+
+        }
+    }
+
+    public ArrayList<ArticoloBean> doGetBySconto() throws SQLException {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        String insertSQL = "SELECT * FROM ARTICOLO WHERE sconto = 1";
+        ResultSet resultSet = null;
+        ArrayList<ArticoloBean> listaArticoli = new ArrayList<>();
+
+        try {
+            connection = DriverManagerConnectionPool.getConnection();
+            System.out.println("Stabilita connessione, stiamo salvando");
+            preparedStatement = connection.prepareStatement(insertSQL);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                ArticoloBean articolo = new ArticoloBean();
+                articolo.setId(resultSet.getInt("id"));
+                articolo.setNome(resultSet.getString("Nome"));
+                articolo.setPrezzo(resultSet.getInt("Prezzo"));
+                articolo.setDescrizione(resultSet.getString("Descrizione"));
+                articolo.setTipo(resultSet.getString("Tipo"));
+                articolo.setQuantita(resultSet.getInt("Quantita"));
+
+                listaArticoli.add(articolo);
+            }
+            return listaArticoli;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            try {
+                if (preparedStatement != null)
+                    preparedStatement.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } finally {
+                DriverManagerConnectionPool.releaseConnection(connection);
+            }
+
+        }
+    }
 }
+
+
+
+

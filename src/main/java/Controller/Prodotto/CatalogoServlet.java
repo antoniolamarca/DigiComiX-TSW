@@ -24,7 +24,13 @@ public class CatalogoServlet extends HttpServlet {
         String tipo = request.getParameter("tipo");
         ArticoloDao articolo=new ArticoloDao();
         try {
-            request.getSession().setAttribute("CatalogoFiltrato",articolo.doGetByTipo(tipo));
+            if(tipo.equals("novita")) {
+                request.getSession().setAttribute("CatalogoFiltrato",articolo.doGetByNovita());
+            } else if (tipo.equals("sconti")) {
+                request.getSession().setAttribute("CatalogoFiltrato",articolo.doGetBySconto());
+            } else {
+                request.getSession().setAttribute("CatalogoFiltrato",articolo.doGetByTipo(tipo));
+            }
             response.sendRedirect("Pagine/Catalogo.jsp");
         } catch (Exception e) {
             throw new RuntimeException(e);

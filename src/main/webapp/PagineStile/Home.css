@@ -12,20 +12,12 @@ body{
 }
 
 /*  */
-#novita{
-    background-color: white;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #f7b544;
-    font-family: 'Press Start 2P', serif;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+#novita {
+    margin-top: 0;
 }
 
 /* stile per i titoli degli slider */
-#sconti, #TCG, #GAF, #GdT{
+.titolo{
     background-color: white;
     justify-content: center;
     display: flex;
@@ -39,7 +31,7 @@ body{
 }
 
 /* stile per gli slider delle immagini di ogni categoria */
-#slider_novita, #slider_sconti, #slider_TCG, #slider_GAF, #slider_GdT{
+.slider{
     background-color: white;
     width: 100%;
     margin: auto;
@@ -50,21 +42,18 @@ body{
 }
 
 /* stile per le foto degli slider */
-#slider_novita img, #slider_sconti img, #slider_TCG img, #slider_GAF img, #slider_GdT img{
+.slider img{
     height: 200px;
     width: 150px;
     margin: 15px;
 }
 
-/* stile per i bottoni destra e sinistra degli slider */
-#left_novita, #right_novita, #left_sconti, #right_sconti, #left_TCG, #right_TCG, #left_GAF, #right_GAF, #left_GdT, #right_GdT{
+
+/* stile per i bottoni degli slider */
+.arrow img{
     display: flex;
     justify-content: center;
     margin-top: 75px;
-}
-
-/* stile per i bottoni degli slider */
-#prev_novita, #next_novita, #prev_sconti, #next_sconti, #prev_TCG, #next_TCG, #prev_GAF, #next_GAF, #prev_GdT, #next_GdT{
     width: 40px !important;
     height: 40px !important;
     border: none !important;
@@ -76,7 +65,7 @@ body{
 }
 
 /* stile per il bottone che torna su */
-#tornaSu {
+.tornaSu {
     width:50px;
     height:50px;
     display: none;
@@ -94,20 +83,6 @@ body{
     line-height: 50px;
 }
 
-
-
-#info ul{
-    font-size: 15px;
-    list-style-type: none;
-}
-
-#info li a:link{
-    color: #f7b544; /* cambia colore di base del link*/
-}
-
-#info li a:hover {
-    color: red; /* Cambia colore del testo al passaggio del mouse */
-}
 
 .titolo a{
     cursor: pointer;
