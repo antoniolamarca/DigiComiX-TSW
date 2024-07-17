@@ -19,6 +19,7 @@ public class CatalogoServlet extends HttpServlet {
         HttpSession session = request.getSession();
         System.out.println("Catalogo in funzione");//flag
 
+
     }
 }
 */
