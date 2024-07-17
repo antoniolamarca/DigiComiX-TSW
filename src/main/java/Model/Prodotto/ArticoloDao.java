@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedList;
 
@@ -21,7 +22,7 @@ public class ArticoloDao {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
-        String insertSQL = "INSERT INTO ARTICOLO (Nome, Prezzo, Descrizione, Tipo, Quantità) VALUES (?,?,?,?,?) ";
+        String insertSQL = "INSERT INTO ARTICOLO (Nome, Prezzo, Descrizione, Tipo, Quantita) VALUES (?,?,?,?,?) ";
 
         try {
             connection = DriverManagerConnectionPool.getConnection();
@@ -65,17 +66,17 @@ public class ArticoloDao {
             preparedStatement = connection.prepareStatement(insertSQL);
             preparedStatement.setInt(1, id);
 
-            //Prendiamo i risultati dalla querry
-            resultSet=preparedStatement.executeQuery();
+            //Prendiamo i risultati dalla query
+            resultSet = preparedStatement.executeQuery();
 
-            while(resultSet.next()) {
+            while (resultSet.next()) {
                 ArticoloBean articolo = new ArticoloBean();
                 articolo.setId(resultSet.getInt("id"));
                 articolo.setNome(resultSet.getString("Nome"));
                 articolo.setPrezzo(resultSet.getInt("Prezzo"));
                 articolo.setDescrizione(resultSet.getString("Descrizione"));
                 articolo.setTipo(resultSet.getString("Tipo"));
-                articolo.setQuantita(resultSet.getInt("Quantità"));
+                articolo.setQuantita(resultSet.getInt("Quantita"));
 
                 return articolo;
             }
@@ -97,6 +98,46 @@ public class ArticoloDao {
         }
 
 
+    }
 
+    public ArrayList<ArticoloBean> doGetByTipo(String tipo) throws SQLException {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        String insertSQL = "SELECT * FROM ARTICOLO WHERE tipo=?";
+        ResultSet resultSet = null;
+        ArrayList<ArticoloBean> listaArticoli = new ArrayList<>();
+
+        try {
+            connection = DriverManagerConnectionPool.getConnection();
+            System.out.println("Stabilita connessione, stiamo salvando");
+            preparedStatement = connection.prepareStatement(insertSQL);
+            preparedStatement.setString(1, tipo);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                ArticoloBean articolo = new ArticoloBean();
+                articolo.setId(resultSet.getInt("id"));
+                articolo.setNome(resultSet.getString("Nome"));
+                articolo.setPrezzo(resultSet.getInt("Prezzo"));
+                articolo.setDescrizione(resultSet.getString("Descrizione"));
+                articolo.setTipo(resultSet.getString("Tipo"));
+                articolo.setQuantita(resultSet.getInt("Quantita"));
+
+                listaArticoli.add(articolo);
+            }
+            return listaArticoli;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            try {
+                if (preparedStatement != null)
+                    preparedStatement.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } finally {
+                DriverManagerConnectionPool.releaseConnection(connection);
+            }
+
+        }
     }
 }

@@ -1,4 +1,4 @@
-/*package Controller.Prodotto;
+package Controller.Prodotto;
 
 import Model.Prodotto.ArticoloBean;
 import Model.Prodotto.ArticoloDao;
@@ -12,14 +12,22 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
+import Model.Prodotto.ArticoloBean;
+
 
 @WebServlet("/CatalogoServlet")
 public class CatalogoServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         System.out.println("Catalogo in funzione");//flag
-
-
+        String tipo = request.getParameter("tipo");
+        ArticoloDao articolo=new ArticoloDao();
+        try {
+            request.getSession().setAttribute("CatalogoFiltrato",articolo.doGetByTipo(tipo));
+            response.sendRedirect("Pagine/Catalogo.jsp");
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }
-*/

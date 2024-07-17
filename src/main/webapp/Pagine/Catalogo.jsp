@@ -2,6 +2,7 @@
 <%@ page import="Model.Prodotto.ArticoloBean" %>
 <%@ page import="Model.Prodotto.ArticoloDao" %>
 <%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
 <html>
 <head>
     <title>Catalogo Prodotti</title>
@@ -9,12 +10,11 @@
 </head>
 <body>
 <%
-    ArticoloDao dao = new ArticoloDao();
-    List<ArticoloBean> articoli = dao.getAllArticoli(); // Assumendo che esista un metodo per recuperare tutti gli articoli
-    for(ArticoloBean articolo : articoli) {
+    ArrayList<ArticoloBean> catalogo = (ArrayList<ArticoloBean>) request.getSession().getAttribute("CatalogoFiltrato");
+    for(ArticoloBean articolo : catalogo) {
 %>
 <div class="articolo">
-    <img src="<%= articolo.getImmagineUrl() %>" alt="Immagine di <%= articolo.getNome() %>">
+    <img src="" alt="Immagine di <%= articolo.getNome() %>">
     <h3><%= articolo.getNome() %></h3>
     <p><%= articolo.getDescrizione() %></p>
     <p>Prezzo: €<%= articolo.getPrezzo() %></p>

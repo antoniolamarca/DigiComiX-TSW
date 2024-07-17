@@ -78,7 +78,7 @@
     </div>
     <!-- slider per i giochi da tavolo-->
     <div id="GdT" class="titolo">
-        <a href="../Pagine/GdT.jsp"><h1>GIOCHI DA TAVOLO</h1></a>
+        <a href="${pageContext.request.contextPath}/CatalogoServlet?tipo=gdt"><h1>GIOCHI DA TAVOLO</h1></a>
     </div>
     <div id="slider_GdT">
         <div id="left_GdT">

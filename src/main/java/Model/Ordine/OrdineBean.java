@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class OrdineBean {
     private int id;
+    private int id_utente;
     private Date data_ordine;
     private String indirizzo;
     private String prodotti_ordinati;
