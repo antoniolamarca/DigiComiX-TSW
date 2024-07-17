@@ -1,6 +1,6 @@
 package Model.Carrello;
 
-import Model.ArticoloDao;
+import Model.Prodotto.ArticoloDao;
 import Model.Prodotto.ArticoloBean;
 
 import java.io.Serializable;

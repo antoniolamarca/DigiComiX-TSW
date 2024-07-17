@@ -1,6 +1,7 @@
-package Model;
+package Model.Prodotto;
 
 
+import Model.DriverManagerConnectionPool;
 import Model.Prodotto.ArticoloBean;
 import Model.Utente.UtenteBean;
 
