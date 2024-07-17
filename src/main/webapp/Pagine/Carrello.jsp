@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Carrello - DigiComiX</title>
-    <link rel="stylesheet" type="text/css" href="../PagineStile/Carrello.css?version=1.1">
+    <link rel="stylesheet" type="text/css" href="../PagineStile/Carrello.css?version=1.2">
 </head>
 <body>
     <!-- header della pagina -->

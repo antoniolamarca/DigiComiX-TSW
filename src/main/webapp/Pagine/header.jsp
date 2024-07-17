@@ -26,5 +26,9 @@
         <li><a href="../Pagine/TCG.jsp">Trading Card Games</a></li>
         <li><a href="../Pagine/Gadgets.jsp">Gadgets & Action figures</a></li>
         <li><a href="../Pagine/GdT.jsp">Giochi da Tavolo</a></li>
+        <% String requestURL = request.getRequestURI();
+            if (!requestURL.endsWith("Home.jsp")) { %>
+        <li><a href="../Pagine/Home.jsp">Torna alla home</a></li>
+        <% } %>
     </ul>
 </div>
