@@ -1,13 +1,13 @@
 @import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
 
 .footer{
-    background: #f7b544;
+    background: #fff685;
     margin-top: 20px;
     padding: 50px ;
     bottom: 0;
     border-radius: 10px;
     font-family: 'Press Start 2P', serif;
-    color: #1b74b0;
+    color: #0049B7;
     font-size: 17px;
 }
 

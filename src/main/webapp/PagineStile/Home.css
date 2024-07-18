@@ -6,7 +6,7 @@
 
 /* stile generale */
 body{
-    background-color: #1b74b0;
+    background-color: #0049B7;
     margin: 0;
     padding: 0;
 }
@@ -18,13 +18,13 @@ body{
 
 /* stile per i titoli degli slider */
 .titolo{
-    background-color: white;
+    background-color: #ff1d58;
     justify-content: center;
     display: flex;
     align-items: center;
     text-align: center;
     margin-top: 50px;
-    color: #f7b544;
+    color: #fff685;
     font-family: 'Press Start 2P', serif;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
@@ -75,8 +75,8 @@ body{
     z-index: 99;
     border: none;
     outline: none;
-    background-color: red;
-    color: #f7b544;
+    background-color: #ff0028;
+    color: #fff685;
     cursor: pointer;
     border-radius: 50%;
     font-size: 24px;
@@ -87,5 +87,5 @@ body{
 .titolo a{
     cursor: pointer;
     text-decoration: none;
-    color: #f7b544
+    color: #fff685
 }

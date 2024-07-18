@@ -1,7 +1,7 @@
 
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.getContextPath()}/PagineStile/header.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.getContextPath()}/PagineStile/header.css?=v1.1">
     <script src="<%=request.getContextPath()%>/script/menu'header.js"></script>
 </head>
 <div id="benvenuto">

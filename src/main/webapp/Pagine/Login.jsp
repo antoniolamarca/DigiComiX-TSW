@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>Login - DigiComiX</title>
-        <link rel="stylesheet" type="text/css" href="../PagineStile/Login.css?version=1.1">
+        <link rel="stylesheet" type="text/css" href="../PagineStile/Login.css?version=1.2">
         <script src="../script/Loginvalidation.js"></script>
     </head>
     <body>

@@ -1,10 +1,10 @@
 @import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
 
 body {
-    background-color: #1b74b0;
+    background-color: #0049B7;
     text-align: center;
     font-family: 'Press Start 2P', serif;
-    color: #f7b544;
+    color: #fff685;
 }
 
 /* modifica l'immagine del prodotto */
@@ -28,17 +28,17 @@ body {
 /* modifica la parte della descrizione del prodotto */
 #product-info{
     max-width: 50%;
-    background-color: red; /* Colore di sfondo */
+    background-color: #ff0028; /* Colore di sfondo */
     border-radius: 15px; /* Angoli arrotondati */
     padding: 100px; /* Spazio interno */
-    color: #f7b544; /* Colore del testo bianco per contrasto */
+    color: #fff685; /* Colore del testo bianco per contrasto */
 }
 
 /* cambia lo stile del bottone "aggiungi al carrello "*/
 #carrello input[type="submit"]{
-    background-color: #ffffff;
+    background-color: #ff1d58;
     border: 2px solid black;
-    color: #f7b544;
+    color: #fff685;
     font-family: 'Press Start 2P', serif;
     width: 350px;
     height: 45px;

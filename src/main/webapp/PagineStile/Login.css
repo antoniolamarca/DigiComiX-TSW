@@ -5,10 +5,10 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: #1b74b0;
+    background-color: #0049B7;
     height: 100vh;
     font-family: 'Press Start 2P', serif;
-    color: #f7b544;
+    color: #fff685;
     padding-bottom: 120px;
 }
 
@@ -58,7 +58,7 @@ body h1{
     height: 25px;
     border: 2px solid black;
     border-radius: 5px;
-    background-color: red;
+    background-color: #ff0028;
 }
 
 #registrazione ul li input[type="password"]{
@@ -68,7 +68,7 @@ body h1{
     height: 25px;
     border: 2px solid black;
     border-radius: 5px;
-    background-color: red;
+    background-color: #ff0028;
 }
 
 #registrazione ul li input[type="email"]{
@@ -78,13 +78,13 @@ body h1{
     height: 25px;
     border: 2px solid black;
     border-radius: 5px;
-    background-color: red;
+    background-color: #ff0028;
 }
 
 #btnReg, #btnLogin{
-    background-color: red;
+    background-color: #ff0028;
     border: 2px solid black;
-    color: #f7b544;
+    color: #fff685;
     font-family: 'Press Start 2P', serif;
     width: 250px;
     height: 45px;
@@ -115,7 +115,7 @@ body h1{
     height: 25px;
     border: 2px solid black;
     border-radius: 5px;
-    background-color: red;
+    background-color: #ff0028;
 }
 
 #login ul li input[type="password"]{
@@ -125,22 +125,22 @@ body h1{
     height: 25px;
     border: 2px solid black;
     border-radius: 5px;
-    background-color: red;
+    background-color: #ff0028;
 }
 
 #login a {
-    color: #f7b544;
+    color: #fff685;
     text-decoration: none;
 }
 
 #login a:hover {
-    color: red;
+    color: #ff0028;
 }
 
 .testo{
-    background-color: red;
+    background-color: #ff0028;
     border: 2px solid black;
-    color: #f7b544;
+    color: #fff685;
     font-family: 'Press Start 2P', serif;
     height: 25px;
     border-radius: 5px;

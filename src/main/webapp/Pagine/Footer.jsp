@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/footer.css?version=1.4">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/footer.css?version=1.5">
 <footer class="footer">
     <div class="grid">
         <div class="col reveal">

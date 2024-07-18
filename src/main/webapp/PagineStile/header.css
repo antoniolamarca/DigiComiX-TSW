@@ -7,7 +7,7 @@
 
 #benvenuto h1{
     flex-grow: 1;
-    color: #f7b544;
+    color: #fff685;
     font-family: 'Press Start 2P', serif;
 }
 
@@ -33,7 +33,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    background-color: #1b74b0;
+    background-color: #0049B7;
     overflow-x: hidden;
     transition: 0.5s;
 }
@@ -49,7 +49,7 @@
     right: 15px;
     font-size: 35px;
     font-family: 'Press Start 2P', serif;
-    color: #f7b544;
+    color: #fff685;
 }
 
 #sideMenu img{
@@ -70,7 +70,7 @@
 
 #sideMenu li a {
     text-decoration: none;
-    color: #f7b544;
+    color: #fff685;
     display: block;
 }
 

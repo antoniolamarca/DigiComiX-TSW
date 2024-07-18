@@ -6,8 +6,8 @@
 
 /* stile generale della pagina */
 body{
-    background-color: #1b74b0;
-    color: #f7b544;
+    background-color: #0049B7;
+    color: #fff685;
     font-family: 'Press Start 2P', serif;
     text-align: center;
 }
@@ -29,7 +29,7 @@ table{
 .tabella-prodotti td{
     width: 50%;
     border: 2px solid black;
-    background-color: #1b74b0;
+    background-color: #0049B7;
     border-radius: 10px;
 }
 /* stile del div che contiene la tabella */
@@ -40,9 +40,9 @@ table{
     padding : 5px;
 }
 .bottone_checkout {
-    background-color: #f7b544; /* Colore giallo */
+    background-color: #fff685; /* Colore giallo */
     border: none; /* Rimuove il bordo predefinito */
-    color: #1b74b0; /* Colore del testo */
+    color: #0049B7; /* Colore del testo */
     padding: 10px 20px; /* Spaziatura interna */
     text-align: center;
     text-decoration: none;
