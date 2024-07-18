@@ -22,7 +22,7 @@ public class ArticoloDao {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
-        String insertSQL = "INSERT INTO ARTICOLO (Nome, Prezzo, Descrizione, Tipo, Quantita) VALUES (?,?,?,?,?) ";
+        String insertSQL = "INSERT INTO ARTICOLO (Nome, Prezzo, Descrizione, Tipo, Quantita, novita, sconti) VALUES (?,?,?,?,?,?,?) ";
 
         try {
             connection = DriverManagerConnectionPool.getConnection();
@@ -33,6 +33,8 @@ public class ArticoloDao {
             preparedStatement.setString(3, articolo.getDescrizione());
             preparedStatement.setString(4, articolo.getTipo());
             preparedStatement.setInt(5, articolo.getQuantita());
+            preparedStatement.setBoolean(6, articolo.isNovita());
+            preparedStatement.setBoolean(7, articolo.isSconti());
 
             preparedStatement.executeUpdate();
 
@@ -77,6 +79,8 @@ public class ArticoloDao {
                 articolo.setDescrizione(resultSet.getString("Descrizione"));
                 articolo.setTipo(resultSet.getString("Tipo"));
                 articolo.setQuantita(resultSet.getInt("Quantita"));
+                articolo.setNovita(resultSet.getBoolean("novita"));
+                articolo.setSconti(resultSet.getBoolean("Sconti"));
 
                 return articolo;
             }
@@ -122,6 +126,8 @@ public class ArticoloDao {
                 articolo.setDescrizione(resultSet.getString("Descrizione"));
                 articolo.setTipo(resultSet.getString("Tipo"));
                 articolo.setQuantita(resultSet.getInt("Quantita"));
+                articolo.setNovita(resultSet.getBoolean("novita"));
+                articolo.setSconti(resultSet.getBoolean("Sconti"));
 
                 listaArticoli.add(articolo);
             }
@@ -162,6 +168,8 @@ public class ArticoloDao {
                 articolo.setDescrizione(resultSet.getString("Descrizione"));
                 articolo.setTipo(resultSet.getString("Tipo"));
                 articolo.setQuantita(resultSet.getInt("Quantita"));
+                articolo.setNovita(resultSet.getBoolean("novita"));
+                articolo.setSconti(resultSet.getBoolean("Sconti"));
 
                 listaArticoli.add(articolo);
             }
@@ -202,6 +210,8 @@ public class ArticoloDao {
                 articolo.setDescrizione(resultSet.getString("Descrizione"));
                 articolo.setTipo(resultSet.getString("Tipo"));
                 articolo.setQuantita(resultSet.getInt("Quantita"));
+                articolo.setNovita(resultSet.getBoolean("novita"));
+                articolo.setSconti(resultSet.getBoolean("Sconti"));
 
                 listaArticoli.add(articolo);
             }
@@ -242,6 +252,8 @@ public class ArticoloDao {
                 articolo.setDescrizione(resultSet.getString("Descrizione"));
                 articolo.setTipo(resultSet.getString("Tipo"));
                 articolo.setQuantita(resultSet.getInt("Quantita"));
+                articolo.setNovita(resultSet.getBoolean("novita"));
+                articolo.setSconti(resultSet.getBoolean("Sconti"));
 
                 listaArticoli.add(articolo);
             }

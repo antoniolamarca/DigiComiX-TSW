@@ -10,6 +10,8 @@ public class ArticoloBean implements Serializable {
     private int prezzo;
     private String descrizione;
     private int quantita;
+    private boolean novita;
+    private boolean sconti;
 
     public String getImages(){
         return id+".jpg";
@@ -60,6 +62,22 @@ public class ArticoloBean implements Serializable {
 
     public int getId() {
         return id;
+    }
+
+    public boolean isNovita() {
+        return novita;
+    }
+
+    public boolean isSconti() {
+        return sconti;
+    }
+
+    public void setNovita(boolean novita) {
+        this.novita = novita;
+    }
+
+    public void setSconti(boolean sconti) {
+        this.sconti = sconti;
     }
 
     //Funzione che serializza un oggetto in una stringa:
