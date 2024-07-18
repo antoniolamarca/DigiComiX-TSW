@@ -36,7 +36,7 @@
             int i = 0;
             for(Object o : prodotti) {
                 articolo = (ArticoloBean) o;
-                if(i < 3 && articolo.getTipo().equals("novita")) {
+                if(i < 4 && articolo.isNovita()) {
 
         %>
         <a href="${pageContext.request.contextPath}/ProdottoServlet?ID=<%= articolo.getId() %>"><img src="${pageContext.request.contextPath}/Immagini/Articoli/<%= articolo.getImages() %>" alt="Immagine di <%= articolo.getNome() %>"></a>
@@ -56,15 +56,14 @@
         </div>
         <%
 
-            i = 0;
+          int isconti = 0;
             for(Object o : prodotti) {
-                i++;
-                articolo = (ArticoloBean) o;
-                if(i <= 3 && articolo.getTipo().equals("sconti")) {
+                ArticoloBean articoloSconti= (ArticoloBean) o;
+                if(i <= 4 && articoloSconti.isSconti()) {
 
         %>
-        <a href="${pageContext.request.contextPath}/ProdottoServlet?ID=<%= articolo.getId() %>"><img src="${pageContext.request.contextPath}/Immagini/Articoli/<%= articolo.getImages() %>" alt="Immagine di <%= articolo.getNome() %>"></a>
-        <% }
+        <a href="${pageContext.request.contextPath}/ProdottoServlet?ID=<%= articoloSconti.getId() %>"><img src="${pageContext.request.contextPath}/Immagini/Articoli/<%= articoloSconti.getImages() %>" alt="Immagine di <%= articoloSconti.getNome() %>"></a>
+        <% } isconti ++;
         }%>
             <img alt="FrecciaDx" src="${pageContext.request.contextPath}/Immagini/Icone/FrecciaD.png">
         </div>

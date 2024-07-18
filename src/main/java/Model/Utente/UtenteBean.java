@@ -1,5 +1,7 @@
 package Model.Utente;
 
+import Model.Carrello.Cart;
+
 public class UtenteBean {
 
     private int id;
@@ -9,7 +11,6 @@ public class UtenteBean {
     private String password;
     private String tipo;
     private String carrello;
-
 
     public int getId() {
         return id;
