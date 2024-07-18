@@ -13,6 +13,7 @@ body {
     width: 500px;
     margin-left: 100px;
     margin-right: 300px;
+    margin-bottom: 10px;
     background-color: white; /* Sfondo bianco */
     border-radius: 15px; /* Contorni tondi */
     padding: 10px; /* Spazio intorno all'immagine */
@@ -29,15 +30,13 @@ body {
     max-width: 50%;
     background-color: red; /* Colore di sfondo */
     border-radius: 15px; /* Angoli arrotondati */
-    padding: 20px; /* Spazio interno */
+    padding: 100px; /* Spazio interno */
     color: #f7b544; /* Colore del testo bianco per contrasto */
-    position: relative;
-    right: 100px; /* Aumenta per spostare più a sinistra */
 }
 
 /* cambia lo stile del bottone "aggiungi al carrello "*/
 #carrello input[type="submit"]{
-    background-color: red;
+    background-color: #ffffff;
     border: 2px solid black;
     color: #f7b544;
     font-family: 'Press Start 2P', serif;
@@ -47,4 +46,5 @@ body {
     cursor: pointer;
     border-radius: 15px;
     margin-top: 20px;
+
 }

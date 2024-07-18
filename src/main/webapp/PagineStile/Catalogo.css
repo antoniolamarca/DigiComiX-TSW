@@ -1,13 +1,14 @@
+@import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
 body {
-    background-color: #ffffff;
-    font-family: 'Arial', sans-serif;
+    background-color: #1b74b0;
+    font-family: 'Press Start 2P', serif;
 }
 
 .articolo {
     border: 1px solid #ddd;
     padding: 20px;
     margin-bottom: 20px;
-    background-color: #1b74b0;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     display: flex;

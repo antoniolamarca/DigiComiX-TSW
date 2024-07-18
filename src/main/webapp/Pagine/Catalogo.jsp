@@ -1,4 +1,4 @@
-/<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="Model.Prodotto.ArticoloBean" %>
 <%@ page import="Model.Prodotto.ArticoloDao" %>
 <%@ page import="java.util.List" %>
@@ -6,9 +6,10 @@
 <html>
 <head>
     <title>Catalogo Prodotti</title>
-    <link rel="stylesheet" type="text/css" href="../PagineStile/Catalogo.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Catalogo.css?=v1.1">
 </head>
 <body>
+<%@include file="header.jsp" %>
 <%
     ArrayList<ArticoloBean> catalogo = (ArrayList<ArticoloBean>) request.getSession().getAttribute("CatalogoFiltrato");
     for(ArticoloBean articolo : catalogo) {
@@ -22,5 +23,6 @@
     <a href="${pageContext.request.contextPath}/ProdottoServlet?ID=<%= articolo.getId() %>">Dettagli</a>
 </div>
 <% } %>
+<%@include file="Footer.jsp" %>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.getContextPath()}/PagineStile/header.css">
@@ -8,11 +8,11 @@
     <img id="menuToggle" alt="Logo" src="${pageContext.request.contextPath}/Immagini/Logo.png">
     <h1>Benvenuto ${sessionScope.nome}</h1>
     <!-- icona carrello -->
-    <a href="Carrello.jsp">
+    <a href="${pageContext.request.contextPath}/Pagine/Carrello.jsp">
         <img alt="carrello" src="${pageContext.request.contextPath}/Immagini/Icone/Carrello.png" class="icone">
     </a>
     <!-- icona profilo -->
-    <a href="Login.jsp">
+    <a href="${pageContext.request.contextPath}/Pagine/Login.jsp">
         <img alt="profilo" src="${pageContext.request.contextPath}/Immagini/Icone/Profilo.png" class="icone">
     </a>
 </div>
@@ -29,7 +29,7 @@
         <li><a href="${pageContext.request.contextPath}/CatalogoServlet?tipo=gdt">Giochi da Tavolo</a></li>
         <% String requestURL = request.getRequestURI();
             if (!requestURL.endsWith("Home.jsp")) { %>
-        <li><a href="${pageContext.request.contextPath}Pagine/Home.jsp">Torna alla home</a></li>
+        <li><a href="${pageContext.request.contextPath}/Pagine/Home.jsp">Torna alla home</a></li>
         <% } %>
     </ul>
 </div>

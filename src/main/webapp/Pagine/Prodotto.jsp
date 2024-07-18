@@ -11,7 +11,7 @@
 <html>
 <head>
     <title>Prodotto - DigiComiX</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Prodotto.css?version=1.1">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Prodotto.css?version=1.2">
 </head>
 <body>
     <!-- header della pagina -->
@@ -24,21 +24,25 @@
         <table>
             <tr>
                 <td><img src="${pageContext.request.contextPath}/Immagini/Articoli/<%= articolo.getImages() %>" alt="Immagine di <%= articolo.getNome() %>"></td>
-                <td><div id="product-info"><h3><%= articolo.getDescrizione() %></h3></div></td>
+                <td><div id="product-info"><h3><%= articolo.getDescrizione() %></h3>
+                    <br>
+                    <div id="carrello" class="carrello-container">
+                        <h3>Prezzo: €<%= articolo.getPrezzo() %></h3>
+                       <center> <form action="Carrello" method="post">
+                            <input type="hidden" name="id" value="<%= articolo.getId() %>">
+                            <input type="hidden" name="nome" value="<%= articolo.getNome() %>">
+                            <input type="hidden" name="prezzo" value="<%= articolo.getPrezzo() %>">
+                            <input type="submit" value="Aggiungi al carrello">
+                        </form> </center>
+                    </div>
+
+
+                </div></td>
             </tr>
-        </table>
-        <h3>Prezzo: <%= articolo.getPrezzo() %></h3>
+       </table>
+
     </div>
 
-    <!-- tasto carrello che invia i dati al database -->
-    <div id="carrello" class="carrello-container">
-        <form action="Carrello" method="post">
-            <input type="hidden" name="id" value="<%= articolo.getId() %>">
-            <input type="hidden" name="nome" value="<%= articolo.getNome() %>">
-            <input type="hidden" name="prezzo" value="<%= articolo.getPrezzo() %>">
-            <input type="submit" value="Aggiungi al carrello">
-        </form>
-    </div>
 
     <div>
         <%@ include file="Footer.jsp" %>

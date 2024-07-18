@@ -1,26 +1,24 @@
 @import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
 
-footer {
-    width: 100%;
-    background-color: #f7b544;
-    color: #1b74b0;
-    text-align: left;
-    padding: 10px 0;
+.footer{
+    background: #f7b544;
+    margin-top: 20px;
+    padding: 50px ;
+    bottom: 0;
+    border-radius: 10px;
     font-family: 'Press Start 2P', serif;
-    text-decoration: none;
-    border-radius: 20px;
-}
-
-#info ul{
-    list-style-type: none;
-}
-
-#info ul li a {
-    text-decoration: none !important;
     color: #1b74b0;
+    font-size: 17px;
 }
 
-#info ul li a:hover {
-    color: red;
+.grid{
+    display: flex; max-width: 1350px; padding: 20px;margin: 0 auto;
 }
 
+.grid .col{
+    width: 100%;
+}
+
+.col {
+    padding: 17px;
+}

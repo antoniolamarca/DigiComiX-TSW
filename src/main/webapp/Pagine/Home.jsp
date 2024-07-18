@@ -32,10 +32,11 @@
             <img alt="FrecciaSx" src="${pageContext.request.contextPath}/Immagini/Icone/FrecciaL.png">
         </div>
         <% assert prodotti != null;
-            ArticoloBean articolo;
+
             int i = 0;
             for(Object o : prodotti) {
-                articolo = (ArticoloBean) o;
+                ArticoloBean articolo = (ArticoloBean) o;
+                System.out.println("prodoto" + articolo.getNome() + "e "+ articolo.isNovita());
                 if(i < 4 && articolo.isNovita()) {
 
         %>
@@ -45,7 +46,9 @@
         <div id="right_novita" class="arrow">
             <img alt="FrecciaDx" src="${pageContext.request.contextPath}/Immagini/Icone/FrecciaD.png">
         </div>
+
     </div>
+
     <!-- Slider per gli sconti -->
     <div id="sconti" class="titolo">
         <a href="${pageContext.request.contextPath}/CatalogoServlet?tipo=sconti"><h1>SCONTI</h1></a>
@@ -65,9 +68,11 @@
         <a href="${pageContext.request.contextPath}/ProdottoServlet?ID=<%= articoloSconti.getId() %>"><img src="${pageContext.request.contextPath}/Immagini/Articoli/<%= articoloSconti.getImages() %>" alt="Immagine di <%= articoloSconti.getNome() %>"></a>
         <% } isconti ++;
         }%>
+        <div>
             <img alt="FrecciaDx" src="${pageContext.request.contextPath}/Immagini/Icone/FrecciaD.png">
         </div>
     </div>
+
 <div id="manga" class="titolo">
     <a href="${pageContext.request.contextPath}/CatalogoServlet?tipo=manga"><h1>MANGA</h1></a>
 </div>
@@ -169,6 +174,6 @@
 
     <button title="Torna su" class="tornaSu">^</button>
 
-    <%@include file="Footer.jsp" %>
+<%@include file="Footer.jsp" %>
 </body>
 </html>
