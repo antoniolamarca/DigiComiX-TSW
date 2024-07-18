@@ -34,7 +34,7 @@ CREATE TABLE ARTICOLO (
     Tipo VARCHAR(50),
     Descrizione VARCHAR(400),
     Quantita INT,
-    Sconto Boolean,
+    Sconti Boolean,
     Novita Boolean
 );
 

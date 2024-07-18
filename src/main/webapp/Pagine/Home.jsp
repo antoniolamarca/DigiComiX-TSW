@@ -128,17 +128,17 @@
             <img alt="FrecciaSx" src="${pageContext.request.contextPath}/Immagini/Icone/FrecciaL.png">
         </div>
         <%
-
-            i = 0;
-            for(Object o : prodotti) {
-                i++;
-                articolo = (ArticoloBean) o;
-                if(i <= 3 && articolo.getTipo().equals("gad")) {
-
+            int igad = 0;
+            for (Object o : prodotti) {
+                ArticoloBean gad = (ArticoloBean) o;
+                if (igad < 3 && "gad".equals(gad.getTipo())) {
         %>
-        <a href="${pageContext.request.contextPath}/ProdottoServlet?ID=<%= articolo.getId() %>"><img src="${pageContext.request.contextPath}/Immagini/Articoli/<%= articolo.getImages() %>" alt="Immagine di <%= articolo.getNome() %>"></a>
-        <% }
-        }%>
+        <a href="${pageContext.request.contextPath}/ProdottoServlet?ID=<%= gad.getId() %>"><img src="${pageContext.request.contextPath}/Immagini/Articoli/<%= gad.getImages() %>" alt="Immagine di <%= gad.getNome() %>"></a>
+        <%
+                    igad++;
+                }
+            }
+        %>
         <div id="right_GAF" class="arrow">
             <img alt="FrecciaDx" src="${pageContext.request.contextPath}/Immagini/Icone/FrecciaD.png">
         </div>
@@ -152,17 +152,17 @@
             <img alt="FrecciaSx" src="${pageContext.request.contextPath}/Immagini/Icone/FrecciaL.png">
         </div>
         <%
-
-            i = 0;
-            for(Object o : prodotti) {
-                i++;
-                articolo = (ArticoloBean) o;
-                if(i <= 3 && articolo.getTipo().equals("gdt")) {
-
+            int igdt = 0;
+            for (Object o : prodotti) {
+                ArticoloBean gdt = (ArticoloBean) o;
+                if (igdt < 3 && "gdt".equals(gdt.getTipo())) {
         %>
-        <a href="${pageContext.request.contextPath}/ProdottoServlet?ID=<%= articolo.getId() %>"><img src="${pageContext.request.contextPath}/Immagini/Articoli/<%= articolo.getImages() %>" alt="Immagine di <%= articolo.getNome() %>"></a>
-        <% }
-        }%>
+        <a href="${pageContext.request.contextPath}/ProdottoServlet?ID=<%= gdt.getId() %>"><img src="${pageContext.request.contextPath}/Immagini/Articoli/<%= gdt.getImages() %>" alt="Immagine di <%= gdt.getNome() %>"></a>
+        <%
+                    igdt++;
+                }
+            }
+        %>
         <div id="right_GdT" class="arrow">
             <img alt="FrecciaDx" src="${pageContext.request.contextPath}/Immagini/Icone/FrecciaD.png">
         </div>
