@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.sql.SQLException;
 
 @WebServlet("/registerUser")
@@ -26,7 +27,8 @@ public class Registrazione extends HttpServlet {
 
         try {
             dao.doSave(utente);
-        } catch (SQLException e) {
+            response.sendRedirect("/Pagine/Login.jsp");
+        } catch (SQLException | IOException e) {
             System.out.println("Siamo nella servlet, errore salvatagio");
             throw new RuntimeException(e);
 

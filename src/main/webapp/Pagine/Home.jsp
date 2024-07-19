@@ -28,24 +28,20 @@
         <a href="${pageContext.request.contextPath}/CatalogoServlet?tipo=novita"><h1>NOVITÀ</h1></a>
     </div>
     <div class="slider">
-        <div class="arrow">
-            <img alt="FrecciaSx" src="${pageContext.request.contextPath}/Immagini/Icone/FrecciaL.png">
-        </div>
+
         <% assert prodotti != null;
 
             int i = 0;
             for(Object o : prodotti) {
                 ArticoloBean articolo = (ArticoloBean) o;
                 System.out.println("prodoto" + articolo.getNome() + "e "+ articolo.isNovita());
-                if(i < 4 && articolo.isNovita()) {
+                if(i < 3 && articolo.isNovita()) {
 
         %>
         <a href="${pageContext.request.contextPath}/ProdottoServlet?ID=<%= articolo.getId() %>"><img src="${pageContext.request.contextPath}/Immagini/Articoli/<%= articolo.getImages() %>" alt="Immagine di <%= articolo.getNome() %>"></a>
         <% }i++;
         }%>
-        <div id="right_novita" class="arrow">
-            <img alt="FrecciaDx" src="${pageContext.request.contextPath}/Immagini/Icone/FrecciaD.png">
-        </div>
+
 
     </div>
 
@@ -54,23 +50,19 @@
         <a href="${pageContext.request.contextPath}/CatalogoServlet?tipo=sconti"><h1>SCONTI</h1></a>
     </div>
     <div class="slider">
-        <div class="arrow">
-            <img alt="FrecciaSx" src="${pageContext.request.contextPath}/Immagini/Icone/FrecciaL.png">
-        </div>
+
         <%
 
           int isconti = 0;
             for(Object o : prodotti) {
                 ArticoloBean articoloSconti= (ArticoloBean) o;
-                if(i <= 4 && articoloSconti.isSconti()) {
+                if(i <= 3 && articoloSconti.isSconti()) {
 
         %>
         <a href="${pageContext.request.contextPath}/ProdottoServlet?ID=<%= articoloSconti.getId() %>"><img src="${pageContext.request.contextPath}/Immagini/Articoli/<%= articoloSconti.getImages() %>" alt="Immagine di <%= articoloSconti.getNome() %>"></a>
         <% } isconti ++;
         }%>
-        <div>
-            <img alt="FrecciaDx" src="${pageContext.request.contextPath}/Immagini/Icone/FrecciaD.png">
-        </div>
+
     </div>
 
 <div id="manga" class="titolo">
@@ -78,14 +70,12 @@
 </div>
 <!-- slider per i manga -->
 <div class="slider">
-    <div class="arrow">
-        <img alt="FrecciaSx" src="${pageContext.request.contextPath}/Immagini/Icone/FrecciaL.png">
-    </div>
+
     <%
     int imanga = 0;
     for (Object o : prodotti) {
     ArticoloBean manga = (ArticoloBean) o;
-    if (imanga < 4 && "manga".equals(manga.getTipo())) {
+    if (imanga < 3 && "manga".equals(manga.getTipo())) {
     %>
     <a href="${pageContext.request.contextPath}/ProdottoServlet?ID=<%= manga.getId() %>">
         <img src="${pageContext.request.contextPath}/Immagini/Articoli/<%= manga.getImages() %>" alt="Immagine di <%= manga.getNome() %>">
@@ -95,18 +85,14 @@
         }
         }
     %>
-    <div class="arrow">
-        <img alt="FrecciaDx" src="${pageContext.request.contextPath}/Immagini/Icone/FrecciaD.png">
-    </div>
+
 </div>
     <!-- slider per i giochi di carte -->
     <div class="titolo">
         <a href="${pageContext.request.contextPath}/CatalogoServlet?tipo=tcg"><h1>TRADING CARD GAMES</h1></a>
     </div>
     <div class="slider">
-        <div class="arrow">
-            <img alt="FrecciaSx" src="${pageContext.request.contextPath}/Immagini/Icone/FrecciaL.png">
-        </div>
+
         <%
             int itcg = 0;
             for (Object o : prodotti) {
@@ -119,18 +105,14 @@
                 }
             }
         %>
-        <div class="arrow">
-            <img alt="FrecciaDx" src="${pageContext.request.contextPath}/Immagini/Icone/FrecciaD.png">
-        </div>
+
     </div>
     <!-- slider per i gadgets -->
     <div class="titolo">
         <a href="${pageContext.request.contextPath}/CatalogoServlet?tipo=gad"><h1>GADGETS & ACTION FIGURES</h1></a>
     </div>
     <div class="slider">
-        <div class="arrow">
-            <img alt="FrecciaSx" src="${pageContext.request.contextPath}/Immagini/Icone/FrecciaL.png">
-        </div>
+
         <%
             int igad = 0;
             for (Object o : prodotti) {
@@ -143,18 +125,14 @@
                 }
             }
         %>
-        <div id="right_GAF" class="arrow">
-            <img alt="FrecciaDx" src="${pageContext.request.contextPath}/Immagini/Icone/FrecciaD.png">
-        </div>
+
     </div>
     <!-- slider per i giochi da tavolo-->
     <div class="titolo">
         <a href="${pageContext.request.contextPath}/CatalogoServlet?tipo=gdt"><h1>GIOCHI DA TAVOLO</h1></a>
     </div>
     <div class="slider">
-        <div class="arrow">
-            <img alt="FrecciaSx" src="${pageContext.request.contextPath}/Immagini/Icone/FrecciaL.png">
-        </div>
+
         <%
             int igdt = 0;
             for (Object o : prodotti) {
@@ -167,9 +145,7 @@
                 }
             }
         %>
-        <div id="right_GdT" class="arrow">
-            <img alt="FrecciaDx" src="${pageContext.request.contextPath}/Immagini/Icone/FrecciaD.png">
-        </div>
+
     </div>
 
     <button title="Torna su" class="tornaSu">^</button>

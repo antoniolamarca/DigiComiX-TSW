@@ -31,6 +31,7 @@ public class Login extends HttpServlet{
                     session.setAttribute("tipo", utenteBean.getTipo());
                     session.setAttribute("nome", utenteBean.getNome());
                 }
+                response.sendRedirect("Pagine/Home.jsp");
 
             }else{
                 response.sendRedirect("Pagine/Registrazione.jsp");

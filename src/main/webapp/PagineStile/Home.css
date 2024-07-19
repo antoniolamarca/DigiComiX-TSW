@@ -46,6 +46,13 @@ body{
     height: 200px;
     width: 150px;
     margin: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Aggiunge una transizione fluida per trasformazione e ombra */
+}
+
+/* Stile per l'hover delle immagini */
+.slider img:hover {
+    transform: scale(1.1); /* Aumenta la dimensione dell'immagine del 10% */
+    box-shadow: 0 0 15px rgba(0,0,0,0.5); /* Aggiunge un'ombra per far risaltare l'immagine */
 }
 
 

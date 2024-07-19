@@ -54,3 +54,72 @@ table{
     font-family: 'Press Start 2P', serif;
     margin-bottom: 40px;
 }
+#payment-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#payment-form {
+    background-color: #0049B7;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+    position: relative;
+}
+#payment-form form {
+    width: 100%; /* Assicura che il form occupi l'intera larghezza del suo contenitore */
+}
+
+#payment-form input[type="text"],
+#payment-form input[type="month"],
+#payment-form button {
+    display: block; /* Rende ogni campo un blocco, facendolo apparire su una nuova riga */
+    width: 100%; /* Ogni campo occupa l'intera larghezza */
+    margin-bottom: 10px; /* Aggiunge spazio sotto ogni campo */
+    box-sizing: border-box; /* Assicura che padding e bordi siano inclusi nella larghezza totale */
+}
+
+.campopagamento {
+    font-size: 20px; /* Aumenta la dimensione del font */
+    padding: 15px 20px; /* Aumenta il padding per ingrandire il campo */
+    border-radius: 25px; /* Arrotonda i bordi */
+    border: 2px solid #fff685; /* Opzionale: aggiunge un bordo solido giallo per coerenza con il design */
+    background-color: #0049B7; /* Imposta il colore di sfondo */
+    color: #fff685; /* Imposta il colore del testo */
+    margin-bottom: 15px; /* Aggiunge spazio sotto il campo */
+    box-sizing: border-box; /* Assicura che padding e bordi siano inclusi nella larghezza totale */
+}
+
+#conferma {
+    font-size: 18px; /* Aumenta la dimensione del font */
+    padding: 12px 24px; /* Aumenta il padding */
+    border-radius: 30px; /* Arrotonda i bordi */
+    background-color: #fff685; /* Colore di sfondo */
+    color: #0049B7; /* Colore del testo */
+    border: none; /* Rimuove il bordo */
+    cursor: pointer; /* Cambia il cursore in una mano per indicare che è cliccabile */
+    transition: background-color 0.3s ease; /* Effetto di transizione per il cambio di colore */
+}
+
+#conferma:hover {
+    background-color: #fff685; /* Cambia il colore di sfondo al passaggio del mouse */
+}
+
+#closePaymentForm {
+    position: absolute;
+    top: 0; /* Ajusta questa distanza come necessario */
+    right: 0; /* Ajusta questa distanza come necessario */
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    color: #fff685;
+    padding: 10px; /* Aggiunge spazio intorno alla X per facilitare il clic */
+}

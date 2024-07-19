@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>Carrello - DigiComiX</title>
-    <link rel="stylesheet" type="text/css" href="../PagineStile/Carrello.css?version=1.3">
+    <link rel="stylesheet" type="text/css" href="../PagineStile/Carrello.css?version=1.4">
+    <script src="${pageContext.request.contextPath}/script/Pagamento.js"></script>
 </head>
 <body>
     <!-- header della pagina -->
@@ -39,6 +40,21 @@
         </table>
         
         <button type="submit" name="action" value="checkout" class="bottone_checkout">Procedi all'acquisto</button>
+    </div>
+    <!-- Div per il menu di pagamento in sovraimpressione -->
+    <div id="payment-overlay" style="display:none;">
+        <div id="payment-form">
+            <button id="closePaymentForm">X</button>
+            <h2>Informazioni di Pagamento</h2>
+            <form id="paymentInfoForm" action="/path/to/payment/processing" method="post">
+                <!-- Campi per le informazioni di pagamento-->
+                <input type="text" class="campopagamento" id="cardNumber" name="cardNumber" placeholder="Numero Carta" required>
+                <input type="text" class= "campopagamento" id="cardHolder" name="cardHolder" placeholder="Titolare Carta" required>
+                <input type="month" class= "campopagamento" id="expiryDate" name="expiryDate" required>
+                <input type="text" class= "campopagamento" id="cvv" name="cvv" placeholder="CVV" required>
+                <button id= "conferma" type="submit">Conferma Pagamento</button>
+            </form>
+        </div>
     </div>
 
     <!-- footer della pagina -->
