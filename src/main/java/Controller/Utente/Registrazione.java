@@ -27,7 +27,8 @@ public class Registrazione extends HttpServlet {
 
         try {
             dao.doSave(utente);
-            response.sendRedirect("/Pagine/Login.jsp");
+            response.sendRedirect("Pagine/Login.jsp");
+            return ;
         } catch (SQLException | IOException e) {
             System.out.println("Siamo nella servlet, errore salvatagio");
             throw new RuntimeException(e);
