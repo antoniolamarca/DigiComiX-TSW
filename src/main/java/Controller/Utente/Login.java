@@ -25,7 +25,7 @@ public class Login extends HttpServlet{
             if (utenteDao.IsEmailPresent(email)){
                 utenteBean=utenteDao.GetUtente(email);
 
-                if (utenteBean.getPassword().equals(password)){
+                if (utenteDao.checkUser(email,password)){
                     HttpSession session=request.getSession();
                     session.setAttribute("email", utenteBean.getEmail());
                     session.setAttribute("tipo", utenteBean.getTipo());
@@ -38,9 +38,7 @@ public class Login extends HttpServlet{
                 response.sendRedirect("Pagine/Registrazione.jsp");
             }
 
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
+        } catch (SQLException | IOException e) {
             throw new RuntimeException(e);
         }
     }

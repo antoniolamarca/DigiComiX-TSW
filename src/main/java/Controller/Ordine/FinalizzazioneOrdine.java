@@ -34,7 +34,7 @@ public class FinalizzazioneOrdine extends HttpServlet {
                 ordineBean.setId_utente((Integer) req.getSession().getAttribute("idUtente"));
 
                 try {
-                    ordineBean.setProdotti_ordinati( Cart.serializzaToString(cart.getCarrello()));
+                    ordineBean.setProdotti_ordinati( cart);
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }

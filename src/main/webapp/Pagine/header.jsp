@@ -7,6 +7,13 @@
 <div id="benvenuto">
     <img id="menuToggle" alt="Logo" src="${pageContext.request.contextPath}/Immagini/Logo.png">
     <h1>Benvenuto ${sessionScope.nome}</h1>
+
+    <div class="header-buttons">
+        <% if(request.getSession().getAttribute("tipo")!=null && request.getSession().getAttribute("tipo").equals("admin")){ %>
+        <form action = "${pageContext.request.contextPath}/accessAdmin" method = "get" >
+            <button type = "submit" > Pagina Amministratore </button >
+        </form >
+        <% }%>
     <!-- icona carrello -->
     <a href="${pageContext.request.contextPath}/Pagine/Carrello.jsp">
         <img alt="carrello" src="${pageContext.request.contextPath}/Immagini/Icone/Carrello.png" class="icone">
@@ -15,6 +22,7 @@
     <a href="${pageContext.request.contextPath}/Pagine/Login.jsp">
         <img alt="profilo" src="${pageContext.request.contextPath}/Immagini/Icone/Profilo.png" class="icone">
     </a>
+    </div>
 </div>
 <!-- menù laterale -->
 <div id="sideMenu" class="side-menu">

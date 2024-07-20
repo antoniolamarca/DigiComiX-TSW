@@ -27,6 +27,7 @@
             <tr >
                 <td ><img alt = "prodotto" src ="${pageContext.request.contextPath}/Immagini/Articoli/<%= o.getImages()%>" ></td >
                 <td ><p > €<%= o.getPrezzo()%></p ></td >
+                <td><img src="${pageContext.request.contextPath}/Immagini/Icone/Cestino.png" alt="Rimuovi" style="cursor:pointer"></td>
             </tr >
                 <% }
             }%>

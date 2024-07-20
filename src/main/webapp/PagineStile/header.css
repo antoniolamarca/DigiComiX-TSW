@@ -18,6 +18,12 @@
     cursor: pointer;
 }
 
+.header-buttons {
+    display: flex;
+    justify-content: space-around; /* o "flex-end" se vuoi che siano allineati a destra */
+    align-items: center; /* Centra i bottoni verticalmente */
+}
+
 /* modifica parametri di specifiche immagini */
 .icone{
     height: 45px !important;

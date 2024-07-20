@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Base64;
 
 public class Cart implements Serializable {
+    private static final long serialVersionUID = 6664768527921825688L;
    private ArrayList<ArticoloBean> carrello;
 
     public ArrayList<ArticoloBean> getCarrello() {
@@ -30,33 +31,24 @@ public class Cart implements Serializable {
         carrello.add(articoloBean);
     }
 
-    //Funzione che serializza un oggetto in una stringa:
-    public static String serializzaToString(Serializable object) throws Exception {
-        ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        ObjectOutputStream oos = new ObjectOutputStream(bos);
-        oos.writeObject(object);
-        oos.close();
-
-        // Codifica l'array di byte in base64
-        byte[] byteData = bos.toByteArray();
-        return Base64.getEncoder().encodeToString(byteData);
+    public String serializeToString() throws IOException {
+        try (ByteArrayOutputStream baos = new ByteArrayOutputStream();
+             ObjectOutputStream oos = new ObjectOutputStream(baos)) {
+            oos.writeObject(this);
+            return Base64.getEncoder().encodeToString(baos.toByteArray());
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw e;
+        }
     }
 
-    //Funzione che deserializza una stringa in un oggetto
-    public static Object deserializzaFromString(String stringaSerializzata) throws Exception {
-        // Decodifica la stringa in base64 in un array di byte
-        byte[] byteData = Base64.getDecoder().decode(stringaSerializzata);
-
-        // Crea un flusso di input per leggere l'array di byte
-        ObjectInputStream ois = new ObjectInputStream(new ByteArrayInputStream(byteData));
-
-        // Deserializza l'oggetto dal flusso di input
-        Object objectDeserializzato = ois.readObject();
-
-        // Chiudi il flusso di input
-        ois.close();
-
-        return objectDeserializzato;
+    //Deserializziamo la Stringa in un oggetto
+    public static Object deserializeFromString(String string) throws IOException, ClassNotFoundException {
+        byte[] data = Base64.getDecoder().decode(string);
+        try (ByteArrayInputStream bais = new ByteArrayInputStream(data);
+             ObjectInputStream ois = new ObjectInputStream(bais)) {
+            return ois.readObject();
+        }
     }
 
 }
