@@ -5,30 +5,25 @@ import Model.Ordine.OrdineDao;
 import Model.Prodotto.ArticoloBean;
 import Model.Utente.UtenteBean;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Collection;
 import java.util.LinkedList;
-import java.sql.Date;
 
 public class OrdineDao {
     public void doSave(OrdineBean ordine) throws SQLException {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
-        String insertSQL = "INSERT INTO ORDINE(id, Data_ordine, indirizzo, prodotti-ordinati) VALUES(?,?,?,?)";
+        String insertSQL = "INSERT INTO ORDINE(id_utente, Data_ordine, indirizzo, prodotti_ordinati) VALUES(?,?,?,?)";
 
         try {
             connection = DriverManagerConnectionPool.getConnection();
             System.out.println("Stabilita connessione, stiamo salvando");
             preparedStatement = connection.prepareStatement(insertSQL);
-            preparedStatement.setInt(1, ordine.getId());
-            preparedStatement.setDate(2, ordine.getData_ordine());
+            preparedStatement.setInt(1, ordine.getId_utente());
+            preparedStatement.setDate(2, Date.valueOf(ordine.getData_ordine()));
             preparedStatement.setString(3, ordine.getIndirizzo());
             preparedStatement.setString(4, ordine.getProdotti_ordinati());
-            preparedStatement.setString(5, "ordine");
 
             preparedStatement.executeUpdate();
 

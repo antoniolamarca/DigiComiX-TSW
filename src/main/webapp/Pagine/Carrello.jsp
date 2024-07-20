@@ -6,14 +6,13 @@
     <title>Carrello - DigiComiX</title>
     <link rel="stylesheet" type="text/css" href="../PagineStile/Carrello.css?version=1.4">
     <script src="${pageContext.request.contextPath}/script/Pagamento.js"></script>
-    <
+    <script src="${pageContext.request.contextPath}/script/Payment.js"></script>
 </head>
 <body>
     <!-- header della pagina -->
     <%@include file="header.jsp" %>
 
     <h1>Il tuo carrello</h1>
-<form action="Carrello" method="post">
     <div id="product-info">
         <table class="tabella-prodotti">
             <tr>
@@ -50,7 +49,7 @@
                 <button id="closePaymentForm">X</button>
             </div>
             <h2>Informazioni di Pagamento</h2>
-            <form id="paymentInfoForm" action="/path/to/payment/processing" method="post">
+            <form id="paymentInfoForm" action="${pageContext.request.contextPath}/EffettuaOrdine" method="post">
                 <!-- Campi per le informazioni di pagamento-->
                 <input type="text" class="campopagamento" id="cardNumber" name="cardNumber" placeholder="Numero Carta" required>
                 <input type="text" class= "campopagamento" id="cardHolder" name="cardHolder" placeholder="Titolare Carta" required>
@@ -61,6 +60,7 @@
             </form>
         </div>
     </div>
+
 
     <!-- footer della pagina -->
     <%@include file="Footer.jsp"%>

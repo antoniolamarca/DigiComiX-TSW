@@ -30,6 +30,7 @@ public class Login extends HttpServlet{
                     session.setAttribute("email", utenteBean.getEmail());
                     session.setAttribute("tipo", utenteBean.getTipo());
                     session.setAttribute("nome", utenteBean.getNome());
+                    session.setAttribute("idUtente", utenteBean.getId());
                 }
                 response.sendRedirect("Pagine/Home.jsp");
 

@@ -24,10 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
             errorMessage += "Nome del titolare della carta non valido.\n";
             valid = false;
         }
-        if (!isValidExpiryDate(expiryDate)) {
-            errorMessage += "Data di scadenza non valida o nel passato.\n";
-            valid = false;
-        }
         if (!cvvRegex.test(cvv)) {
             errorMessage += "CVV non valido.\n";
             valid = false;
@@ -35,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (!valid) {
             alert(errorMessage);
-            event.preventDefault(); // Impedisce l'invio del form
+            event.preventDefault();// Impedisce l'invio del form
         }
     });
 

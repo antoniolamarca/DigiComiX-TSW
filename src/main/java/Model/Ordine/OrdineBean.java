@@ -1,11 +1,12 @@
 package Model.Ordine;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class OrdineBean {
     private int id;
     private int id_utente;
-    private Date data_ordine;
+    private LocalDate data_ordine;
     private String indirizzo;
     private String prodotti_ordinati;
 
@@ -13,8 +14,8 @@ public class OrdineBean {
         return id;
     }
 
-    public java.sql.Date getData_ordine() {
-        return (java.sql.Date) data_ordine;
+    public LocalDate getData_ordine() {
+        return  data_ordine;
     }
 
     public String getIndirizzo() {
@@ -33,11 +34,19 @@ public class OrdineBean {
         this.indirizzo = indirizzo;
     }
 
-    public void setData_ordine(Date data_ordine) {
+    public void setData_ordine(LocalDate data_ordine) {
         this.data_ordine = data_ordine;
     }
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getId_utente() {
+        return id_utente;
+    }
+
+    public void setId_utente(int id_utente) {
+        this.id_utente = id_utente;
     }
 }
