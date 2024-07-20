@@ -15,11 +15,12 @@ CREATE TABLE ACCOUNT_UTENTE (
 
 CREATE TABLE ORDINE (
     Id INT AUTO_INCREMENT PRIMARY KEY,
+    Id_utente int,
     Data_ordine DATE,
     Indirizzo VARCHAR(200),
-    Prodotti_ordinati VARCHAR(1000)
+    Prodotti_ordinati TEXT
 );
-
+select * from Ordine;
 CREATE TABLE WISHLIST (
     Id INT AUTO_INCREMENT PRIMARY KEY,
     NumeroArticoli INT,
@@ -84,8 +85,8 @@ INSERT INTO ARTICOLO (Nome, Prezzo, Tipo, Descrizione, Quantita, Sconti, Novita)
 ('Portachiavi Hatsune Miku', 3.50, 'gad', 'Porta con te lo stile di Hatsune Miku ovunque tu vada con questo splendido portachiavi! Perfetto per i fan del fenomeno Vocaloid, questo accessorio rappresenta al meglio la iconica idol virtuale in un design accattivante e dettagliato.', 10, 0,0),
 ('Yu-Gi-Oh! Fire Kings Structure Deck', 15.00, 'tcg', 'Scatena il potere ardente con lo Structure Deck - Fire Kings di Yu-Gi-Oh! Questo mazzo pre-costruito è perfetto per i duellanti che desiderano dominare il campo di battaglia con strategie infuocate e potenti mostri di fuoco.',5, 0,1),
 ('Devil May Cry 5: Visions of V vol.1', 10.00, 'manga', 'Entra nel mondo oscuro e affascinante di Devil May Cry con il primo volume del manga "Devil May Cry 5: Visions of V". Questo capitolo imperdibile offre una prospettiva unica e avvincente sul mondo del celebre videogioco, esplorando la storia del misterioso V.',3,1,1),
-('Super Dragonball Heroes Universe mission 2 Booster Box', 79.99, 'tcg', 'Espandi la tua collezione e potenzia il tuo mazzo con il Booster Box di Dragon Ball Heroes Universe Mission 2! Questa confezione speciale è un must-have per tutti i fan di Dragon Ball e i giocatori del gioco di carte Super Dragon Ball Heroes, offrendo una gamma di carte potenti e iconiche direttamente dallo spin-off di Dragon Ball.',10,0,1),
-('jojos bizzarre adventure Golden Wind vol.1', 5.00, 'manga', 'Immergiti nello stravagante e bizzarro mondo di JoJos Bizarre Adventure: Golden Wind con il primo volume di questa serie iconica creata da Hirohiko Araki. Questo capitolo iniziale introduce i lettori alle avventure di Giorno Giovanna, un giovane carismatico con un sogno ambizioso.',10,1,0);
+('Super Dragonball Heroes Universe mission 2 Booster Box', 79.99, 'tcg', 'Espandi la tua collezione e potenzia il tuo mazzo con il Booster Box di Dragon Ball Heroes Universe Mission 2! Questa confezione speciale è un must-have per tutti i fan di Dragon Ball e i giocatori del gioco di carte Super Dragon Ball Heroes, offrendo una gamma di carte potenti e iconiche direttamente dallo spin-off di Dragon Ball.',10,0,1);
+
 
  
 
