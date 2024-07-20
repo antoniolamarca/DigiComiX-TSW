@@ -13,7 +13,7 @@ public class OrdineBean {
         return id;
     }
 
-    public Date getData_ordine() {
+    public java.sql.Date getData_ordine() {
         return data_ordine;
     }
 
