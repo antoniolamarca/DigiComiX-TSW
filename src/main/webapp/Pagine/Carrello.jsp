@@ -1,5 +1,6 @@
 <%@ page import="Model.Prodotto.ArticoloBean" %>
 <%@ page import="Model.Carrello.Cart" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,18 +26,27 @@
                     %>
             <tr >
                 <td ><img alt = "prodotto" src ="${pageContext.request.contextPath}/Immagini/Articoli/<%= o.getImages()%>" ></td >
-                <td ><p > <%= o.getPrezzo()%> </p ></td >
+                <td ><p > €<%= o.getPrezzo()%></p ></td >
             </tr >
                 <% }
             }%>
 
         </table>
         <table>
+            <%
+                double totale = 0;
+                if(request.getSession().getAttribute("cart")!= null){
+                    Cart prodotti = (Cart) request.getSession().getAttribute("cart");
+                    for(ArticoloBean o : prodotti.getCarrello()) {
+                        totale += o.getPrezzo(); // Aggiungi il prezzo di ogni articolo al totale
+                    }
+                }
+            %>
             <tr>
                 <th>Totale</th>
             </tr>
             <tr>
-                <td>21,97 euro</td>
+                <td><%= String.format("%.2f", totale) %> euro</td>
             </tr>
         </table>
         
