@@ -36,11 +36,11 @@
                 ArticoloBean articolo = (ArticoloBean) o;
                 System.out.println("prodoto" + articolo.getNome() + "e "+ articolo.isNovita());
                 if(i < 3 && articolo.isNovita()) {
-
+                    System.out.println( "articolo " + articolo.getNome());
+                    i++;
         %>
         <a href="${pageContext.request.contextPath}/ProdottoServlet?ID=<%= articolo.getId() %>"><img src="${pageContext.request.contextPath}/Immagini/Articoli/<%= articolo.getImages() %>" alt="Immagine di <%= articolo.getNome() %>"></a>
-        <% }i++;
-        }%>
+        <% } }%>
 
 
     </div>
@@ -56,11 +56,12 @@
           int isconti = 0;
             for(Object o : prodotti) {
                 ArticoloBean articoloSconti= (ArticoloBean) o;
-                if(i <= 3 && articoloSconti.isSconti()) {
+                if(isconti < 3 && articoloSconti.isSconti()) {
+                    isconti ++;
 
         %>
         <a href="${pageContext.request.contextPath}/ProdottoServlet?ID=<%= articoloSconti.getId() %>"><img src="${pageContext.request.contextPath}/Immagini/Articoli/<%= articoloSconti.getImages() %>" alt="Immagine di <%= articoloSconti.getNome() %>"></a>
-        <% } isconti ++;
+        <% } ;
         }%>
 
     </div>
