@@ -19,11 +19,13 @@ body h1{
 /* definizione della grandezza della tabella per gestire l'immagine e il testo */
 table{
     width: 50%;
-    border: 2px solid black;
-    background-color: whitesmoke;
+    border: 3px solid black;
+    background-color: red;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .tabella-prodotti td{
@@ -54,6 +56,7 @@ table{
     font-family: 'Press Start 2P', serif;
     margin-bottom: 40px;
 }
+
 #payment-overlay {
     position: fixed;
     top: 0;
@@ -122,4 +125,9 @@ table{
     font-size: 20px;
     color: #fff685;
     padding: 10px; /* Aggiunge spazio intorno alla X per facilitare il clic */
+}
+
+#chiudiFinestra{
+    display: flex;
+    justify-content: flex-end;
 }
