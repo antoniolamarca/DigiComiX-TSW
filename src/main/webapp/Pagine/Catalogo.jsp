@@ -6,7 +6,7 @@
 <html>
 <head>
     <title>Catalogo Prodotti</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Catalogo.css?=v1.1">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Catalogo.css?=v1.2">
 </head>
 <body>
 <%@include file="header.jsp" %>

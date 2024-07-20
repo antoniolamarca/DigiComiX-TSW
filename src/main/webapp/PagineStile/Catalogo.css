@@ -5,10 +5,10 @@ body {
 }
 
 .articolo {
-    border: 1px solid #ddd;
+    border: 1px solid #080808;
     padding: 20px;
     margin-bottom: 20px;
-    background-color: #ffffff;
+    background-color: #6495ED;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     display: flex;
@@ -25,7 +25,7 @@ body {
 }
 
 .articolo h3 {
-    color: #0049B7;
+    color: #fff685;
     margin-top: 10px;
 }
 

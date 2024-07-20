@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Press%20Start%202P');
+
+/* Stile generale della pagina di errore, seguendo lo stile di Home.css */
+body {
+    background-color: #0049B7; /* Colore di sfondo come in Home.css */
+    font-family: 'Press Start 2P', serif; /* Font come in Home.css */
+    color: #fff685; /* Colore dei testi come in Home.css */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #c41246;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: #ff1d58; /* Colore dei titoli come in Home.css */
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+a {
+    display: inline-block;
+    background-color: #ff1d58; /* Colore dei bottoni come in Home.css */
+    color: #fff685; /* Colore del testo dei bottoni come in Home.css */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #c41246; /* Effetto hover per i bottoni */
+}

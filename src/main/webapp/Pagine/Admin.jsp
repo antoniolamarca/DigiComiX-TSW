@@ -6,6 +6,7 @@
 <html>
   <head>
     <title>Title</title>
+      <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Admin.css">
   </head>
   <body>
   <div class="container">

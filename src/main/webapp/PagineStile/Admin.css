@@ -1,0 +1,75 @@
+/* Admin.css - Stile per la pagina admin.jsp che rispetta il design e i colori di Home.css */
+
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0049B7; /* Colore di sfondo come Home.css */
+    color: #fff685; /* Colore dei testi come Home.css */
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Press Start 2P', serif; /* Font per i titoli come Home.css */
+    color: #fff685; /* Colore dei titoli come Home.css */
+}
+
+/* Stile del form di amministrazione */
+.admin-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input e label del form */
+.admin-form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #fff685; /* Colore dei testi come Home.css */
+}
+
+.admin-form input, .admin-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Pulsanti */
+.button {
+    background-color: #ff1d58; /* Colore dei bottoni come Home.css */
+    color: #fff685; /* Colore del testo dei bottoni come Home.css */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', serif; /* Font come Home.css */
+}
+
+.button:hover {
+    background-color: #c41246; /* Variazione colore al hover */
+}
+
+/* Tabella degli articoli */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th, .admin-table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.admin-table th {
+    background-color: #ff1d58; /* Colore di sfondo delle intestazioni come Home.css */
+    color: #fff685; /* Colore del testo delle intestazioni come Home.css */
+}
+
+.admin-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
