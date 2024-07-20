@@ -14,7 +14,7 @@ public class OrdineBean {
     }
 
     public java.sql.Date getData_ordine() {
-        return data_ordine;
+        return (java.sql.Date) data_ordine;
     }
 
     public String getIndirizzo() {
