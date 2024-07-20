@@ -6,6 +6,7 @@
     <title>Carrello - DigiComiX</title>
     <link rel="stylesheet" type="text/css" href="../PagineStile/Carrello.css?version=1.4">
     <script src="${pageContext.request.contextPath}/script/Pagamento.js"></script>
+    <
 </head>
 <body>
     <!-- header della pagina -->
@@ -55,6 +56,7 @@
                 <input type="text" class= "campopagamento" id="cardHolder" name="cardHolder" placeholder="Titolare Carta" required>
                 <input type="month" class= "campopagamento" id="expiryDate" name="expiryDate" required>
                 <input type="text" class= "campopagamento" id="cvv" name="cvv" placeholder="CVV" required>
+                <input type="text" class= "campopagamento" id="address" name="address" placeholder="Indirizzo" required>
                 <button id= "conferma" type="submit">Conferma Pagamento</button>
             </form>
         </div>
