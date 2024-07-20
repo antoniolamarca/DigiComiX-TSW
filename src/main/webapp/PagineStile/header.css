@@ -1,4 +1,6 @@
-/* stile per il div del titolo e per la foto del menu */
+@import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
+
+
 #benvenuto{
     display: flex;
     justify-content: center;
@@ -82,4 +84,28 @@
 
 #sideMenu li a:hover {
     color: red;
+}
+
+/* Stile per il form e il bottone della pagina amministratore in header.jsp */
+
+.header-buttons form {
+    display: flex;
+    align-items: center; /* Allinea verticalmente il form con le altre icone */
+}
+
+.header-buttons form input[type="submit"] {
+    background-color: #ff1d58; /* Colore di sfondo come i bottoni in Home.css */
+    color: #fff685; /* Colore del testo come in Home.css */
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px; /* Distanza dal testo o altre icone */
+    border-radius: 5px; /* Arrotonda gli angoli */
+    cursor: pointer; /* Cambia il cursore in una mano per indicare che è cliccabile */
+    font-family: 'Press Start 2P', serif; /* Font come in Home.css */
+    font-size: 14px; /* Dimensione del testo */
+    transition: background-color 0.3s; /* Transizione fluida al passaggio del mouse */
+}
+
+.header-buttons form input[type="submit"]:hover {
+    background-color: #c41246; /* Cambia colore al passaggio del mouse per feedback visivo */
 }
