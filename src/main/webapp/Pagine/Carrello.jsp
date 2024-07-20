@@ -44,7 +44,9 @@
     <!-- Div per il menu di pagamento in sovraimpressione -->
     <div id="payment-overlay" style="display:none;">
         <div id="payment-form">
-            <button id="closePaymentForm">X</button>
+            <div id="chiudiFinestra">
+                <button id="closePaymentForm">X</button>
+            </div>
             <h2>Informazioni di Pagamento</h2>
             <form id="paymentInfoForm" action="/path/to/payment/processing" method="post">
                 <!-- Campi per le informazioni di pagamento-->
