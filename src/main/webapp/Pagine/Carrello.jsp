@@ -1,3 +1,5 @@
+<%@ page import="Model.Prodotto.ArticoloBean" %>
+<%@ page import="Model.Carrello.Cart" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,18 +19,17 @@
                 <th><h3>Prodotti</h3></th>
                 <th><h3>Prezzo</h3></th>
             </tr>
-            <tr>
-                <td><img alt="prodotto" src="../Immagini/Articoli/1.jpg"></td>
-                <td><p>5,99 euro</p></td>
-            </tr>
-            <tr>
-                <td><img alt="prodotto" src="../Immagini/Articoli/BoxMagic.png"></td>
-                <td><p>9,99 euro</p></td>
-            </tr>
-            <tr>
-                <td><img alt="prodotto" src="../Immagini/Articoli/DarlingXX.jpg"></td>
-                <td><p>5,99 euro</p></td>
-            </tr>
+            <% if(request.getSession().getAttribute("cart")!= null){
+                Cart prodotti = (Cart) request.getSession().getAttribute("cart");
+                for(ArticoloBean o : prodotti.getCarrello()) {
+                    %>
+            <tr >
+                <td ><img alt = "prodotto" src ="${pageContext.request.contextPath}/Immagini/Articoli/<%= o.getImages()%>" ></td >
+                <td ><p > <%= o.getPrezzo()%> </p ></td >
+            </tr >
+                <% }
+            }%>
+
         </table>
         <table>
             <tr>

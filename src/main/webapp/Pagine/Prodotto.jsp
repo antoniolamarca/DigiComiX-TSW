@@ -28,10 +28,7 @@
                     <br>
                     <div id="carrello" class="carrello-container">
                         <h3>Prezzo: €<%= articolo.getPrezzo() %></h3>
-                       <center> <form action="Carrello" method="post">
-                            <input type="hidden" name="id" value="<%= articolo.getId() %>">
-                            <input type="hidden" name="nome" value="<%= articolo.getNome() %>">
-                            <input type="hidden" name="prezzo" value="<%= articolo.getPrezzo() %>">
+                       <center> <form  onsubmit="event.preventDefault(); addProdottoCart(<%= articolo.getId() %>)">
                             <input type="submit" value="Aggiungi al carrello">
                         </form> </center>
                     </div>
@@ -43,7 +40,7 @@
 
     </div>
 
-
+    <script src="${pageContext.request.contextPath}/script/Ajax.js"></script>
     <div>
         <%@ include file="Footer.jsp" %>
     </div>
