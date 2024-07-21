@@ -24,17 +24,20 @@
         <table>
             <tr>
                 <td><img src="${pageContext.request.contextPath}/Immagini/Articoli/<%= articolo.getImages() %>" alt="Immagine di <%= articolo.getNome() %>"></td>
-                <td><div id="product-info"><h3><%= articolo.getDescrizione() %></h3>
-                    <br>
-                    <div id="carrello" class="carrello-container">
-                        <h3>Prezzo: €<%= articolo.getPrezzo() %></h3>
-                       <center> <form  onsubmit="event.preventDefault(); addProdottoCart(<%= articolo.getId() %>)">
-                            <input type="submit" value="Aggiungi al carrello">
-                        </form> </center>
+                <td>
+                    <div id="product-info">
+                        <h3><%= articolo.getDescrizione() %></h3>
+                        <br>
+                        <div id="carrello" class="carrello-container">
+                            <h3>Prezzo: €<%= articolo.getPrezzo() %></h3>
+                            <center>
+                                <form  onsubmit="event.preventDefault(); addProdottoCart(<%= articolo.getId() %>)">
+                                <input type="submit" value="Aggiungi al carrello">
+                                </form>
+                            </center>
+                        </div>
                     </div>
-
-
-                </div></td>
+                </td>
             </tr>
        </table>
 

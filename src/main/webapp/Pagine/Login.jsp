@@ -44,6 +44,7 @@
             <script src="../script/Loginvalidation.js"></script>
             <p>Non sei registrato? <a href="Registrazione.jsp">Registrati qui</a></p>
         </div>
+
         <%@include file="Footer.jsp" %>
     </body>
 </html>

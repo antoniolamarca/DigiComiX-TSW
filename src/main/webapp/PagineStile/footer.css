@@ -12,7 +12,10 @@
 }
 
 .grid{
-    display: flex; max-width: 1350px; padding: 20px;margin: 0 auto;
+    display: flex;
+    max-width: 1350px;
+    padding: 20px;
+    margin: 0 auto;
 }
 
 .grid .col{
