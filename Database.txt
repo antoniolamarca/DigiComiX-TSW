@@ -21,12 +21,6 @@ CREATE TABLE ORDINE (
     Prodotti_ordinati TEXT
 );
 select * from Ordine;
-CREATE TABLE WISHLIST (
-    Id INT AUTO_INCREMENT PRIMARY KEY,
-    NumeroArticoli INT,
-    AccountId INT,
-    FOREIGN KEY (AccountId) REFERENCES ACCOUNT_UTENTE(Id)
-);
 
 CREATE TABLE ARTICOLO (
     Id INT AUTO_INCREMENT PRIMARY KEY,
@@ -69,10 +63,7 @@ INSERT INTO ORDINE (Data_ordine, indirizzo, Prodotti_ordinati) VALUES
 ('2023-06-15', 'Via Roma 1, Roma', 'manga'),
 ('2023-06-16', 'Corso Italia 5, Milano', 'tcg');
 
--- Popolamento della tabella WISHLIST
-INSERT INTO WISHLIST (NumeroArticoli, AccountId) VALUES
-(5, 1),
-(3, 3);
+
 
 -- Popolamento della tabella ARTICOLO
 INSERT INTO ARTICOLO (Nome, Prezzo, Tipo, Descrizione, Quantita, Sconti, Novita) VALUES
@@ -97,10 +88,6 @@ INSERT INTO OFFERTA (Tipo, Percentuale, DataScadenza, ArticoloId) VALUES
 ('Sconto', 10.00, '2023-07-01', 1),
 ('Sconto', 15.00, '2023-07-15', 2);
 
--- Popolamento della tabella WISHLIST_ARTICOLO
-INSERT INTO INSERIRE (WishlistId, ArticoloId) VALUES
-(1, 1),
-(1, 3),
-(2, 2);
+
 
 SELECT * FROM ACCOUNT_UTENTE;

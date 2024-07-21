@@ -9,6 +9,7 @@
       <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Admin.css">
   </head>
   <body>
+  <%@include file="header.jsp" %>
   <div class="container">
       <h1>Gestione Prodotti</h1>
 
