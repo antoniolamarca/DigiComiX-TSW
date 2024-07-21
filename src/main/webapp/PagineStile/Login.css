@@ -145,3 +145,30 @@ body h1{
     height: 25px;
     border-radius: 5px;
 }
+
+@media screen and (max-width: 550px){
+    #login ul li input[type="text"]{
+        width: 100%;
+    }
+
+    #login ul li input[type="password"]{
+        width: 100%;
+    }
+
+    #registrazione ul li input[type="text"]{
+        width: 100%;
+    }
+
+    #registrazione ul li input[type="email"]{
+        width: 100%;
+    }
+
+    #registrazione ul li input[type="password"]{
+        width: 100%;
+    }
+
+    #btnReg, #btnLogin{
+        width: 100%;
+        font-size: 13px;
+    }
+}

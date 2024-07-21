@@ -96,3 +96,16 @@ body{
     text-decoration: none;
     color: #fff685
 }
+
+/* media query per rendere la pagina home dinamica */
+@media screen and (max-width: 550px){
+    .slider img{
+        height: 125px;
+        width: 85px;
+        margin: 10px;
+    }
+
+    .titolo{
+        font-size: 12px;
+    }
+}

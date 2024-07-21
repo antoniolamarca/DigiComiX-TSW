@@ -12,7 +12,10 @@
 }
 
 .grid{
-    display: flex; max-width: 1350px; padding: 20px;margin: 0 auto;
+    display: flex;
+    max-width: 1350px;
+    padding: 20px;
+    margin: 0 auto;
 }
 
 .grid .col{
@@ -21,4 +24,19 @@
 
 .col {
     padding: 17px;
+}
+
+@media screen and (max-width: 550px){
+    .footer{
+        font-size: 12px;
+    }
+
+    .grid{
+        float: none;
+        display: block;
+        width: 100%;
+    }
+    .col{
+        padding: 10px;
+    }
 }

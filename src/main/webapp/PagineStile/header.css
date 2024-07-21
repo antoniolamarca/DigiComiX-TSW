@@ -109,3 +109,36 @@
 .header-buttons form input[type="submit"]:hover {
     background-color: #c41246; /* Cambia colore al passaggio del mouse per feedback visivo */
 }
+
+@media screen and (max-width: 550px){
+    #benvenuto{
+        font-size: 12px;
+    }
+
+    #benvenuto img{
+        height: 75px;
+        width: 75px;
+    }
+
+    .side-menu.open {
+        width: 25%; /* larghezza del menù */
+    }
+
+    #sideMenu li a {
+        font-size: 15px;
+    }
+
+    #sideMenu img{
+        height: 75px;
+        width: 75px;
+    }
+
+    #closeMenu{
+        font-size: 20px;
+    }
+
+    .icone{
+        height: 30px !important;
+        width: 30px !important;
+    }
+}
