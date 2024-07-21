@@ -5,7 +5,7 @@
 <html>
 <head>
     <title>Carrello - DigiComiX</title>
-    <link rel="stylesheet" type="text/css" href="../PagineStile/Carrello.css?version=1.6">
+    <link rel="stylesheet" type="text/css" href="../PagineStile/Carrello.css?version=1.7">
     <script src="${pageContext.request.contextPath}/script/Pagamento.js"></script>
     <script src="${pageContext.request.contextPath}/script/Payment.js"></script>
 </head>

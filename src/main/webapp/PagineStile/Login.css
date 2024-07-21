@@ -135,12 +135,14 @@ h1 {
     height: 25px;
     border-radius: 5px;
 }
+
 .error {
     color: white;
     font-size: 0.9em;
     margin-top: 5px;
 }
 
+/* Media query per schermi piccoli */
 @media screen and (max-width: 550px) {
     #login ul li input[type="text"],
     #login ul li input[type="password"],
@@ -153,5 +155,121 @@ h1 {
     #btnReg, #btnLogin {
         width: 100%;
         font-size: 13px;
+    }
+
+    #registrazione, #login {
+        width: 90%;
+    }
+
+    #foto-logo img {
+        width: 125px;
+        height: 125px;
+    }
+
+    .foto-login {
+        margin-top: 30px;
+    }
+
+    .foto-registrazione {
+        margin-top: 50px;
+    }
+}
+
+/* Media query per tablet in portrait */
+@media screen and (min-width: 551px) and (max-width: 768px) {
+    #login ul li input[type="text"],
+    #login ul li input[type="password"],
+    #registrazione ul li input[type="text"],
+    #registrazione ul li input[type="email"],
+    #registrazione ul li input[type="password"] {
+        width: 75%;
+    }
+
+    #btnReg, #btnLogin {
+        width: 75%;
+        font-size: 16px;
+    }
+
+    #registrazione, #login {
+        width: 80%;
+    }
+
+    #foto-logo img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .foto-login {
+        margin-top: 40px;
+    }
+
+    .foto-registrazione {
+        margin-top: 60px;
+    }
+}
+
+/* Media query per tablet in landscape e schermi più grandi */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #login ul li input[type="text"],
+    #login ul li input[type="password"],
+    #registrazione ul li input[type="text"],
+    #registrazione ul li input[type="email"],
+    #registrazione ul li input[type="password"] {
+        width: 60%;
+    }
+
+    #btnReg, #btnLogin {
+        width: 60%;
+        font-size: 18px;
+    }
+
+    #registrazione, #login {
+        width: 70%;
+    }
+
+    #foto-logo img {
+        width: 175px;
+        height: 175px;
+    }
+
+    .foto-login {
+        margin-top: 50px;
+    }
+
+    .foto-registrazione {
+        margin-top: 70px;
+    }
+}
+
+/* Media query per desktop */
+@media screen and (min-width: 1025px) {
+    #login ul li input[type="text"],
+    #login ul li input[type="password"],
+    #registrazione ul li input[type="text"],
+    #registrazione ul li input[type="email"],
+    #registrazione ul li input[type="password"] {
+        width: 50%;
+    }
+
+    #btnReg, #btnLogin {
+        width: 50%;
+        font-size: 20px;
+    }
+
+    #registrazione, #login {
+        width: 45%;
+    }
+
+    #foto-logo img {
+        width: 175px;
+        height: 175px;
+    }
+
+    .foto-login {
+        margin-top: 50px;
+    }
+
+    .foto-registrazione {
+        margin-top: 70px;
     }
 }

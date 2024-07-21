@@ -137,7 +137,7 @@ table {
 #closePaymentForm {
     position: absolute;
     top: 10px; /* Aggiusta questa distanza come necessario */
-    right: 10px; /* Aggiusta questa distanza come necessario */
+    left: 220px; /* Aggiusta questa distanza come necessario */
     cursor: pointer;
     border: none;
     background-color: transparent;

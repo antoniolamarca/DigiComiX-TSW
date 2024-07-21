@@ -5,19 +5,19 @@
 /* colore per lo sfondo: #1b74b0*/
 
 /* stile generale */
-body{
+body {
     background-color: #0049B7;
     margin: 0;
     padding: 0;
+    font-family: 'Press Start 2P', serif;
 }
 
-/*  */
 #novita {
     margin-top: 0;
 }
 
 /* stile per i titoli degli slider */
-.titolo{
+.titolo {
     background-color: #ff1d58;
     justify-content: center;
     display: flex;
@@ -28,21 +28,24 @@ body{
     font-family: 'Press Start 2P', serif;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    padding: 10px;
 }
 
 /* stile per gli slider delle immagini di ogni categoria */
-.slider{
+.slider {
     background-color: white;
     width: 100%;
     margin: auto;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Aggiunge la possibilità di andare a capo */
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    padding: 10px;
 }
 
 /* stile per le foto degli slider */
-.slider img{
+.slider img {
     height: 200px;
     width: 150px;
     margin: 15px;
@@ -55,9 +58,8 @@ body{
     box-shadow: 0 0 15px rgba(0,0,0,0.5); /* Aggiunge un'ombra per far risaltare l'immagine */
 }
 
-
 /* stile per i bottoni degli slider */
-.arrow img{
+.arrow img {
     display: flex;
     justify-content: center;
     margin-top: 75px;
@@ -73,8 +75,8 @@ body{
 
 /* stile per il bottone che torna su */
 .tornaSu {
-    width:50px;
-    height:50px;
+    width: 50px;
+    height: 50px;
     display: none;
     position: fixed;
     bottom: 20px;
@@ -90,27 +92,117 @@ body{
     line-height: 50px;
 }
 
-
-.titolo a{
+.titolo a {
     cursor: pointer;
     text-decoration: none;
     color: #fff685
 }
 
-/* media query per rendere la pagina home dinamica */
-@media screen and (max-width: 550px){
-
-    body {
-        align-items: center;
-    }
-    .slider img{
+/* Media query per schermi piccoli */
+@media screen and (max-width: 550px) {
+    .slider img {
         height: 125px;
         width: 85px;
         margin: 5px;
     }
 
-    .titolo{
+    .titolo {
         font-size: 12px;
+        margin-top: 20px;
+    }
+
+    .arrow img {
+        margin-top: 25px;
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .tornaSu {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        line-height: 40px;
+    }
+}
+
+/* Media query per tablet in portrait */
+@media screen and (min-width: 551px) and (max-width: 768px) {
+    .slider img {
+        height: 150px;
+        width: 100px;
+        margin: 10px;
+    }
+
+    .titolo {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .arrow img {
+        margin-top: 40px;
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .tornaSu {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+        line-height: 45px;
+    }
+}
+
+/* Media query per tablet in landscape e schermi più grandi */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .slider img {
+        height: 175px;
+        width: 125px;
+        margin: 12px;
+    }
+
+    .titolo {
+        font-size: 18px;
+        margin-top: 40px;
+    }
+
+    .arrow img {
+        margin-top: 60px;
+        width: 38px !important;
+        height: 38px !important;
+    }
+
+    .tornaSu {
+        width: 48px;
+        height: 48px;
+        font-size: 23px;
+        line-height: 48px;
+    }
+}
+
+/* Media query per desktop */
+@media screen and (min-width: 1025px) {
+    .slider img {
+        height: 200px;
+        width: 150px;
+        margin: 15px;
+    }
+
+    .titolo {
+        font-size: 20px;
+        margin-top: 50px;
+    }
+
+    .arrow img {
+        margin-top: 75px;
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    .tornaSu {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        line-height: 50px;
     }
 }
 

@@ -11,7 +11,7 @@
 <html>
 <head>
     <title>Prodotto - DigiComiX</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Prodotto.css?version=1.2">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Prodotto.css?version=1.5">
 </head>
 <body>
     <!-- header della pagina -->

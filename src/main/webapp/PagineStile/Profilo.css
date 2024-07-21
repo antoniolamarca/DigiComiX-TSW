@@ -1,6 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
 
-body{
+body {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -9,10 +9,10 @@ body{
     height: 100vh;
     font-family: 'Press Start 2P', serif;
     color: #fff685;
-    padding-bottom: 120px;
+
 }
 
-body h1{
+body h1 {
     text-align: center;
 }
 
@@ -25,33 +25,35 @@ body h1{
     height: 175px;
 }
 
-.foto-login{
+.foto-login {
     margin-top: 175px;
 }
 
-.foto-registrazione{
+.foto-registrazione {
     margin-top: 70px;
 }
 
-#registrazione, #login{
+#registrazione, #login {
     width: 45%;
     margin: 10px;
 }
 
-#registrazione{
+#registrazione {
     text-align: center;
 }
 
-#registrazione ul{
+#registrazione ul {
     list-style-type: none;
     padding: 0;
 }
 
-#registrazione ul li{
+#registrazione ul li {
     margin: 10px;
 }
 
-#registrazione ul li input[type="text"]{
+#registrazione ul li input[type="text"],
+#registrazione ul li input[type="password"],
+#registrazione ul li input[type="email"] {
     display: block;
     margin: auto;
     width: 50%;
@@ -61,27 +63,7 @@ body h1{
     background-color: #ff0028;
 }
 
-#registrazione ul li input[type="password"]{
-    display: block;
-    margin: auto;
-    width: 50%;
-    height: 25px;
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: #ff0028;
-}
-
-#registrazione ul li input[type="email"]{
-    display: block;
-    margin: auto;
-    width: 50%;
-    height: 25px;
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: #ff0028;
-}
-
-#btnReg,#btnLogout, #btnLogin{
+#btnReg, #btnLogout, #btnLogin {
     background-color: #ff0028;
     border: 2px solid black;
     color: #fff685;
@@ -94,31 +76,22 @@ body h1{
     margin-top: 20px;
 }
 
-#login{
+#login {
     text-align: center;
 }
 
-#login ul{
+#login ul {
     list-style-type: none;
     padding: 10px;
 }
 
-#login ul li{
+#login ul li {
     margin: 10px;
     padding: 10px;
 }
 
-#login ul li input[type="text"]{
-    display: block;
-    margin: auto;
-    width: 50%;
-    height: 25px;
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: #ff0028;
-}
-
-#login ul li input[type="password"]{
+#login ul li input[type="text"],
+#login ul li input[type="password"] {
     display: block;
     margin: auto;
     width: 50%;
@@ -137,7 +110,7 @@ body h1{
     color: #ff0028;
 }
 
-.testo{
+.testo {
     background-color: #ff0028;
     border: 2px solid black;
     color: #fff685;
@@ -146,16 +119,142 @@ body h1{
     border-radius: 5px;
 }
 
-#btnReg {
-    font-size:8px;
-
-
-}
-
 footer {
     text-align: center;
     padding: 10px;
     background-color: #002d6c; /* Aggiungi uno sfondo al footer per evidenziarlo */
     width: 100%;
     color: #fff685;
+}
+
+/* Media query per schermi piccoli */
+@media screen and (max-width: 550px) {
+    #login ul li input[type="text"],
+    #login ul li input[type="password"],
+    #registrazione ul li input[type="text"],
+    #registrazione ul li input[type="email"],
+    #registrazione ul li input[type="password"] {
+        width: 100%;
+    }
+
+    #btnReg, #btnLogout, #btnLogin {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    #registrazione, #login {
+        width: 90%;
+    }
+
+    #foto-logo img {
+        width: 125px;
+        height: 125px;
+    }
+
+    .foto-login {
+        margin-top: 30px;
+    }
+
+    .foto-registrazione {
+        margin-top: 50px;
+    }
+}
+
+/* Media query per tablet in portrait */
+@media screen and (min-width: 551px) and (max-width: 768px) {
+    #login ul li input[type="text"],
+    #login ul li input[type="password"],
+    #registrazione ul li input[type="text"],
+    #registrazione ul li input[type="email"],
+    #registrazione ul li input[type="password"] {
+        width: 75%;
+    }
+
+    #btnReg, #btnLogout, #btnLogin {
+        width: 75%;
+        font-size: 18px;
+    }
+
+    #registrazione, #login {
+        width: 80%;
+    }
+
+    #foto-logo img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .foto-login {
+        margin-top: 40px;
+    }
+
+    .foto-registrazione {
+        margin-top: 60px;
+    }
+}
+
+/* Media query per tablet in landscape e schermi più grandi */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #login ul li input[type="text"],
+    #login ul li input[type="password"],
+    #registrazione ul li input[type="text"],
+    #registrazione ul li input[type="email"],
+    #registrazione ul li input[type="password"] {
+        width: 60%;
+    }
+
+    #btnReg, #btnLogout, #btnLogin {
+        width: 60%;
+        font-size: 20px;
+    }
+
+    #registrazione, #login {
+        width: 70%;
+    }
+
+    #foto-logo img {
+        width: 175px;
+        height: 175px;
+    }
+
+    .foto-login {
+        margin-top: 50px;
+    }
+
+    .foto-registrazione {
+        margin-top: 70px;
+    }
+}
+
+/* Media query per desktop */
+@media screen and (min-width: 1025px) {
+    #login ul li input[type="text"],
+    #login ul li input[type="password"],
+    #registrazione ul li input[type="text"],
+    #registrazione ul li input[type="email"],
+    #registrazione ul li input[type="password"] {
+        width: 50%;
+    }
+
+    #btnReg, #btnLogout, #btnLogin {
+        width: 50%;
+        font-size: 20px;
+    }
+
+    #registrazione, #login {
+        width: 45%;
+    }
+
+    #foto-logo img {
+        width: 175px;
+        height: 175px;
+    }
+
+    .foto-login {
+        margin-top: 175px;
+    }
+
+    .foto-registrazione {
+        margin-top: 70px;
+    }
 }

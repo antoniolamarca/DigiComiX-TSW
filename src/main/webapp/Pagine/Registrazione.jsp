@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Login.css">
 </head>
 <body>
+<script> <%@include file="/script/Registervalidation.js"%> </script>
 <main>
     <div id="foto-logo">
         <a href="Home.jsp"><img src="${pageContext.request.contextPath}/Immagini/Logo.png" alt="Logo" class="foto-registrazione"></a>
@@ -42,8 +43,6 @@
 </main>
 <%@include file="../Fragments/Footer.jsp" %>
 
-
-<script src="${pageContext.request.contextPath}/script/Registervalidation.js"></script>
 
 </body>
 </html>
