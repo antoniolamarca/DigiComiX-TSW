@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Registrazione - DigiComiX</title>
-  <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Profilo.css">
+  <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Profilo.css?=v1.1">
 </head>
 <body>
 <div id="foto-logo">
@@ -10,30 +10,33 @@
 </div>
 <h1>Ciao ${sessionScope.nome}!</h1>
 <div id="registrazione">
-  <form method="POST" action="${pageContext.request.contextPath}/registerUser">
+  <form method="POST" action="${pageContext.request.contextPath}/registerUser" id="dati"></form>
     <ul>
       <li>
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+        <input form="dati" type="text" id="nome" name="nome" required>
       </li>
       <li>
         <label for="cognome">Cognome:</label>
-        <input type="text" id="cognome" name="cognome" required>
+        <input form="dati" type="text" id="cognome" name="cognome" required>
       </li>
       <li>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input form="dati" type="email" id="email" name="email" required>
       </li>
       <li>
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <input form="dati" type="password" id="password" name="password" required>
       </li>
       <li>
-        <input type="submit" value="Aggiorna le tue credenziali" id="btnReg" disabled>
+        <input form="dati" type="submit" value="Aggiorna le tue credenziali" id="btnReg" disabled>
+      </li>
+      <li>
+        <a href="${pageContext.request.contextPath}/Logout"><label for="btnLogout"></label><button  id="btnLogout">Logout</button> </a>
+
       </li>
     </ul>
     <script src="../script/Registervalidation.js"></script>
-  </form>
 
 </div>
 <%@include file="Footer.jsp" %>

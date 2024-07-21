@@ -81,7 +81,7 @@ body h1{
     background-color: #ff0028;
 }
 
-#btnReg, #btnLogin{
+#btnReg,#btnLogout, #btnLogin{
     background-color: #ff0028;
     border: 2px solid black;
     color: #fff685;

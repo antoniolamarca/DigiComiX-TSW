@@ -18,10 +18,16 @@
     <a href="${pageContext.request.contextPath}/Pagine/Carrello.jsp">
         <img alt="carrello" src="${pageContext.request.contextPath}/Immagini/Icone/Carrello.png" class="icone">
     </a>
-    <!-- icona profilo -->
-    <a href="${pageContext.request.contextPath}/Pagine/Login.jsp">
-        <img alt="profilo" src="${pageContext.request.contextPath}/Immagini/Icone/Profilo.png" class="icone">
-    </a>
+        <% if(request.getSession().getAttribute("tipo")==null) { %>
+            <!-- icona profilo -->
+            <a href="${pageContext.request.contextPath}/Pagine/Login.jsp">
+                <img alt="profilo" src="${pageContext.request.contextPath}/Immagini/Icone/Profilo.png" class="icone">
+            </a>
+        <% } else { %>
+            <a href="${pageContext.request.contextPath}/Pagine/Profilo.jsp">
+                <img alt="profilo" src="${pageContext.request.contextPath}/Immagini/Icone/Profilo.png" class="icone">
+            </a>
+        <% } %>
     </div>
 </div>
 <!-- menù laterale -->
