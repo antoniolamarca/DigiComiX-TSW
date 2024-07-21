@@ -193,7 +193,7 @@ public class ArticoloDao {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
-        String insertSQL = "SELECT * FROM ARTICOLO WHERE sconto = 1";
+        String insertSQL = "SELECT * FROM ARTICOLO WHERE sconti = 1";
         ResultSet resultSet = null;
         ArrayList<ArticoloBean> listaArticoli = new ArrayList<>();
 
@@ -273,6 +273,8 @@ public class ArticoloDao {
 
         }
     }
+
+
 }
 
 

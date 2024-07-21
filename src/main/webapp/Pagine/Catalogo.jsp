@@ -7,13 +7,23 @@
 <head>
     <title>Catalogo Prodotti</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Catalogo.css?=v1.2">
+
 </head>
 <body>
+
+
 <%@include file="header.jsp" %>
+
+<input type="text" id="searchbar">
+<button type="button" onclick="ajax_searchbar()"></button>
+
+<div id="catalogo">
 <%
     ArrayList<ArticoloBean> catalogo = (ArrayList<ArticoloBean>) request.getSession().getAttribute("CatalogoFiltrato");
     for(ArticoloBean articolo : catalogo) {
 %>
+
+
 
 <div class="articolo">
     <img src="${pageContext.request.contextPath}/Immagini/Articoli/<%= articolo.getImages() %>" alt="Immagine di <%= articolo.getNome() %>">
@@ -23,6 +33,8 @@
     <a href="${pageContext.request.contextPath}/ProdottoServlet?ID=<%= articolo.getId() %>">Dettagli</a>
 </div>
 <% } %>
+    </div>
 <%@include file="Footer.jsp" %>
+<script src="${pageContext.request.contextPath}/script/ajax_searchbar.js"></script>
 </body>
 </html>

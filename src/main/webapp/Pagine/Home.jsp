@@ -5,7 +5,6 @@
 
 <% Collection<?> prodotti = (Collection<?>) request.getAttribute("Prodotti");
     if (prodotti == null) {
-        System.out.println("Raffaele é gay");
         response.sendRedirect(request.getContextPath() + "/HomeServlet");
         return;
 

@@ -15,7 +15,6 @@ public class HomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        System.out.println("Raffaele é Stronzo");
         System.out.println("Caricamento in funzione");//flag
         ArticoloDao articolo=new ArticoloDao();
         try {
@@ -30,4 +29,6 @@ public class HomeServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doGet(req, resp);
     }
+
+
 }
