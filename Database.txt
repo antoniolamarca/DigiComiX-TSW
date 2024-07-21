@@ -43,13 +43,6 @@ CREATE TABLE OFFERTA (
 );
 
 
-CREATE TABLE INSERIRE (
-    WishlistId INT,
-    ArticoloId INT,
-    PRIMARY KEY (WishlistId, ArticoloId),
-    FOREIGN KEY (WishlistId) REFERENCES WISHLIST(Id),
-    FOREIGN KEY (ArticoloId) REFERENCES ARTICOLO(Id)
-);
 
 
 -- Popolamento della tabella ACCOUNT
@@ -76,7 +69,18 @@ INSERT INTO ARTICOLO (Nome, Prezzo, Tipo, Descrizione, Quantita, Sconti, Novita)
 ('Portachiavi Hatsune Miku', 3.50, 'gad', 'Porta con te lo stile di Hatsune Miku ovunque tu vada con questo splendido portachiavi! Perfetto per i fan del fenomeno Vocaloid, questo accessorio rappresenta al meglio la iconica idol virtuale in un design accattivante e dettagliato.', 10, 0,0),
 ('Yu-Gi-Oh! Fire Kings Structure Deck', 15.00, 'tcg', 'Scatena il potere ardente con lo Structure Deck - Fire Kings di Yu-Gi-Oh! Questo mazzo pre-costruito è perfetto per i duellanti che desiderano dominare il campo di battaglia con strategie infuocate e potenti mostri di fuoco.',5, 0,1),
 ('Devil May Cry 5: Visions of V vol.1', 10.00, 'manga', 'Entra nel mondo oscuro e affascinante di Devil May Cry con il primo volume del manga "Devil May Cry 5: Visions of V". Questo capitolo imperdibile offre una prospettiva unica e avvincente sul mondo del celebre videogioco, esplorando la storia del misterioso V.',3,1,1),
-('Super Dragonball Heroes Universe mission 2 Booster Box', 79.99, 'tcg', 'Espandi la tua collezione e potenzia il tuo mazzo con il Booster Box di Dragon Ball Heroes Universe Mission 2! Questa confezione speciale è un must-have per tutti i fan di Dragon Ball e i giocatori del gioco di carte Super Dragon Ball Heroes, offrendo una gamma di carte potenti e iconiche direttamente dallo spin-off di Dragon Ball.',10,0,1);
+('Super Dragonball Heroes Universe mission 2 Booster Box', 79.99, 'tcg', 'Espandi la tua collezione e potenzia il tuo mazzo con il Booster Box di Dragon Ball Heroes Universe Mission 2! Questa confezione speciale è un must-have per tutti i fan di Dragon Ball e i giocatori del gioco di carte Super Dragon Ball Heroes, offrendo una gamma di carte potenti e iconiche direttamente dallo spin-off di Dragon Ball.',10,0,1),
+('JoJo\'s Bizarre Adventure: Golden Wind Volume 1', 12.99, 'manga', 'Il primo volume della serie manga JoJo\'s Bizarre Adventure: Golden Wind.', 50, 0, 1),
+('Funko Pop! Iron Man', 15.99, 'gad', 'Una figure da collezione Funko Pop! di Iron Man della serie Marvel.', 50, 0, 1),
+('Set Iniziale di Dungeons & Dragons', 19.99, 'gdt', 'L\'introduzione perfetta al mondo di Dungeons & Dragons.', 30, 0, 1),
+('The Legend of Zelda Link Action Figure', 59.99, 'gad', 'Una figure dell\'eroe della famosa serie di videogiochi.', 20, 0, 0),
+('Bacchetta di Harry Potter', 29.99, 'gad', 'Una replica autentica della bacchetta di Harry Potter.', 40, 1, 0),
+('Naruto Volume 1', 9.99, 'manga', 'Il primo volume del famoso manga Naruto.', 70, 0, 1),
+('One Piece Volume 1', 9.99, 'manga', 'Il primo volume del celebre manga One Piece.', 65, 1, 0),
+('Cubo di Rubik 3x3', 9.99, 'gad', 'Il classico puzzle del Cubo di Rubik 3x3.', 150, 1, 1),
+('Gioco da Tavolo Il Trono di Spade', 39.99, 'gdt', 'Un gioco di strategia basato sulla serie Il Trono di Spade.', 10, 1, 0),
+('Crimson King Structure Deck', 15.99, 'tcg', 'Un mazzo strutturato per il gioco di carte Yu-Gi-Oh! basato sul coprotagonista di 5ds Jack e il suo arcidemone drago rosso', 45, 1, 1);
+
 
 
  
@@ -91,3 +95,4 @@ INSERT INTO OFFERTA (Tipo, Percentuale, DataScadenza, ArticoloId) VALUES
 
 
 SELECT * FROM ACCOUNT_UTENTE;
+UPDATE ACCOUNT_UTENTE SET tipo="admin" where id=4;
