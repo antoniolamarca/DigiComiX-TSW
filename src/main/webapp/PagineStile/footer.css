@@ -22,3 +22,18 @@
 .col {
     padding: 17px;
 }
+
+@media screen and (max-width: 550px){
+    .footer{
+        font-size: 12px;
+    }
+
+    .grid{
+        float: none;
+        display: block;
+        width: 100%;
+    }
+    .col{
+        padding: 10px;
+    }
+}
