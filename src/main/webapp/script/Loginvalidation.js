@@ -1,27 +1,23 @@
-
 // Otteniamo gli elementi dalla pagina
-var inputpassword = document.getElementById("password");
-var inputemail = document.getElementById("email");
+var inputPassword = document.getElementById("password");
+var inputEmail = document.getElementById("email");
 var tasto = document.getElementById("btnLogin");
+var emailError = document.getElementById("emailError");
+var passwordError = document.getElementById("passwordError");
 
 // Funzione per verificare le condizioni
 function check() {
-  var mail = inputemail.value;
-  var password = inputpassword.value;
+  var mail = inputEmail.value;
+  var password = inputPassword.value;
 
   // Validazione email e password
   var emailValid = validateEmail(mail);
   var passwordValid = validatePassword(password);
 
-  if (!emailValid) {
-    console.log("Email non valida");
-  }
-  if (!passwordValid) {
-    console.log("Password non valida");
-  }
 
+
+  // Abilita o disabilita il pulsante in base alla validazione
   if (emailValid && passwordValid) {
-
     tasto.disabled = false;
   } else {
     tasto.disabled = true;
@@ -41,5 +37,17 @@ function validatePassword(password) {
 }
 
 // Aggiungiamo i listener per attendere l'inserimento del campo
-inputpassword.addEventListener("input", check);
-inputemail.addEventListener("input", check);
+inputPassword.addEventListener("input", check);
+inputEmail.addEventListener("input", check);
+
+// Ascoltatore di eventi blur per il campo email
+inputEmail.addEventListener("blur", function() {
+  var emailValid = validateEmail(inputEmail.value);
+  emailError.textContent = emailValid ? '' : 'Email non valida';
+});
+
+// Ascoltatore di eventi blur per il campo password
+inputPassword.addEventListener("blur", function() {
+  var passwordValid = validatePassword(inputPassword.value);
+  passwordError.textContent = passwordValid ? '' : 'Password non valida';
+});

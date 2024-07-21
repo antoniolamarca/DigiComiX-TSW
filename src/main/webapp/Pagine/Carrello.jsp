@@ -5,13 +5,13 @@
 <html>
 <head>
     <title>Carrello - DigiComiX</title>
-    <link rel="stylesheet" type="text/css" href="../PagineStile/Carrello.css?version=1.4">
+    <link rel="stylesheet" type="text/css" href="../PagineStile/Carrello.css?version=1.6">
     <script src="${pageContext.request.contextPath}/script/Pagamento.js"></script>
     <script src="${pageContext.request.contextPath}/script/Payment.js"></script>
 </head>
 <body>
     <!-- header della pagina -->
-    <%@include file="header.jsp" %>
+    <%@include file="../Fragments/header.jsp" %>
 
     <h1>Il tuo carrello</h1>
     <div id="product-info">
@@ -74,6 +74,6 @@
 
 
     <!-- footer della pagina -->
-    <%@include file="Footer.jsp"%>
+    <%@include file="../Fragments/Footer.jsp"%>
 </body>
 </html>

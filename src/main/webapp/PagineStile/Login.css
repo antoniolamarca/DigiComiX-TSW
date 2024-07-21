@@ -1,18 +1,35 @@
 @import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
 
-body{
+body {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     background-color: #0049B7;
-    height: 100vh;
+    min-height: 100vh;
     font-family: 'Press Start 2P', serif;
     color: #fff685;
-    padding-bottom: 120px;
+    margin: 0;
 }
 
-body h1{
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #002d6c; /* Aggiungi uno sfondo al footer per evidenziarlo */
+    width: 100%;
+    color: #fff685;
+}
+
+h1 {
     text-align: center;
 }
 
@@ -25,33 +42,35 @@ body h1{
     height: 175px;
 }
 
-.foto-login{
+.foto-login {
     margin-top: 175px;
 }
 
-.foto-registrazione{
+.foto-registrazione {
     margin-top: 70px;
 }
 
-#registrazione, #login{
+#registrazione, #login {
     width: 45%;
     margin: 10px;
 }
 
-#registrazione{
+#registrazione {
     text-align: center;
 }
 
-#registrazione ul{
+#registrazione ul {
     list-style-type: none;
     padding: 0;
 }
 
-#registrazione ul li{
+#registrazione ul li {
     margin: 10px;
 }
 
-#registrazione ul li input[type="text"]{
+#registrazione ul li input[type="text"],
+#registrazione ul li input[type="password"],
+#registrazione ul li input[type="email"] {
     display: block;
     margin: auto;
     width: 50%;
@@ -61,27 +80,7 @@ body h1{
     background-color: #ff0028;
 }
 
-#registrazione ul li input[type="password"]{
-    display: block;
-    margin: auto;
-    width: 50%;
-    height: 25px;
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: #ff0028;
-}
-
-#registrazione ul li input[type="email"]{
-    display: block;
-    margin: auto;
-    width: 50%;
-    height: 25px;
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: #ff0028;
-}
-
-#btnReg, #btnLogin{
+#btnReg, #btnLogin {
     background-color: #ff0028;
     border: 2px solid black;
     color: #fff685;
@@ -94,31 +93,22 @@ body h1{
     margin-top: 20px;
 }
 
-#login{
+#login {
     text-align: center;
 }
 
-#login ul{
+#login ul {
     list-style-type: none;
     padding: 10px;
 }
 
-#login ul li{
+#login ul li {
     margin: 10px;
     padding: 10px;
 }
 
-#login ul li input[type="text"]{
-    display: block;
-    margin: auto;
-    width: 50%;
-    height: 25px;
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: #ff0028;
-}
-
-#login ul li input[type="password"]{
+#login ul li input[type="text"],
+#login ul li input[type="password"] {
     display: block;
     margin: auto;
     width: 50%;
@@ -137,7 +127,7 @@ body h1{
     color: #ff0028;
 }
 
-.testo{
+.testo {
     background-color: #ff0028;
     border: 2px solid black;
     color: #fff685;
@@ -145,29 +135,22 @@ body h1{
     height: 25px;
     border-radius: 5px;
 }
+.error {
+    color: white;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
 
-@media screen and (max-width: 550px){
-    #login ul li input[type="text"]{
+@media screen and (max-width: 550px) {
+    #login ul li input[type="text"],
+    #login ul li input[type="password"],
+    #registrazione ul li input[type="text"],
+    #registrazione ul li input[type="email"],
+    #registrazione ul li input[type="password"] {
         width: 100%;
     }
 
-    #login ul li input[type="password"]{
-        width: 100%;
-    }
-
-    #registrazione ul li input[type="text"]{
-        width: 100%;
-    }
-
-    #registrazione ul li input[type="email"]{
-        width: 100%;
-    }
-
-    #registrazione ul li input[type="password"]{
-        width: 100%;
-    }
-
-    #btnReg, #btnLogin{
+    #btnReg, #btnLogin {
         width: 100%;
         font-size: 13px;
     }

@@ -16,11 +16,11 @@
 <html>
 <head>
     <title>Home - DigiComiX</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Home.css?=v1.4">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Home.css?=v1.7">
     <script src="${pageContext.request.contextPath}/script/funzionihome.js"></script>
 </head>
 <body>
-<%@include file="header.jsp" %>
+<%@include file="../Fragments/header.jsp" %>
     <!-- Slider per le novità -->
 
     <div id="novita" class="titolo">
@@ -150,6 +150,6 @@
 
     <button title="Torna su" class="tornaSu">^</button>
 
-<%@include file="Footer.jsp" %>
+<%@include file="../Fragments/Footer.jsp" %>
 </body>
 </html>

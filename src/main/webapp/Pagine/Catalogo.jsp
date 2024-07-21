@@ -6,16 +6,16 @@
 <html>
 <head>
     <title>Catalogo Prodotti</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Catalogo.css?=v1.2">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Catalogo.css?=v1.5">
 
 </head>
 <body>
 
 
-<%@include file="header.jsp" %>
+<%@include file="../Fragments/header.jsp" %>
 
 <input type="text" id="searchbar">
-<button type="button" onclick="ajax_searchbar()"></button>
+<button type="button" onclick="ajax_searchbar()">Cerca nel nostro catalogo</button>
 
 <div id="catalogo">
 <%
@@ -34,7 +34,7 @@
 </div>
 <% } %>
     </div>
-<%@include file="Footer.jsp" %>
+<%@include file="../Fragments/Footer.jsp" %>
 <script src="${pageContext.request.contextPath}/script/ajax_searchbar.js"></script>
 </body>
 </html>

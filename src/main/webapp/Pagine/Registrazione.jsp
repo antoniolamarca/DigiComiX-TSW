@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Login.css">
 </head>
 <body>
+<main>
     <div id="foto-logo">
         <a href="Home.jsp"><img src="${pageContext.request.contextPath}/Immagini/Logo.png" alt="Logo" class="foto-registrazione"></a>
     </div>
@@ -36,6 +37,7 @@
         </form>
 
     </div>
-    <%@include file="Footer.jsp" %>
+    <main>
+    <%@include file="../Fragments/Footer.jsp" %>
 </body>
 </html>

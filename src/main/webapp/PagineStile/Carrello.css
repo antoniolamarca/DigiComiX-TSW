@@ -1,24 +1,37 @@
 /* Importazione del font */
 @import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
 
-/* colore per i testi: #f7b544*/
-/* colore per lo sfondo: #1b74b0*/
+/* colore per i testi: #f7b544 */
+/* colore per lo sfondo: #1b74b0 */
 
 /* stile generale della pagina */
-body{
+html, body {
+    height: 100%; /* Imposta l'altezza al 100% per il corpo e html */
+    margin: 0; /* Rimuove il margine predefinito */
+}
+
+body {
     background-color: #0049B7;
     color: #fff685;
     font-family: 'Press Start 2P', serif;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
-body h1{
+/* Aggiunge spazio in fondo al corpo per far sì che il footer sia posizionato correttamente */
+main {
+    flex: 1;
+}
+
+h1 {
     text-align: center;
 }
 
 /* definizione della grandezza della tabella per gestire l'immagine e il testo */
-table{
-    width: 50%;
+table {
+    width: 100%;
+    max-width: 600px; /* Imposta una larghezza massima per schermi grandi */
     border: 3px solid black;
     background-color: red;
     margin-left: auto;
@@ -26,21 +39,24 @@ table{
     margin-bottom: 50px;
     border-radius: 10px;
     padding: 10px;
+    box-sizing: border-box; /* Include padding e bordi nella larghezza totale */
 }
 
-.tabella-prodotti td{
+.tabella-prodotti td {
     width: 50%;
     border: 2px solid black;
     background-color: #0049B7;
     border-radius: 10px;
 }
+
 /* stile del div che contiene la tabella */
-#product-info td img{
-    height: 100px;
-    width: 75px;
-    border-radius: 10px; /* Regola l'arrotondamento qui */
-    padding : 5px;
+#product-info td img {
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+    max-width: 100px; /* Limita la larghezza massima dell'immagine */
+    border-radius: 10px;
+    padding: 5px;
 }
+
 .bottone_checkout {
     background-color: #fff685; /* Colore giallo */
     border: none; /* Rimuove il bordo predefinito */
@@ -75,69 +91,119 @@ table{
     border-radius: 5px;
     border: 2px solid black;
     position: relative;
+    width: 90%;
+    max-width: 500px; /* Limita la larghezza massima del modulo */
 }
+
 #payment-form form {
-    width: 100%; /* Assicura che il form occupi l'intera larghezza del suo contenitore */
+    width: 100%;
 }
 
 #payment-form input[type="text"],
 #payment-form input[type="month"],
 #payment-form button {
-    display: block; /* Rende ogni campo un blocco, facendolo apparire su una nuova riga */
-    width: 100%; /* Ogni campo occupa l'intera larghezza */
-    margin-bottom: 10px; /* Aggiunge spazio sotto ogni campo */
-    box-sizing: border-box; /* Assicura che padding e bordi siano inclusi nella larghezza totale */
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 .campopagamento {
-    font-size: 20px; /* Aumenta la dimensione del font */
-    padding: 15px 20px; /* Aumenta il padding per ingrandire il campo */
-    border-radius: 25px; /* Arrotonda i bordi */
-    border: 2px solid #fff685; /* Opzionale: aggiunge un bordo solido giallo per coerenza con il design */
-    background-color: #0049B7; /* Imposta il colore di sfondo */
-    color: #fff685; /* Imposta il colore del testo */
-    margin-bottom: 15px; /* Aggiunge spazio sotto il campo */
-    box-sizing: border-box; /* Assicura che padding e bordi siano inclusi nella larghezza totale */
+    font-size: 20px;
+    padding: 15px 20px;
+    border-radius: 25px;
+    border: 2px solid #fff685;
+    background-color: #0049B7;
+    color: #fff685;
+    margin-bottom: 15px;
+    box-sizing: border-box;
 }
 
 #conferma {
-    font-size: 18px; /* Aumenta la dimensione del font */
-    padding: 12px 24px; /* Aumenta il padding */
-    border-radius: 30px; /* Arrotonda i bordi */
-    background-color: #fff685; /* Colore di sfondo */
-    color: #0049B7; /* Colore del testo */
-    border: none; /* Rimuove il bordo */
-    cursor: pointer; /* Cambia il cursore in una mano per indicare che è cliccabile */
-    transition: background-color 0.3s ease; /* Effetto di transizione per il cambio di colore */
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 30px;
+    background-color: #fff685;
+    color: #0049B7;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #conferma:hover {
-    background-color: #fff685; /* Cambia il colore di sfondo al passaggio del mouse */
+    background-color: #f7b544; /* Aggiunge un effetto hover con un colore diverso */
 }
 
 #closePaymentForm {
     position: absolute;
-    top: 0; /* Ajusta questa distanza come necessario */
-    right: 0; /* Ajusta questa distanza come necessario */
+    top: 10px; /* Aggiusta questa distanza come necessario */
+    right: 10px; /* Aggiusta questa distanza come necessario */
     cursor: pointer;
     border: none;
     background-color: transparent;
     font-size: 20px;
     color: #fff685;
-    padding: 10px; /* Aggiunge spazio intorno alla X per facilitare il clic */
+    padding: 10px;
 }
 
-#chiudiFinestra{
+#chiudiFinestra {
     display: flex;
     justify-content: flex-end;
 }
 
-@media screen and (max-width: 550px) {
-    h1{
-        font-size: 20px;
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #002d6c;
+    width: 100%;
+    color: #fff685;
+    position: relative; /* Permette al footer di adattarsi meglio */
+    bottom: 0; /* Assicura che il footer sia posizionato in basso */
+}
+
+/* Media queries per la responsività */
+@media screen and (max-width: 768px) {
+    table {
+        width: 90%;
     }
 
-    #product-info th h3{
-        font-size: 13px;
+    .tabella-prodotti td {
+        width: 100%;
+        display: block; /* Cambia il layout della tabella per schermi piccoli */
+    }
+
+    #payment-form {
+        width: 90%;
+        max-width: none; /* Rimuove la larghezza massima per schermi più piccoli */
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body, html {
+        padding: 0;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 16px; /* Riduci la dimensione del titolo */
+    }
+
+    table, #product-info, .tabella-prodotti td {
+        width: 100%; /* Usa la larghezza completa dello schermo */
+        max-width: none; /* Rimuove la larghezza massima */
+    }
+
+    #product-info td img {
+        max-width: 80px; /* Riduci la larghezza massima delle immagini */
+    }
+
+    .bottone_checkout, #conferma {
+        font-size: 14px; /* Riduci la dimensione del testo nei bottoni */
+        padding: 8px 16px; /* Riduci il padding */
+    }
+
+    .campopagamento, #payment-form input[type="text"], #payment-form input[type="month"], #payment-form button {
+        font-size: 16px; /* Adatta la dimensione del testo per i campi di input e i bottoni */
+        padding: 10px; /* Riduci il padding */
     }
 }

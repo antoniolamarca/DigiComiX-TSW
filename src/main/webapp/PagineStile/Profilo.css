@@ -151,3 +151,11 @@ body h1{
 
 
 }
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #002d6c; /* Aggiungi uno sfondo al footer per evidenziarlo */
+    width: 100%;
+    color: #fff685;
+}

@@ -99,13 +99,26 @@ body{
 
 /* media query per rendere la pagina home dinamica */
 @media screen and (max-width: 550px){
+
+    body {
+        align-items: center;
+    }
     .slider img{
         height: 125px;
         width: 85px;
-        margin: 10px;
+        margin: 5px;
     }
 
     .titolo{
         font-size: 12px;
     }
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #002d6c; /* Aggiungi uno sfondo al footer per evidenziarlo */
+    width: 100%;
+    color: #fff685;
+    font-size: 7px;
 }

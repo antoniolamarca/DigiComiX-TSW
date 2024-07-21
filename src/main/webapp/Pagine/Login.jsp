@@ -3,10 +3,11 @@
 <html>
     <head>
         <title>Login - DigiComiX</title>
-        <link rel="stylesheet" type="text/css" href="../PagineStile/Login.css?version=1.2">
+        <link rel="stylesheet" type="text/css" href="../PagineStile/Login.css?version=1.3">
         <script src="../script/Loginvalidation.js"></script>
     </head>
     <body>
+    <main>
         <div id="foto-logo">
             <a href="Home.jsp"><img src="../Immagini/Logo.png" alt="Logo" class="foto-login"></a>
         </div>
@@ -31,10 +32,12 @@
                     <li>
                         <label for="email">Email:</label>
                         <input type="text" id="email" name="email" required>
+                        <div id="emailError" class="error"></div>
                     </li>
                     <li>
                         <label for="password">Password:</label>
                         <input type="password" id="password" name="password" required>
+                        <div id="passwordError" class="error"></div>
                     </li>
                     <li>
                         <input type="submit" value="Login" id="btnLogin" disabled>
@@ -44,7 +47,7 @@
             <script src="../script/Loginvalidation.js"></script>
             <p>Non sei registrato? <a href="Registrazione.jsp">Registrati qui</a></p>
         </div>
-
-        <%@include file="Footer.jsp" %>
+        </main>
+        <%@include file="../Fragments/Footer.jsp" %>
     </body>
 </html>

@@ -15,7 +15,7 @@
 </head>
 <body>
     <!-- header della pagina -->
-    <%@ include file="header.jsp" %>
+    <%@ include file="../Fragments/header.jsp" %>
 
     <!-- visualizzazione del prodotto e degli altri elementi -->
     <div id="prodotto">
@@ -45,7 +45,7 @@
 
     <script src="${pageContext.request.contextPath}/script/Ajax.js"></script>
     <div>
-        <%@ include file="Footer.jsp" %>
+        <%@ include file="../Fragments/Footer.jsp" %>
     </div>
 </body>
 </html>

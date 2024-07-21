@@ -39,6 +39,6 @@
     <script src="../script/Registervalidation.js"></script>
 
 </div>
-<%@include file="Footer.jsp" %>
+<%@include file="../Fragments/Footer.jsp" %>
 </body>
 </html>

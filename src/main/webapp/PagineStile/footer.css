@@ -1,24 +1,24 @@
 @import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
 
-.footer{
+.footer {
     background: #fff685;
     margin-top: 20px;
-    padding: 50px ;
-    bottom: 0;
+    padding: 50px;
+    margin-bottom: 0;
     border-radius: 10px;
     font-family: 'Press Start 2P', serif;
     color: #0049B7;
     font-size: 17px;
 }
 
-.grid{
+.grid {
     display: flex;
     max-width: 1350px;
     padding: 20px;
     margin: 0 auto;
 }
 
-.grid .col{
+.grid .col {
     width: 100%;
 }
 
@@ -26,17 +26,68 @@
     padding: 17px;
 }
 
-@media screen and (max-width: 550px){
-    .footer{
-        font-size: 12px;
+/* Responsive for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    .footer {
+        font-size: 14px;
+        padding: 40px;
     }
 
-    .grid{
-        float: none;
+    .grid {
         display: block;
         width: 100%;
     }
-    .col{
+
+    .col {
+        padding: 15px;
+    }
+}
+
+/* Responsive for screens smaller than 360px */
+@media screen and (max-width: 360px) {
+    .footer {
+        font-size: 12px;
+        padding: 30px;
+    }
+
+    .grid {
+        display: block;
+        width: 100%;
+    }
+
+    .col {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        font-size: 14px;
+        padding: 40px;
+    }
+
+    .grid {
+        display: block;
+        width: 100%;
+    }
+
+    .col {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .footer {
+        font-size: 12px;
+        padding: 30px;
+    }
+
+    .grid {
+        display: block;
+        width: 100%;
+    }
+
+    .col {
         padding: 10px;
     }
 }
