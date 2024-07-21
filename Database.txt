@@ -43,10 +43,6 @@ INSERT INTO ACCOUNT_UTENTE (Nome, Cognome, Email, Passkey, Tipo) VALUES
 ('Luigi', 'Verdi', 'luigi.verdi@gmail.com', 'password456', 'Cliente'),
 ('Anna', 'Bianchi', 'anna.bianchi@gmail.com', 'password789', 'Cliente');
 
--- Popolamento della tabella ORDINE
-INSERT INTO ORDINE (Data_ordine, indirizzo, Prodotti_ordinati) VALUES
-('2023-06-15', 'Via Roma 1, Roma', 'manga'),
-('2023-06-16', 'Corso Italia 5, Milano', 'tcg');
 
 
 
@@ -83,18 +79,5 @@ INSERT INTO ARTICOLO (Nome, Prezzo, Tipo, Descrizione, Quantita, Sconti, Novita)
 
 SELECT * FROM ACCOUNT_UTENTE;
 UPDATE ACCOUNT_UTENTE SET tipo="admin" where id=4;
-
-
- 
-
-
-
--- Popolamento della tabella OFFERTA
-INSERT INTO OFFERTA (Tipo, Percentuale, DataScadenza, ArticoloId) VALUES
-('Sconto', 10.00, '2023-07-01', 1),
-('Sconto', 15.00, '2023-07-15', 2);
-
-
-
-SELECT * FROM ACCOUNT_UTENTE;
-UPDATE ACCOUNT_UTENTE SET tipo="admin" where id=4;
+SELECT * FROM ARTICOLO;
+SELECT * FROM ORDINE

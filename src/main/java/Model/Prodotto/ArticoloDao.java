@@ -274,6 +274,70 @@ public class ArticoloDao {
         }
     }
 
+    public void doUpdate(ArticoloBean articolo) throws SQLException {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        String insertSQL = "UPDATE ARTICOLO SET Nome=?, Prezzo=?, Descrizione=?, Tipo=?, Quantita=?, novita=?, sconti=? WHERE id=?";
+
+        try {
+            System.out.println("Stiamo aggiornando");
+            connection = DriverManagerConnectionPool.getConnection();
+            System.out.println("Stabilita connessione, stiamo salvando");
+            preparedStatement = connection.prepareStatement(insertSQL);
+            preparedStatement.setString(1, articolo.getNome());
+            preparedStatement.setInt(2, articolo.getPrezzo());
+            preparedStatement.setString(3, articolo.getDescrizione());
+            preparedStatement.setString(4, articolo.getTipo());
+            preparedStatement.setInt(5, articolo.getQuantita());
+            preparedStatement.setBoolean(6, articolo.isNovita());
+            preparedStatement.setBoolean(7, articolo.isSconti());
+            preparedStatement.setInt(8, articolo.getId());
+
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            try {
+                if (preparedStatement != null)
+                    preparedStatement.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } finally {
+                DriverManagerConnectionPool.releaseConnection(connection);
+            }
+        }
+    }
+
+    public void doDelete(int id) throws SQLException {
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+
+        String insertSQL = "DELETE FROM ARTICOLO WHERE id=?";
+
+        try {
+            System.out.println("Stiamo aggiornando");
+            connection = DriverManagerConnectionPool.getConnection();
+            System.out.println("Stabilita connessione, stiamo salvando");
+            preparedStatement = connection.prepareStatement(insertSQL);
+            preparedStatement.setInt(1, id);
+
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            try {
+                if (preparedStatement != null)
+                    preparedStatement.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } finally {
+                DriverManagerConnectionPool.releaseConnection(connection);
+            }
+        }
+    }
 
 }
 
