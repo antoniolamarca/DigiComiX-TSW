@@ -41,7 +41,7 @@ public class ModificaProdotto extends HttpServlet {
             throw new RuntimeException(e);
         }
 
-        response.sendRedirect("Pagine/Home.jsp");
+        response.sendRedirect("Pagine/Admin.jsp");
 
     }
 

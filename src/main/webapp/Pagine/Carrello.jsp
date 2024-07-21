@@ -23,11 +23,16 @@
             <% if(request.getSession().getAttribute("cart")!= null){
                 Cart prodotti = (Cart) request.getSession().getAttribute("cart");
                 for(ArticoloBean o : prodotti.getCarrello()) {
+
                     %>
             <tr >
                 <td ><img alt = "prodotto" src ="${pageContext.request.contextPath}/Immagini/Articoli/<%= o.getImages()%>" ></td >
                 <td ><p > €<%= o.getPrezzo()%></p ></td >
-                <td><img src="${pageContext.request.contextPath}/Immagini/Icone/Cestino.png" alt="Rimuovi" style="cursor:pointer"></td>
+                <td>
+                       <a href="${pageContext.request.contextPath}/EliminaProdotto?eliminaidProdotto=<%= o.getId()%>">
+                           <img src="${pageContext.request.contextPath}/Immagini/Icone/Cestino.png" alt="Rimuovi" style="cursor:pointer">
+                       </a>
+                </td>
             </tr >
                 <% }
             }%>

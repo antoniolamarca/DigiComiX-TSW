@@ -36,7 +36,7 @@ public class AggiungiProdotto  extends HttpServlet  {
             throw new RuntimeException(e);
         }
 
-        resp.sendRedirect("Pagine/Home.jsp");
+        resp.sendRedirect("Pagine/Admin.jsp");
 
 
     }

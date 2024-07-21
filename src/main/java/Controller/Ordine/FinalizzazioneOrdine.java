@@ -40,12 +40,14 @@ public class FinalizzazioneOrdine extends HttpServlet {
                 }
                 ordineBean.setIndirizzo(req.getParameter("address"));
 
+                req.getSession().removeAttribute("cart");
                 try {
                     ordineDao.doSave(ordineBean);
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }
 
+                resp.sendRedirect("Pagine/Home.jsp");
 
             }
         }

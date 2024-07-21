@@ -7,6 +7,7 @@ import java.io.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Base64;
+import java.util.Iterator;
 
 public class Cart implements Serializable {
     private static final long serialVersionUID = 6664768527921825688L;
@@ -29,6 +30,20 @@ public class Cart implements Serializable {
         ArticoloDao elemento = new ArticoloDao();
         ArticoloBean articoloBean= elemento.doGetById(id);
         carrello.add(articoloBean);
+    }
+
+
+    public void RemoveFromCart(int id) throws SQLException {
+        ArticoloDao articoloDao = new ArticoloDao();
+        Iterator<ArticoloBean> iterator = this.carrello.iterator();
+
+        while (iterator.hasNext()) {
+            ArticoloBean o = iterator.next();
+            if (o.getId() == id) {
+                iterator.remove(); // Rimuove l'elemento corrente
+                break; // Esce dal ciclo se si vuole rimuovere solo un elemento
+            }
+        }
     }
 
     public String serializeToString() throws IOException {

@@ -47,7 +47,7 @@
 
 
           <h2>Elimina un prodotto</h2>
-          <form action="${pageContext.request.contextPath}/EliminaProdotto" method="post">
+          <form action="${pageContext.request.contextPath}/EliminaProdottoAdmin" method="post">
               <label for="idProdotto">ID Prodotto:</label>
               <input type="number" id="idProdotto" name="eliminaidProdotto" required>
 
