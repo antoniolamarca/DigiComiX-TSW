@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Otteniamo gli elementi dalla pagina
   var inputPassword = document.getElementById("password");
   var inputEmail = document.getElementById("email");
-  var tasto = document.getElementById("btnReg");
+  var tasto = document.getElementById("btnLogin");
 
   // Elementi per i messaggi di errore
   var passwordError = document.getElementById("passwordError");
@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
     } else if (target === inputPassword) {
       passwordError.textContent = validatePassword(password) ? "" : "La password deve contenere almeno una lettera maiuscola, una lettera minuscola e un numero, e deve essere lunga tra 4 e 20 caratteri.";
     }
+
 
     // Abilita/disabilita il tasto di registrazione
     tasto.disabled = !(validateEmail(mail) && validatePassword(password));

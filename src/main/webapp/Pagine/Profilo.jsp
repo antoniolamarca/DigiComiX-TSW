@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Registrazione - DigiComiX</title>
-  <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Profilo.css?=v1.1">
+  <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/PagineStile/Profilo.css?=v1.5">
 </head>
 <body>
 <div id="foto-logo">

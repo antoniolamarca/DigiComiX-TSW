@@ -40,6 +40,10 @@ public class FinalizzazioneOrdine extends HttpServlet {
                 }
                 ordineBean.setIndirizzo(req.getParameter("address"));
 
+                for(int i = 0; i < cart.getCarrello().size(); i++) {
+                    ordineBean.setPrezzo(ordineBean.getPrezzo() + cart.getCarrello().get(i).getPrezzo());
+                }
+
                 req.getSession().removeAttribute("cart");
                 try {
                     ordineDao.doSave(ordineBean);

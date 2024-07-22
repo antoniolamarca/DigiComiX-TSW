@@ -20,6 +20,14 @@ public class ArticoloBean implements Serializable {
         this.id = id;
     }
 
+    @Override
+    public String toString() {
+        return "<table >" +
+                "<tr><th>Nome</th><td>" + nome + "</td></tr>" +
+                "<tr><th>Prezzo</th><td>" + prezzo + "</td></tr>" +
+                "</table>";
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }

@@ -145,12 +145,13 @@
       <!-- Mostra tutti gli ordini -->
       <div class="section">
           <h3>Lista degli Ordini</h3>
-          <table>
+          <table class="admin-table">
               <tr>
                   <th>ID Ordine</th>
                   <th>ID Utente</th>
                   <th>Data di acquisto</th>
                   <th>Costo Totale</th>
+                  <th>Nome prodotti acquistati</th>
               </tr>
 
               <% if(request.getSession().getAttribute("listaOrdini") != null){
@@ -161,6 +162,8 @@
                   <td><%= o.getId()%></td>
                   <td><%= o.getId_utente()%></td>
                   <td><%= o.getData_ordine()%></td>
+                  <td><%= o.getPrezzo()%></td>
+                  <td><%= o.getProdotti_ordinati().getCarrello().toString()%></td>
                   <td></td>
               </tr>
               <%} }%>

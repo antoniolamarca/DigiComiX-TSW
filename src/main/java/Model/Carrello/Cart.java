@@ -10,7 +10,7 @@ import java.util.Base64;
 import java.util.Iterator;
 
 public class Cart implements Serializable {
-    private static final long serialVersionUID = 6664768527921825688L;
+    private static final long serialVersionUID = 6664768527921825680L;
    private ArrayList<ArticoloBean> carrello;
 
     public ArrayList<ArticoloBean> getCarrello() {

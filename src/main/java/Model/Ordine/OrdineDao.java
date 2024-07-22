@@ -17,7 +17,7 @@ public class OrdineDao {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
 
-        String insertSQL = "INSERT INTO ORDINE(id_utente, Data_ordine, indirizzo, prodotti_ordinati) VALUES(?,?,?,?)";
+        String insertSQL = "INSERT INTO ORDINE(id_utente, Data_ordine, indirizzo, Prezzo, prodotti_ordinati) VALUES(?,?,?,?,?)";
 
         try {
             connection = DriverManagerConnectionPool.getConnection();
@@ -26,7 +26,8 @@ public class OrdineDao {
             preparedStatement.setInt(1, ordine.getId_utente());
             preparedStatement.setDate(2, Date.valueOf(ordine.getData_ordine()));
             preparedStatement.setString(3, ordine.getIndirizzo());
-            preparedStatement.setString(4, ordine.getProdotti_ordinati().serializeToString());
+            preparedStatement.setString(5, ordine.getProdotti_ordinati().serializeToString());
+            preparedStatement.setInt(4, ordine.getPrezzo());
 
             preparedStatement.executeUpdate();
 
@@ -65,7 +66,7 @@ public class OrdineDao {
                 ordineBean.setData_ordine(rs.getDate("Data_ordine").toLocalDate());
                 ordineBean.setIndirizzo(rs.getString("indirizzo"));
                 ordineBean.setProdotti_ordinati( (Cart) Cart.deserializeFromString(rs.getString("Prodotti_ordinati")));
-
+                ordineBean.setPrezzo(rs.getInt("Prezzo"));
                 ordini.add(ordineBean);
             }
             return ordini;

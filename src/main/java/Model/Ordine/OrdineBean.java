@@ -10,7 +10,16 @@ public class OrdineBean {
     private int id_utente;
     private LocalDate data_ordine;
     private String indirizzo;
+    private int prezzo;
     private Cart prodotti_ordinati;
+
+    public int getPrezzo() {
+        return prezzo;
+    }
+
+    public void setPrezzo(int prezzo) {
+        this.prezzo = prezzo;
+    }
 
     public int getId() {
         return id;

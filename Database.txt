@@ -18,6 +18,7 @@ CREATE TABLE ORDINE (
     Id_utente int,
     Data_ordine DATE,
     Indirizzo VARCHAR(200),
+    Prezzo INT,
     Prodotti_ordinati TEXT
 );
 select * from Ordine;
