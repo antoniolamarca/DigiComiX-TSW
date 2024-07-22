@@ -69,7 +69,3 @@ h1, h2, h3 {
     background-color: #ff1d58; /* Colore di sfondo delle intestazioni come Home.css */
     color: #fff685; /* Colore del testo delle intestazioni come Home.css */
 }
-
-.admin-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
